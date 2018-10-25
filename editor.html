@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TEI Workshop #2</title>
+        <style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 5%;
+        bottom: 20%;
+        right: 5%;
+        left: 0%;
+    }
+    
+    #instructions{
+    position:absolute;
+    background: white;
+    z-index:99999;
+    top:5%;
+    left:2%;
+    border: solid 1px black;
+     }
+     
+     #instructions.invisible{
+     display:none;
+     }
+   .invisible{
+     display:none;
+     }
+     
+     #closeButton{
+     text-align:right;
+     font-weight:bold;
+     }
+</style>
+        
+        <script>
+            
+            function showInstructions(){
+                var showInstructions = document.getElementById('showInstructions');
+                var hideInstructions = document.getElementById('hideInstructions');
+                var instructions = document.getElementById('instructions');
+                showInstructions.classList.add('invisible');
+                instructions.classList.remove('invisible');
+                hideInstructions.classList.remove('invisible');
+            }
+            
+            function hideInstructions(){
+                 var showInstructions = document.getElementById('showInstructions');
+                var hideInstructions = document.getElementById('hideInstructions');
+                 var instructions = document.getElementById('instructions');
+                showInstructions.classList.remove('invisible');
+                   instructions.classList.add('invisible');
+                hideInstructions.classList.add('invisible');
+            }
+        </script>
+    </head>
+    <body>
+        <div id="editor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"&gt;
+    &lt;teiHeader&gt;
+        &lt;fileDesc&gt;
+            &lt;titleStmt&gt;
+                &lt;title&gt;Title&lt;/title&gt;
+            &lt;/titleStmt&gt;
+            &lt;publicationStmt&gt;
+                &lt;p&gt;Publication Information&lt;/p&gt;
+            &lt;/publicationStmt&gt;
+            &lt;sourceDesc&gt;
+                &lt;p&gt;Information about the source&lt;/p&gt;
+            &lt;/sourceDesc&gt;
+        &lt;/fileDesc&gt;
+    &lt;/teiHeader&gt;
+    &lt;text&gt;
+    &lt;!--Note that all content here is not saved anywhere unless you press download (above) --&gt;
+        &lt;body&gt;
+            &lt;p&gt;Some text here.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/text&gt;
+&lt;/TEI&gt;
+        </div>
+        <button id="showInstructions" type="button" onclick="javascript:showInstructions()">Open Instructions</button>
+        <button id="hideInstructions" type="button" onclick="javascript:hideInstructions()" class="invisible">Close Instructions</button>
+        <button id="download2" type="submit" class="btn btn-primary">Download</button>
+        <div id="instructions" class="invisible">
+            <h4>Instructions</h4>
+                <p>This is a very simple text editor using the <a href="https://ace.c9.io/#nav=embedding">Ace Text Editor</a>.</p>
+                <p>To save this file, press the download button above.</p>
+            <p>Note that this text editor does not save your progress, so make sure to download the files often.</p>
+            <p>To close these instructions, press Close Instructions above.</p>
+        </div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.session.setMode("ace/mode/xml");
+
+</script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+        <script type="text/javascript">
+    document.getElementById("download2").addEventListener("click", ()=>{
+  var file = new File([editor.getValue()], "teiworkshop.xml", {type: "application/xml;charset=utf-8"});
+  saveAs(file);
+}) 
+            </script>
+        
+    </body>
+</html>
