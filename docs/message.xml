@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Princess Kathleen letter in bottle</title>
+            <author>
+               <name ref="#ML">Marvin Lunder</name>
+            </author>
+            <author>
+               <name ref="#DDR">Dick de Remer</name>
+            </author>
+            <editor>
+               <name ref="#JT">Joey Takeda</name>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <p>Not for publication</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Retrieved from the UBC Archives <!--Better METADATA would go here--></p>
+         </sourceDesc>
+      </fileDesc>
+     <profileDesc>
+        <particDesc>
+           <listPerson>
+              <person xml:id="ML">
+                 <persName>
+                    <reg>Marvin Lunder</reg>
+                 </persName>
+              </person>
+              <person xml:id="DDR">
+                 <persName>
+                    <reg>Dick de Remer</reg>
+                 </persName>
+              </person>
+              <person xml:id="JT">
+                 <persName>
+                    <reg>Joey Takeda</reg>
+                 </persName>
+              </person>
+           </listPerson>
+        </particDesc>
+        <handNotes>
+           <handNote xml:id="HAND1" scribeRef="#ML"/>
+           <handNote xml:id="HAND2" scribeRef="#DDR">
+              <certainty locus="value" match="@scribeRef">
+                 <desc>This information is only understood via the shifting hands in signatures.</desc>
+              </certainty>
+           </handNote>
+        </handNotes>
+     </profileDesc>
+  </teiHeader>
+   <text facs="https://open.library.ubc.ca/media/download/pdf/chungtext/1.0363195/0">
+      <body>
+         <div>
+            <opener>ON BOARD SS <del><unclear reason="illegible" extent="4" unit="chars"/></del> <name type="ship"><hi rend="above">Princess</hi> <lb/>Kathleen</name></opener>
+               
+               <ab>Any person finding this bottle shall
+                  <lb/>receive a reward from <orgName>The Tacoma News<lb/>
+                  Tribune</orgName><lb/>
+                  <placeName>Tacoma Wash. U.S.A</placeName></ab>
+               <ab>This note was thrown adrift <date when="1939-06-04">June 4 1939</date>
+                  Tacoma News Tribune <choice><sic>Excuption</sic></choice> Trip</ab>
+
+<ab style="float:left;">
+   Get Reward<lb/>
+   and Publicity
+</ab>
+               <closer>This was thrown over by <signed><persName ref="#ML">Marvin Lunder</persName>
+               <address><street>806 1/2 Ea. 35 th st</street>
+               <lb/>
+               <settlement>Tacoma</settlement> <region><choice><abbr>Wash.</abbr><expan>Washington</expan></choice></region>
+                  <lb/><country>USA</country></address>
+               <lb/>and
+               <lb/><persName ref="#DDR">Dick De Remer</persName>
+               <lb/>406 Ea. Dis. Lane
+               <lb/>Tacoma, Washington
+               <lb/>U.S.A
+               (Please write us!)</signed></closer>
+         </div>
+        
+      </body>
+  </text>
+</TEI>
