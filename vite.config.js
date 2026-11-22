@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { defineConfig } from "vite";
 
@@ -24,7 +24,9 @@ const files = execFileSync("git", ["ls-files", "--cached", "--others", "--exclud
   encoding: "utf8",
 })
   .split("\0")
-  .filter(Boolean);
+  .filter(Boolean)
+  // git still lists tracked files that were deleted but not yet committed
+  .filter((f) => existsSync(join(__dirname, f)));
 
 const top = (f) => f.split("/")[0];
 const isStatic = (f) =>

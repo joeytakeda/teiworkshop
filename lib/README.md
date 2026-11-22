@@ -14,7 +14,6 @@ copied into the site as they are, so pages never depend on a CDN.
 | `annotorious-2.5.10/` | 2.5.10 | Annotorious | 2021-11-18/annotate.html |
 | `annotorious-shape-labels/` | unknown | Annotorious shape-labels plugin | 2021-11-18/annotate.html |
 | `bootstrap-5.0.2/` | 5.0.2 | Bootstrap CSS | 2021-11-18/annotate.html |
-| `pico.min.css` | 1.5.x | npm `@picocss/pico` | landing page |
 | `fonts/oswald/` | variable | Google Fonts (OFL) | shared deck stylesheet |
 | `fonts/*/` (others) | | npm `@fontsource/*` 5.x, woff2 files only, CSS rewritten to them; `fira-code/` from `@fontsource-variable/fira-code`, renamed to the `Fira Code VF` and `Fira Code` families the decks use | decks, spectator demo |
 
