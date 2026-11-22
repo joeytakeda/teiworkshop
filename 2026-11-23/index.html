@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en" data-style="2024">
+<head>
+    <meta charset="utf-8"/>
+    <title>Introduction to TEI | November 23, 2026</title>
+    <!-- Slides marked data-draft are new for this deck (open with ?drafts to see them).
+         Speaker notes: press S. -->
+    <script type="module" src="./deck.js"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================
+     PART 1: WELCOME (1:30–1:40)
+     ============================================================ -->
+
+    <section class="title-slide">
+        <div class="title-grid">
+            <div class="title-text">
+                <h1 class="maintitle">Introduction to TEI</h1>
+                <p class="course">[ENGL ###]</p>
+                <div class="byline">
+                    <p>Joey Takeda</p>
+                    <p>Digital Humanities Innovation Lab, Simon Fraser University</p>
+                    <p>November 23, 2026</p>
+                </div>
+            </div>
+            <div class="facs facs-title" aria-hidden="true">
+                <img src="../images/lyrical-ballads-1798-p115.jpg" alt=""/>
+                <span class="box" data-label="head" style="--out:77px; left:22%; top:23.8%; width:54%; height:10.6%"></span>
+                <span class="box lg" data-label="lg" style="--out:50px; left:6.5%; top:49.5%; width:78%; height:16.3%"></span>
+                <span class="box lg" data-label="lg" style="--out:50px; left:6.5%; top:67.7%; width:78%; height:16%"></span>
+            </div>
+        </div>
+        <aside class="notes">PLACEHOLDER: course code and title. The page is "Lines written in early spring," Lyrical Ballads (1798), p. 115, which comes back in Part 3.</aside>
+    </section>
+
+    <section data-background-image="../images/native-land.png">
+        <div>
+            <p>Unceded territory of the səl̓ilw̓ətaʔɬ (Tsleil-Waututh), kʷikʷəƛ̓əm (Kwikwetlem), Sḵwx̱wú7mesh Úxwumixw (Squamish), and xʷməθkʷəy̓əm (Musqueam) Nations</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>About Me</h3>
+        <ul class="fragmented">
+            <li>Digital Scholarship Librarian (2026–), Digital Humanities Innovation Lab, SFU Library</li>
+            <li>Developer, DHIL (2020–2026), and still building things</li>
+            <li>BA in English from UVic; MA in English from UBC; MLIS</li>
+        </ul>
+    </section>
+
+    <section data-draft>
+        <h3>About Me</h3>
+        <div class="two-col small">
+            <div class="fragment">
+                <p><strong>Areas of support</strong></p>
+                <p>Scholarly digital projects (digital exhibits, critical editions, databases, thematic research collections); faculty and graduate student research in the Digital Humanities; integrated teaching and digital research</p>
+            </div>
+            <div class="fragment">
+                <p><strong>Research interests</strong></p>
+                <p>New forms of scholarly publishing; digital infrastructure and sustainability; "CanLit" (esp. Indigenous and diasporic literatures); Asian Canadian studies; STS; critical archival practice</p>
+            </div>
+        </div>
+        <aside class="notes">Text from your comment on v1. Merge with the previous slide or cut if time is short.</aside>
+    </section>
+
+    <section>
+        <h3>Today</h3>
+        <ol class="fragmented">
+            <li>From manuscript to type to markup</li>
+            <li>Markup as interpretation</li>
+            <li>XML and the TEI</li>
+            <li>Break</li>
+            <li>Describing your manuscript</li>
+            <li>Encoding your poem</li>
+            <li>What next?</li>
+        </ol>
+    </section>
+
+    <section data-draft>
+        <h3>Today's argument</h3>
+        <ol class="fragmented">
+            <li>Markup records what something <i>is</i>, not how it should look</li>
+            <li>An encoded text carries its interpretation with it</li>
+            <li>So encoding is a critical, editorial act</li>
+        </ol>
+        <aside class="notes">PLACEHOLDER: thesis for the afternoon. Each part returns to one claim; Part 8 closes on the third.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 2: FROM MANUSCRIPT TO TYPE TO MARKUP (1:40–1:50)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 2</p>
+        <h2>From manuscript to type to markup</h2>
+        <aside class="notes">1:40–1:50</aside>
+    </section>
+
+    <section data-draft>
+        <h3>You've already made this text twice</h3>
+        <ol>
+            <li class="fragment">Transcribing it from the manuscript</li>
+            <li class="fragment">Setting it in type</li>
+            <li class="fragment">Today: <strong>encoding</strong> it</li>
+        </ol>
+        <aside class="notes">
+            PLACEHOLDER: short framing; they already know typography from the studio, so this replaces the usual typographic opener.
+            Fallbacks if students don't have copies: (1) printed poem from the studio or a phone photo; (2) type it from memory and check with a neighbour; (3) the shared Lyon in Mourning poem, v03.0397.01.
+        </aside>
+    </section>
+
+    <section data-draft>
+        <h3>Discussion</h3>
+        <ul class="fragmented">
+            <li>What did the manuscript have that your printed version doesn't?</li>
+            <li>What did you have to decide when you set it in type?</li>
+            <li>Who is your edition for?</li>
+        </ul>
+        <aside class="notes">Board: two columns, "kept" and "lost". Come back to "lost" in Part 7: most of it can be kept in TEI, but only by deciding what each thing is.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 3: MARKUP AS INTERPRETATION (1:50–2:10)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 3</p>
+        <h2>Markup as interpretation</h2>
+        <aside class="notes">1:50–2:10</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Not just putting it online</h3>
+        <ul class="fragmented">
+            <li><strong>Digitizing for access:</strong> a scan or a web page</li>
+            <li><strong>Encoding as representation:</strong> a model that says what each part is</li>
+        </ul>
+        <blockquote class="fragment small">digital editions force us to confront the very same set of issues with far more rigor and clarity</blockquote>
+        <cite class="fragment">Julia Flanders, "The Productive Unease of 21st-century Digital Scholarship," <i>Digital Humanities Quarterly</i> 3.3 (2009), para. 22.</cite>
+        <aside class="notes">PLACEHOLDER: a scan reproduces the object; an encoding records a reading of it. "Productive unease" is Flanders's phrase (para. 12).</aside>
+    </section>
+
+    <section>
+        <h3>What is markup?</h3>
+        <p class="fragment">Markup refers to a <i>structured</i> way to identify and separate textual information</p>
+        <p class="fragment">The most common form of markup is a structure called XML (aka "pointy brackets")</p>
+    </section>
+
+    <section>
+        <div style="display:grid; grid-template-columns: 1fr auto; gap: 72pt; align-items: center; padding-right: 110px;">
+        <div>
+        <h3>Encoding, markup, et cetera...</h3>
+        <p class="fragment" data-fragment-index="0">At its core, marking up text is a way of identifying and differentiating bits of text from other bits of texts.</p>
+        <cite class="fragment fade-in" data-fragment-index="1">"Lines written in early spring," <i>Lyrical Ballads</i> (1798), p. 115. Facsimile from <a href="https://lyrical-ballads.dhil.lib.sfu.ca/early-spring.html">https://lyrical-ballads.dhil.lib.sfu.ca/early-spring.html</a></cite>
+        </div>
+        <div>
+            <div class="facs fragment" data-fragment-index="1" style="height:560px">
+                <img src="../images/lyrical-ballads-1798-p115.jpg" alt="Lyrical Ballads (1798), p. 115: Lines written in early spring"/>
+                <span class="box fragment" data-fragment-index="2" data-label="head" style="--out:77px; left:22%; top:23.8%; width:54%; height:10.6%"></span>
+                <span class="box lg fragment" data-fragment-index="3" data-label="lg" style="--out:50px; left:6.5%; top:49.5%; width:78%; height:16.3%"></span>
+                <span class="box lg fragment" data-fragment-index="3" data-label="lg" style="--out:50px; left:6.5%; top:67.7%; width:78%; height:16%"></span>
+                <span class="box l fragment" data-fragment-index="4" data-label="l" style="--out:26px; left:8%; top:50.5%; width:76.5%; height:3.3%"></span>
+                <span class="box l fragment" data-fragment-index="4" data-label="l" style="--out:26px; left:8%; top:54.2%; width:76.5%; height:3.3%"></span>
+                <span class="box l fragment" data-fragment-index="4" data-label="l" style="--out:26px; left:8%; top:58%; width:76.5%; height:3.3%"></span>
+                <span class="box l fragment" data-fragment-index="4" data-label="l" style="--out:26px; left:8%; top:61.7%; width:76.5%; height:3.3%"></span>
+            </div>
+        </div>
+        </div>
+        <aside class="notes">Replaces the O'Hara images with the instructor's Lyrical Ballads project. The boxes are positioned by eye: check them in the browser and adjust the percentages if needed. Ask: how do you know this is a poem? Where does a stanza end?</aside>
+    </section>
+
+    <section>
+        <h3>We do this all the time!</h3>
+        <p class="fragment fade-in" data-state="italic"><span class="italic">Italics</span> for emphasis</p>
+        <p class="fragment fade-in" data-state="underline"><span class="underline">Underlining</span> for titles</p>
+        <p class="fragment fade-in" data-state="bold"><span class="bold">Bold</span> for extra-emphasis</p>
+        <p class="fragment fade-in">Quotation marks for <q>outside attribution</q> or <q>skepticism</q></p>
+        <p class="fragment fade-in" data-state="yell">All capitals to <span class="yell">YELL</span></p>
+        <p class="fragment fade-in">And in manuscript: <span class="strike">crossing out</span>, <span class="interlinear">writing above the line</span></p>
+    </section>
+
+    <section data-draft>
+        <h3>Try it on paper (5 minutes)</h3>
+        <p>On your poem, bracket and label every part you can see.</p>
+        <p class="fragment">Make up your own labels.</p>
+        <aside class="notes">PLACEHOLDER: first hands-on moment before 2:45. Compare two or three students' labels (different names, different levels of detail) to set up semantics v. display now and the need for a shared vocabulary in Part 4.</aside>
+    </section>
+
+    <section>
+        <h3>Semantics v. Display</h3>
+        <p class="fragment">Semantic or Descriptive markup = encoding <i>what</i> the thing is</p>
+        <p class="fragment">Display or Presentational markup = encoding <i>how</i> you want that thing to look</p>
+        <aside class="notes">An underlined word in your manuscript: "underlined", "emphasized", or "a title"?</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Encoding preserves interpretation</h3>
+        <ul class="fragmented">
+            <li>A printed edition keeps its decisions in the apparatus, or makes them silently</li>
+            <li>An encoded text records each decision where it was made</li>
+            <li>The decisions stay in the file, open to a reader who disagrees</li>
+        </ul>
+        <aside class="notes">PLACEHOLDER: point back to the board; the "lost" column is mostly interpretation the printed version had to drop or hide.</aside>
+    </section>
+
+    <section>
+        <h3>The Process of Marking Up Texts</h3>
+        <div class="r-stack">
+            <blockquote class="fragment fade-out" data-fragment-index="0">The process is analytical, strategic, and interpretive.</blockquote>
+            <blockquote class="fragment current-visible" data-fragment-index="1">It is analytical, in identifying a set of components into which the text can meaningfully be broken and whose relationship can be represented</blockquote>
+            <blockquote class="fragment current-visible" data-fragment-index="2">Markup is strategic, in that text encoding is always aimed (deliberately or by default) at some intellectual or practical goal</blockquote>
+            <blockquote class="fragment current-visible" data-fragment-index="3">And markup is interpretive, in that the act of encoding will always take place through a connection between an observing individual and a source object.</blockquote>
+        </div>
+        <cite>Julia Flanders, Syd Bauman, and Sarah Connell. "Text Encoding." <i>Doing Digital Humanities</i>, edited by Constance Crompton, Richard Lane, and Ray Siemens. Routledge, 2016.</cite>
+    </section>
+
+    <section data-draft>
+        <h3>A model is an argument</h3>
+        <ul class="fragmented">
+            <li>To encode a text is to model it: what are its parts, and which matter?</li>
+            <li>Every model leaves things out</li>
+            <li>The TEI is a shared model, one you adapt and argue with</li>
+        </ul>
+        <cite class="fragment">See Julia Flanders and Fotis Jannidis, "Data Modeling in a Digital Humanities Context: An Introduction," in <i>The Shape of Data in Digital Humanities</i>, ed. Flanders and Jannidis (Routledge, 2019).</cite>
+        <aside class="notes">PLACEHOLDER: paraphrase, not a quotation. Optional companion line from Flanders, "Productive Unease," para. 23: "it is the act of stating rules that requires the discipline of methodological self-scrutiny."</aside>
+    </section>
+
+    <section>
+        <h3>Encoding Texts as Literary Criticism</h3>
+        <p class="fragment">Marking up text is an assertion of your knowledge and your interpretation of the text</p>
+        <p class="fragment">What does the text (form and content) express?</p>
+    </section>
+
+    <section data-draft>
+        <h3>Every edition is an argument</h3>
+        <div class="two-col">
+            <div class="fragment">
+                <p><strong>Copy-text and intention</strong></p>
+                <p class="small">Greg, Bowers, Tanselle</p>
+            </div>
+            <div class="fragment">
+                <p><strong>The social text</strong></p>
+                <p class="small">McKenzie, McGann</p>
+            </div>
+        </div>
+        <p class="fragment">Markup makes your position explicit, element by element</p>
+        <aside class="notes">OPTIONAL (~5 min): replaces the Tonra slides. Use only if the class has read editorial theory. PLACEHOLDER: add citations for the works you'd name.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 4: XML AND TEI (2:10–2:25)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 4</p>
+        <h2>XML and the TEI</h2>
+        <aside class="notes">2:10–2:25</aside>
+    </section>
+
+    <section>
+        <h3>XML</h3>
+        <div class="fragmented">
+            <p>XML = eXtensible Markup Language</p>
+            <p>XML is not a set language unto itself, but a grammar</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>XML</h3>
+        <div class="fragmented">
+            <p>There is nothing inherent about the function of XML</p>
+            <p>It is purely a structure--a way of organizing</p>
+            <p>Anyone can conceive of an XML dialect (e.g. it is extensible)</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>XML</h3>
+        <p class="fragment">XML is hierarchical</p>
+        <p class="fragment">XML is a tree-like structure</p>
+        <p class="fragment">And is often described in genealogical terms</p>
+    </section>
+
+    <section>
+        <h3>XML</h3>
+        <pre><code class="language-xml" data-trim data-line-numbers="|4|4|1|1,13|1-13|5-10|6-9" data-fragment-index="1"><script type="text/template">
+<book edition="1798">
+  <title>Lyrical Ballads</title>
+  <poem>
+    <title>Lines written in early spring</title>
+    <stanza n="1">
+      <line>I heard a thousand blended notes,</line>
+      <line>While in a grove I sate reclined,</line>
+      <line>In that sweet mood when pleasant thoughts</line>
+      <line>Bring sad thoughts to the mind.</line>
+    </stanza>
+    <!-- ... -->
+  </poem>
+</book>
+        </script></code></pre>
+        <div class="r-stack fragment" data-fragment-index="0">
+            <p class="fragment fade-out" data-fragment-index="1">The two pointy brackets is called an element</p>
+            <p class="fragment fade-out current-visible" data-fragment-index="1">E.g. <kbd>&lt;title&gt;</kbd> = the title element</p>
+            <p class="fragment fade-out current-visible" data-fragment-index="2">All elements have start and end tags<br/><kbd>&lt;title&gt;</kbd> is the start tag and <kbd>&lt;/title&gt;</kbd> is the end tag</p>
+            <p class="fragment fade-out current-visible" data-fragment-index="3">Elements can also have attributes (<kbd>@edition</kbd>)<br/>Attributes must have a value: <kbd>&lt;book <mark>edition="1798"</mark>&gt;</kbd></p>
+            <p class="fragment fade-out current-visible" data-fragment-index="4">All XML structures have a "root" (or container) element</p>
+            <p class="fragment fade-out current-visible" data-fragment-index="5">Elements nest and use genealogical terms</p>
+            <p class="fragment fade-out current-visible" data-fragment-index="6">The <kbd>stanza</kbd> element is a parent of <kbd>line</kbd></p>
+            <p class="fragment fade-out current-visible" data-fragment-index="7"><kbd>&lt;line&gt;</kbd>s are children of <kbd>&lt;stanza&gt;</kbd></p>
+        </div>
+        <aside class="notes">Replaces the recipe (your comment: use a book). Invented XML, not TEI: the tag names are just choices. What's missing? An author, a publisher, the other poems: you decide what counts.</aside>
+    </section>
+
+    <section>
+        <h3>XML Explained</h3>
+        <p class="fragment">Elements cannot overlap</p>
+        <p class="fragment r-fit-text">✅ <kbd><span>&lt;stanza&gt;</span><mark>&lt;line&gt;</mark>Bring sad thoughts to the mind.<mark>&lt;/line&gt;</mark>&lt;/stanza&gt;</kbd></p>
+        <p class="fragment r-fit-text">❌ <kbd>&lt;stanza&gt;<mark>&lt;line&gt;</mark>Bring sad thoughts to the mind.&lt;/stanza&gt;<mark>&lt;/line&gt;</mark></kbd></p>
+    </section>
+
+    <section data-draft>
+        <h3>Well-formed and valid</h3>
+        <ul class="fragmented">
+            <li><strong>Well-formed:</strong> follows XML's rules (tags close, elements nest, <kbd>&amp;</kbd> is written <kbd>&amp;amp;</kbd>)</li>
+            <li><strong>Valid:</strong> also follows a schema's rules, here the TEI's</li>
+            <li>oXygen checks both</li>
+        </ul>
+        <aside class="notes">PLACEHOLDER. 19th-century hands are full of ampersands: the first error most students hit is a bare &amp; in their transcription.</aside>
+    </section>
+
+    <section>
+        <h3>TEI and the "Hierarchy"</h3>
+        <ul>
+            <li>Text = "Ordered Hierarchy of Content Objects" [OHCO] (DeRose et al., 1990)</li>
+        </ul>
+        <cite>Steven J. DeRose, David G. Durand, Elli Mylonas, and Allen H. Renear, "What Is Text, Really?" <i>Journal of Computing in Higher Education</i> 1, no. 2 (1990): 3–26.</cite>
+    </section>
+
+    <section>
+        <h3>But this can get tricky...</h3>
+        <aside class="notes">Recall the paper exercise: which of your brackets nested, and which overlapped? A stanza running onto the next page is the classic case: TEI picks one hierarchy and marks the other with milestones like &lt;pb/&gt; and &lt;lb/&gt;.</aside>
+    </section>
+
+    <section>
+        <div class="r-stack">
+            <img class="fragment" src="../images/letter-closer-diagram.png"/>
+            <img class="fragment" src="../images/letter-closer-diagram_p1.png"/>
+            <img class="fragment" src="../images/letter-closer-diagram_p2.png"/>
+            <img class="fragment" src="../images/letter-closer-diagram_p3.png"/>
+            <img class="fragment" src="../images/letter-closer-diagram_p4.png"/>
+        </div>
+    </section>
+
+    <!-- Encoding a poem: auto-animated steps -->
+    <section data-auto-animate>
+        <pre data-id="spring"><code class="language-text" data-trim>
+LINES
+WRITTEN IN EARLY SPRING.
+
+I heard a thousand blended notes,
+While in a grove I sate reclined,
+In that sweet mood when pleasant thoughts
+Bring sad thoughts to the mind.
+
+To her fair works did nature link
+The human soul that through me ran ;
+And much it griev’d my heart to think
+What man has made of man.
+        </code></pre>
+    </section>
+
+    <section data-auto-animate>
+        <pre data-id="spring"><code class="language-xml" data-trim data-line-numbers="1,2,13"><script type="text/template">
+<div>
+  <head>Lines written in early spring</head>
+  I heard a thousand blended notes,
+  While in a grove I sate reclined,
+  In that sweet mood when pleasant thoughts
+  Bring sad thoughts to the mind.
+
+  To her fair works did nature link
+  The human soul that through me ran ;
+  And much it griev’d my heart to think
+  What man has made of man.
+
+</div>
+        </script></code></pre>
+    </section>
+
+    <section data-auto-animate>
+        <pre data-id="spring"><code class="language-xml" data-trim data-line-numbers="3-14"><script type="text/template">
+<div>
+  <head>Lines written in early spring</head>
+  <lg type="stanza">
+    <l>I heard a thousand blended notes,</l>
+    <l>While in a grove I sate reclined,</l>
+    <l>In that sweet mood when pleasant thoughts</l>
+    <l>Bring sad thoughts to the mind.</l>
+  </lg>
+  <lg type="stanza">
+    <l>To her fair works did nature link</l>
+    <l>The human soul that through me ran ;</l>
+    <l>And much it griev’d my heart to think</l>
+    <l>What man has made of man.</l>
+  </lg>
+</div>
+        </script></code></pre>
+    </section>
+
+    <section data-auto-animate>
+        <pre data-id="spring"><code class="language-xml" data-trim data-line-numbers="10|12"><script type="text/template">
+<div>
+  <head>Lines written in early spring</head>
+  <lg type="stanza">
+    <l>I heard a thousand blended notes,</l>
+    <l>While in a grove I sate reclined,</l>
+    <l>In that sweet mood when pleasant thoughts</l>
+    <l>Bring sad thoughts to the mind.</l>
+  </lg>
+  <lg type="stanza">
+    <l>To her fair works did <rs type="personification">nature</rs> link</l>
+    <l>The human soul that through me ran ;</l>
+    <l>And much it <choice><orig>griev’d</orig><reg>grieved</reg></choice> my heart to think</l>
+    <l>What man has made of man.</l>
+  </lg>
+</div>
+        </script></code></pre>
+        <aside class="notes">Interpretation step (replaces placeName/persName in O'Hara). Is nature a person here? Should "griev'd" be regularized? Each tag is a reading. PLACEHOLDER: swap in your preferred examples.</aside>
+    </section>
+
+    <section data-draft>
+        <h3>And in manuscript</h3>
+        <pre><code class="language-xml" data-trim data-line-numbers="1-3|4-7|8-11|12-13"><script type="text/template">
+<l>And cease to mourn the Ills,
+  <choice><abbr>qch</abbr><expan>which</expan></choice>
+  Britons bear.</l>
+<l>The Sun in Mists
+  <choice><abbr>&</abbr><expan>and</expan></choice>
+  Vapours hides his
+  <subst><del>Face</del><add n="^" place="above">Head</add></subst>,</l>
+<l>And gloomy Darkness
+  <choice><abbr>o’er</abbr><expan>over</expan></choice>
+  <choice><abbr>ye</abbr><expan>the</expan></choice>
+  World is spread!</l>
+<fw type="catchword" place="right">Hear,</fw>
+<pb facs="pg:399"/>
+        </script></code></pre>
+        <cite>"Upon the Tenth of June, 1747," <i>The Lyon in Mourning</i>, vol. 3, pp. 397–399. <a href="https://lyoninmourning.dhil.lib.sfu.ca/v03.0397.01.html">https://lyoninmourning.dhil.lib.sfu.ca/v03.0397.01.html</a></cite>
+        <aside class="notes">Excerpted from the project's XML (original/v03.0397.01.xml); the &amp; is shown as typed for readability (in the file it is &amp;amp;). Abbreviation and expansion, a substitution above the line, catchword and page break: the features their own poems are likely to have.</aside>
+    </section>
+
+    <section>
+        <h3>The TEI</h3>
+        <img class="r-stretch" src="../images/TEI_Logo_Horizontal_Light.png">
+    </section>
+
+    <section data-auto-animate>
+        <h3>The TEI</h3>
+        <p class="fragment">A set of guidelines for encoding text</p>
+        <p class="fragment">A non-profit organization</p>
+        <p class="fragment">A community or consortium of users</p>
+        <p class="fragment">Website: https://tei-c.org/</p>
+    </section>
+
+    <!-- Cut first if Part 4 runs long (as in 2026-04-01, where it was commented out).
+    <section>
+        <h3>The TEI: A Brief History</h3>
+        <p class="fragment">Began in 1987 with the Poughkeepsie Principles</p>
+        <p class="fragment">Proposal 1 (P1) released 1990</p>
+        <p class="fragment">HTML (v1) appears</p>
+        <p class="fragment">P3 (1994): Picking up steam</p>
+        <p class="fragment">HTML 4.01 (1999)</p>
+        <p class="fragment">P4 (2002): P3, but make it XML</p>
+        <p class="fragment">P5 (2007): The current version</p>
+    </section> -->
+
+    <section>
+        <h3>The TEI</h3>
+        <p>Offers a rich vocabulary and method to encode:</p>
+        <div class="r-fit-text">
+            <p class="fragment">Bibliographic and structural features: page breaks, headers, footers, page numbers, line breaks, divisions, paragraphs, line groups, etc</p>
+            <p class="fragment">Interpretative features: stage movement, emphasis, place names, proper names, dialogue direction, etc</p>
+            <p class="fragment">Editorial apparatus: hands, witnesses, collation, gaps, additions, deletions, etc</p>
+            <p class="fragment">Linguistic features: morphemes, feature structures, orthographic form, etc</p>
+            <p class="fragment">Spoken features: incidents, pauses, shifts, "communicative phenomenon", etc</p>
+            <p class="fragment">Metadata: various classification schemes, provenance, manuscript description, etc</p>
+            <p class="fragment">+++++</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Some Examples</h3>
+        <aside class="notes">The four sites the instructor asked students to review.</aside>
+    </section>
+
+    <section data-background-iframe="https://lyoninmourning.dhil.lib.sfu.ca/v03.0397.01.html">
+        <div>
+            <h2>The Lyon in Mourning Project</h2>
+            <p><a href="https://lyoninmourning.dhil.lib.sfu.ca/v03.0397.01.html">https://lyoninmourning.dhil.lib.sfu.ca/v03.0397.01.html</a></p>
+        </div>
+        <aside class="notes">Try the "Show Deletions", "Show Regularizations" and "Diplomatic Transcription" toggles: one encoded file, several editions.</aside>
+    </section>
+
+    <section data-background-iframe="https://lyrical-ballads.dhil.lib.sfu.ca/early-spring.html">
+        <div>
+            <h2>Lyrical Ballads (1798)</h2>
+            <p><a href="https://lyrical-ballads.dhil.lib.sfu.ca/">https://lyrical-ballads.dhil.lib.sfu.ca/</a></p>
+        </div>
+    </section>
+
+    <section data-background-iframe="https://dvpp.uvic.ca/poems/chambers_series/1850/pom_6074_the_dream.html">
+        <div>
+            <h2>Digital Victorian Periodical Poetry</h2>
+            <p><a href="https://dvpp.uvic.ca/">https://dvpp.uvic.ca/</a></p>
+        </div>
+    </section>
+
+    <section data-draft>
+        <h2>Walt Whitman Archive</h2>
+        <p><a href="https://whitmanarchive.org/item/loc.00006">https://whitmanarchive.org/item/loc.00006</a></p>
+        <aside class="notes">PLACEHOLDER: the Whitman Archive blocks embedding (X-Frame-Options: SAMEORIGIN), so this can't be a background iframe. Add a screenshot as data-background-image, or open the link live.</aside>
+    </section>
+
+    <section>
+        <div class="code-explained">
+            <pre class="compact"><code class="language-xml" data-trim data-line-numbers="|1-3,23|4-16|17|18-22|19-21" data-fragment-index="0"><script type="text/template">
+<?xml-model href=".../relaxng/tei_all.rng" ...?>
+<?xml-model href=".../relaxng/tei_all.rng" ...?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <!-- <facsimile>...</facsimile> -->
+  <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+  </text>
+</TEI>
+            </script></code></pre>
+            <div>
+                <h3>Components of a (basic) TEI file</h3>
+                <ul>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="0">Root &lt;TEI&gt; element</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="1">A &lt;teiHeader&gt; that describes both the file and the primary source that you are transcribing (if applicable)</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="2">Optionally, a &lt;facsimile&gt; element that describes the facsimile you are encoding</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="3">A &lt;text&gt; that contains the text of the document</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="4">Within text, you can have a &lt;front&gt;, &lt;body&gt;, or &lt;back&gt;</li>
+                </ul>
+            </div>
+        </div>
+        <aside class="notes">Combines the components list with the step-through. The xml-model lines are shortened to fit; the full versions are in the starter file. The facsimile comment just marks where a facsimile element would go.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 5: BREAK AND OXYGEN (2:25–2:45)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 5</p>
+        <h2>Break</h2>
+        <p>10 minutes</p>
+        <p class="small">Then: download <a href="../data/2026-11-23/poem-template.xml" download>poem-template.xml</a> and open it in oXygen</p>
+        <aside class="notes">Anyone without their poem: pick a fallback now (see notes on "You've already made this text twice").</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Getting set up in oXygen</h3>
+        <ol class="fragmented">
+            <li>Download <a href="../data/2026-11-23/poem-template.xml" download>poem-template.xml</a></li>
+            <li>Open it in oXygen (<kbd>File → Open</kbd>)</li>
+            <li>Save a copy as <kbd>yourname-poem.xml</kbd></li>
+        </ol>
+        <p class="fragment small muted">No download? <kbd>File → New → Framework templates → TEI P5 → All</kbd></p>
+    </section>
+
+    <section>
+        <h3>oXygen Tips</h3>
+        <p class="fragment">To tag element quickly, highlight + <kbd>Command + E</kbd> (<kbd>Ctrl + E</kbd>) and type in element name</p>
+        <p class="fragment">Always make sure the file is valid! Validate, validate, validate! (Red checkmark OR <kbd>Command + Shift + V</kbd>)</p>
+        <aside class="notes">Windows column added in parentheses; check the lab OS. Live demo (~5 min) with the Lyrical Ballads stanza: wrap in lg/l with Cmd+E; delete an end tag and validate; add rend to a del; hover an element for the Guidelines pop-up.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 6: DESCRIBING YOUR MANUSCRIPT (2:45–2:55)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 6</p>
+        <h2>Describing your manuscript</h2>
+        <aside class="notes">2:45–2:55</aside>
+    </section>
+
+    <section data-draft>
+        <h3>The header describes your source</h3>
+        <ul class="fragmented">
+            <li><kbd>&lt;sourceDesc&gt;</kbd> = the source itself</li>
+            <li>For a manuscript: <kbd>&lt;msDesc&gt;</kbd>, a structured manuscript description</li>
+        </ul>
+        <aside class="notes">PLACEHOLDER. Your note: linger on metadata if there's time; cut this part to this slide if not. For a book history class this is close to a catalogue record or codicological description.</aside>
+    </section>
+
+    <section data-draft>
+        <div class="code-explained">
+            <pre class="compact"><code class="language-xml" data-trim data-line-numbers="|2-7|8-14|15-25|26-29" data-fragment-index="0"><script type="text/template">
+<msDesc>
+  <msIdentifier>
+    <settlement>Burnaby</settlement>
+    <institution>Simon Fraser University</institution>
+    <repository>Special Collections and Rare Books</repository>
+    <idno>[call number]</idno>
+  </msIdentifier>
+  <msContents>
+    <msItem>
+      <locus from="12r" to="12v">ff. 12r–12v</locus>
+      <title>[title, if any]</title>
+      <incipit>[first line]</incipit>
+    </msItem>
+  </msContents>
+  <physDesc>
+    <objectDesc>
+      <supportDesc material="paper">
+        <extent>[leaves; size]</extent>
+      </supportDesc>
+    </objectDesc>
+    <handDesc>
+      <handNote xml:id="hand1">[main hand]</handNote>
+      <handNote xml:id="hand2">[later corrections]</handNote>
+    </handDesc>
+  </physDesc>
+  <history>
+    <origin><origDate>[date]</origDate></origin>
+    <provenance>[previous owners]</provenance>
+  </history>
+</msDesc>
+            </script></code></pre>
+            <div>
+                <h3>A manuscript description</h3>
+                <ul>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="0"><code>&lt;msIdentifier&gt;</code>: where it is and what it's called</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="1"><code>&lt;msContents&gt;</code> / <code>&lt;msItem&gt;</code>: what's in it</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="2"><code>&lt;physDesc&gt;</code>: what it is physically (support, extent, hands)</li>
+                    <li class="fragment fade-in-then-semi-out" data-fragment-index="3"><code>&lt;history&gt;</code>: where it's been (origin, provenance, acquisition)</li>
+                </ul>
+                <cite><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-msDesc.html">https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-msDesc.html</a></cite>
+            </div>
+        </div>
+        <aside class="notes">Combines the parts table with the step-through. Values are placeholders, not facts about the SCRB manuscript. @hand in the body points back to these handNotes.</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Discussion</h3>
+        <ul class="fragmented">
+            <li>You're all encoding poems from the same manuscript. Should every file repeat this?</li>
+            <li>What would you record that the TEI doesn't seem to ask for?</li>
+        </ul>
+        <aside class="notes">First question leads to project-level decisions (shared header, teiCorpus); second to customization in Part 8.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 7: ENCODE YOUR POEM (2:55–3:30)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 7</p>
+        <h2>Encoding your poem</h2>
+        <aside class="notes">2:55–3:30</aside>
+    </section>
+
+    <section>
+        <h3>Encoding Practice</h3>
+        <ol class="fragmented">
+            <li><strong>Structure:</strong> title, stanzas, lines</li>
+            <li><strong>The page:</strong> where pages and lines begin</li>
+            <li><strong>The hand:</strong> added, crossed out, hard to read, someone else's</li>
+            <li><strong>Your reading:</strong> spelling, abbreviations, names, notes</li>
+            <li><strong>The header:</strong> what you know about the manuscript</li>
+        </ol>
+        <aside class="notes">Go as far as you can; nobody is expected to finish. Keep the "lost" column in mind: what can you get back?</aside>
+    </section>
+
+    <section data-draft>
+        <table class="bordered">
+            <thead><tr><th></th><th>Element</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>Structure</td><td><code>&lt;head&gt;</code> <code>&lt;lg&gt;</code> <code>&lt;l&gt;</code></td><td><code>&lt;lg type="stanza"&gt;&lt;l n="1"&gt;…&lt;/l&gt;&lt;/lg&gt;</code></td></tr>
+                <tr><td>Page</td><td><code>&lt;pb/&gt;</code> <code>&lt;lb/&gt;</code></td><td><code>&lt;pb n="12v"/&gt;</code></td></tr>
+                <tr><td>Hand</td><td><code>&lt;del&gt;</code> <code>&lt;add&gt;</code> <code>&lt;subst&gt;</code></td><td><code>&lt;subst&gt;&lt;del&gt;Face&lt;/del&gt;&lt;add place="above"&gt;Head&lt;/add&gt;&lt;/subst&gt;</code></td></tr>
+                <tr><td>Hand</td><td><code>&lt;unclear&gt;</code> <code>&lt;gap/&gt;</code></td><td><code>&lt;unclear reason="faded"&gt;…&lt;/unclear&gt;</code>, <code>&lt;gap reason="illegible"/&gt;</code></td></tr>
+                <tr><td>Hand</td><td><code>&lt;hi&gt;</code></td><td><code>&lt;hi rend="underline"&gt;never&lt;/hi&gt;</code></td></tr>
+                <tr><td>Reading</td><td><code>&lt;choice&gt;</code></td><td><code>&lt;choice&gt;&lt;abbr&gt;qch&lt;/abbr&gt;&lt;expan&gt;which&lt;/expan&gt;&lt;/choice&gt;</code></td></tr>
+                <tr><td>Reading</td><td><code>&lt;choice&gt;</code></td><td><code>&lt;choice&gt;&lt;sic&gt;recieve&lt;/sic&gt;&lt;corr&gt;receive&lt;/corr&gt;&lt;/choice&gt;</code></td></tr>
+                <tr><td>Reading</td><td><code>&lt;supplied&gt;</code></td><td><code>&lt;supplied reason="damage"&gt;a&lt;/supplied&gt;</code></td></tr>
+                <tr><td>Reading</td><td><code>&lt;persName&gt;</code> <code>&lt;placeName&gt;</code> <code>&lt;rs&gt;</code></td><td><code>&lt;placeName&gt;Edinburgh&lt;/placeName&gt;</code></td></tr>
+                <tr><td>Reading</td><td><code>&lt;note&gt;</code></td><td><code>&lt;note type="editorial"&gt;…&lt;/note&gt;</code></td></tr>
+            </tbody>
+        </table>
+        <aside class="notes">Leave up during the encoding block; print as a handout.</aside>
+    </section>
+
+    <section>
+        <h2>Authorial Interventions</h2>
+        <ul class="fragmented">
+            <li><kbd>add</kbd> = an addition to the text</li>
+            <li><kbd>del</kbd> = a deletion within the text</li>
+            <li><kbd>subst</kbd> = a substitution (e.g. add + del)</li>
+            <li>These can also be placed on the page (using <kbd>@place</kbd>)</li>
+            <li>They can also be identified as belonging to different hands (using <kbd>@hand</kbd>)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Editorial Interventions</h2>
+        <ul class="fragmented">
+            <li><kbd>supplied</kbd> = text supplied for editorial reasons</li>
+            <li><kbd>gap</kbd> = text omitted for editorial reasons</li>
+            <li><kbd>note</kbd> = Usually, an editorial note (but not always)</li>
+        </ul>
+    </section>
+
+    <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html">
+        <aside class="notes">Reading the Guidelines: show how to look up an element while encoding.</aside>
+    </section>
+
+<!-- ============================================================
+     PART 8: DEBRIEF AND NEXT STEPS (3:30–3:45)
+     ============================================================ -->
+
+    <section class="divider">
+        <p class="part-no">Part 8</p>
+        <h2>What next?</h2>
+        <aside class="notes">3:30–3:45</aside>
+    </section>
+
+    <section data-background-iframe="../2026-04-01/editor/index.html">
+        <div>
+            <h2>Show and tell</h2>
+            <p>What did you encode? What did you leave out? What did you get back?</p>
+        </div>
+        <aside class="notes">Paste two or three volunteers' files into the editor to render them with CETEIcean.</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Compare with the professionals</h3>
+        <ul class="fragmented">
+            <li><a href="https://lyoninmourning.dhil.lib.sfu.ca/original/v03.0397.01.xml">Lyon in Mourning: XML for the 1747 poem</a></li>
+            <li><a href="https://lyrical-ballads.dhil.lib.sfu.ca/xml/early-spring.xml">Lyrical Ballads: XML for "Lines written in early spring"</a></li>
+        </ul>
+        <p class="fragment">What did they decide differently?</p>
+        <aside class="notes">PLACEHOLDER. Worth pointing out: the Lyrical Ballads file records display (rend="centre uppercase font-size(3mm)") and puts the poem's lg inside a p; Lyon in Mourning expands abbreviations with choice throughout. Different projects, different arguments.</aside>
+    </section>
+
+    <section>
+        <h3>What to encode?</h3>
+        <p class="fragment">Input =/= Output</p>
+        <p class="fragment">Encode what you care about and what you have time to encode</p>
+        <p class="fragment">If you don't encode it, you can't do much with it</p>
+        <p class="fragment">But: you don't need to encode or retain everything</p>
+    </section>
+
+    <section>
+        <h3>But if you tag it, you can aggregate it</h3>
+        <p><a href="https://winnifredeatonarchive.org/pseudonyms.html">WEA Pseudonyms</a></p>
+        <aside class="notes">Bridge to the class: tag every del and you can study revision across the manuscript; every @hand and you can see who intervened. 30 poems encoded the same way could be asked these questions.</aside>
+    </section>
+
+    <section>
+        <h3>TEI</h3>
+        <p class="fragment">Note that the TEI is huge (586 elements)</p>
+        <p class="fragment">No one uses the entirety of the TEI tagset</p>
+        <p class="fragment">Individual projects customize the TEI for their own needs, usually using a small subset of the overall tagset</p>
+    </section>
+
+    <section>
+        <h3>TEI Schema and Customization</h3>
+        <p class="fragment">Customization of the TEI schema is crucial</p>
+        <p class="fragment">It provides useful guidance for new encoders</p>
+        <p class="fragment">It clearly describes how you use elements</p>
+        <p class="fragment">It narrates your intentions to be interoperable</p>
+        <aside class="notes">Ties back to the msDesc discussion: a class edition of this manuscript would start by agreeing on a customization.</aside>
+    </section>
+
+    <section data-draft>
+        <h3>Your file will outlast the software</h3>
+        <ul class="fragmented">
+            <li>Plain text in an open, documented standard</li>
+            <li>One file: a web page, a print edition, a dataset</li>
+            <li>Send it to your instructor: 30 poems encoded the same way are the start of a class edition</li>
+        </ul>
+        <aside class="notes">PLACEHOLDER. Closes the third claim of the argument. Confirm with the instructor where files should go.</aside>
+    </section>
+
+    <section>
+        <h3>Okay, I'm convinced...where do I start?</h3>
+    </section>
+
+    <section data-background-image="../images/vscode.png" data-background-size="cover">
+        <div>
+            <h2>VSCode + Scholarly XML Extension</h2>
+            <p><a href="https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml">https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml</a></p>
+        </div>
+    </section>
+
+    <section data-background-image="../images/leafwriter.png" data-background-size="cover">
+        <div>
+            <h2>LEAF-Writer</h2>
+            <p><a href="https://leaf-writer.leaf-vre.org/">https://leaf-writer.leaf-vre.org/</a></p>
+        </div>
+    </section>
+
+    <section>
+        <h3>My stuff is encoded...what can I do with it?</h3>
+    </section>
+
+    <section data-background-iframe="https://teigarage.tei-c.org/">
+        <div>
+            <h2>TEI Garage</h2>
+            <p><a href="https://teigarage.tei-c.org/">https://teigarage.tei-c.org/</a></p>
+        </div>
+    </section>
+
+    <section data-background-iframe="https://teic.github.io/CETEIcean/" data-background-color="white">
+        <div>
+            <h2>CETEIcean 🐳</h2>
+            <p><a href="https://github.com/TEIC/CETEIcean">https://github.com/TEIC/CETEIcean</a></p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Learning more about the TEI</h3>
+        <ul class="small">
+            <li>The TEI Guidelines: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></li>
+            <li>TEI By Example: <a href="https://teibyexample.org/">https://teibyexample.org/</a></li>
+            <li>TEI listServ: <a href="https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L">https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L</a></li>
+            <li>Julia Flanders, "The Productive Unease of 21st-century Digital Scholarship," <i>DHQ</i> 3.3 (2009)</li>
+            <li>Flanders and Jannidis, eds., <i>The Shape of Data in Digital Humanities</i> (Routledge, 2019)</li>
+        </ul>
+        <aside class="notes">TODO (your note to self): update the TEI-L link.</aside>
+    </section>
+
+    <section class="divider closing">
+        <h2>Thanks!</h2>
+        <p>Questions?</p>
+        <p class="small muted">takeda@sfu.ca &nbsp;|&nbsp; dhil@sfu.ca &nbsp;|&nbsp; <a href="https://dhil.lib.sfu.ca">https://dhil.lib.sfu.ca</a></p>
+    </section>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,725 @@
+/* ==========================================================================
+   Deck styles for 2026-11-23: "blue pencil", dark
+
+   Markup began as instructions written on copy for the compositor, and
+   editors marked copy in a non-photo blue pencil the camera wouldn't pick up.
+   Here the slide is an ink-dark desk; everything that is *markup* (tags,
+   boxes, marginal labels, additions) is in that pale blue pencil. Correction
+   red appears only for deletions.
+
+   Type: EB Garamond (after Claude Garamont's 16th-century romans) for headings
+   and marginalia; Inter for reading text; JetBrains Mono for code.
+
+   No reveal.js theme is loaded; this file is the theme.
+   ========================================================================== */
+
+@import "@fontsource/eb-garamond/400.css";
+@import "@fontsource/eb-garamond/500.css";
+@import "@fontsource/eb-garamond/400-italic.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "reveal.js/dist/reveal.css";
+@import "../css/presentation.css";
+
+:root {
+  /* Palette */
+  --desk: #161a21;        /* blue-black ink, the ground */
+  --desk-raised: #1f242d; /* code blocks, cards */
+  --paper: #e9ebe7;       /* main text */
+  --paper-soft: #a3a9b3;  /* secondary text */
+  --rule: #343b47;        /* hairlines */
+  --pencil: #8cc8e0;      /* non-photo blue */
+  --pencil-deep: #5aa4c4; /* boxes and rules where the pale blue is too loud */
+  --iron-gall: #d9a87a;   /* attribute values, like brown manuscript ink */
+  --correction: #e5675a;  /* deletions only */
+
+  /* Type */
+  --display: "EB Garamond", Garamond, Georgia, serif;
+  --text: "Inter Variable", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", "Fira Code VF", monospace;
+
+  /* reveal.js variables */
+  --r-background-color: var(--desk);
+  --r-main-color: var(--paper);
+  --r-heading-color: var(--paper);
+  --r-link-color: var(--pencil);
+  --r-link-color-hover: var(--paper);
+  --r-selection-background-color: var(--pencil-deep);
+  --r-selection-color: var(--desk);
+  --r-block-margin: 18pt;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+.reveal-viewport {
+  background: var(--desk);
+}
+
+.reveal {
+  font-family: var(--text);
+  font-size: 24pt;
+  font-weight: 330;
+  color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+.reveal ::selection {
+  background: var(--pencil-deep);
+  color: var(--desk);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  line-height: 1.35;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--paper);
+  text-transform: none;
+  letter-spacing: -0.005em;
+  line-height: 1.08;
+  margin: 0 0 20pt;
+  text-wrap: balance;
+}
+
+.reveal h1 { font-size: 64pt; }
+.reveal h2 { font-size: 44pt; }
+.reveal h3 { font-size: 36pt; }
+
+.reveal p,
+.reveal li {
+  max-width: 34em;
+  text-wrap: pretty;
+}
+
+.reveal p {
+  margin: 0 0 12pt;
+}
+
+.reveal ul,
+.reveal ol {
+  display: block;
+  margin: 0 0 0 1.1em;
+  padding: 0;
+}
+
+.reveal li {
+  margin: 0 0 12pt;
+  padding-left: 0.2em;
+}
+
+.reveal ul li::marker {
+  color: var(--pencil);
+}
+
+.reveal ol li::marker {
+  font-family: var(--display);
+  font-size: 1.1em;
+  color: var(--pencil);
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: 600;
+}
+
+.reveal i,
+.reveal em {
+  font-style: italic;
+}
+
+.reveal a {
+  color: var(--pencil);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.reveal a:hover {
+  color: var(--paper);
+}
+
+.reveal a:focus-visible,
+.reveal button:focus-visible {
+  outline: 2px solid var(--pencil);
+  outline-offset: 3px;
+}
+
+.reveal hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 18pt 0;
+}
+
+.reveal img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.reveal img.r-stretch {
+  display: block;
+  margin: 0 auto;
+}
+
+/* The old r-fit-text blocks: a fixed, readable size instead of fitty's
+   scaling, which misbehaves with wrapped paragraphs */
+.reveal .r-fit-text {
+  display: block;
+  white-space: normal;
+  font-size: 19pt !important;
+}
+.reveal .r-fit-text p {
+  max-width: 46em;
+  margin-bottom: 9pt;
+}
+
+.reveal mark {
+  background: color-mix(in srgb, var(--pencil) 28%, transparent);
+  color: inherit;
+  padding: 0 0.1em;
+}
+
+.reveal q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* Fragments: a plain fade, no movement */
+.reveal .slides section .fragment {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Folio, progress, controls
+   -------------------------------------------------------------------------- */
+
+.reveal .slide-number {
+  background: transparent;
+  color: var(--paper-soft);
+  font-family: var(--display);
+  font-size: 19px;
+  right: auto;
+  left: 32px; /* bottom-left, clear of the navigation arrows */
+  bottom: 18px;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.reveal .slide-number a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .progress {
+  color: var(--pencil-deep);
+  height: 3px;
+  background: transparent;
+}
+
+.reveal .controls {
+  color: var(--pencil-deep);
+}
+
+/* --------------------------------------------------------------------------
+   Title slide
+   -------------------------------------------------------------------------- */
+
+.reveal .title-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48pt;
+  align-items: center;
+}
+
+.reveal .title-slide h1 {
+  font-size: 72pt;
+  margin-bottom: 12pt;
+}
+
+.reveal .title-slide .course {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 28pt;
+  color: var(--paper-soft);
+  margin-bottom: 40pt;
+}
+
+.reveal .title-slide .byline p {
+  font-size: 16pt;
+  margin: 0 0 4pt;
+  color: var(--paper-soft);
+}
+
+.reveal .title-slide .byline p:first-child {
+  font-weight: 550;
+  color: var(--paper);
+}
+
+.reveal .facs-title {
+  height: 560px;
+}
+
+/* --------------------------------------------------------------------------
+   Part dividers
+   -------------------------------------------------------------------------- */
+
+.reveal section.divider .part-no {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 26pt;
+  color: var(--pencil);
+  margin-bottom: 4pt;
+}
+
+.reveal section.divider h2 {
+  font-size: 68pt;
+  max-width: 13em;
+  margin-bottom: 18pt;
+}
+
+.reveal section.divider p:not(.part-no) {
+  color: var(--paper-soft);
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Quotations and citations
+   -------------------------------------------------------------------------- */
+
+.reveal blockquote {
+  width: auto;
+  max-width: 28em;
+  margin: 0 0 12pt;
+  padding: 0 0 0 24pt;
+  border-left: 2px solid var(--pencil-deep);
+  background: none;
+  box-shadow: none;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 32pt;
+  line-height: 1.25;
+  color: var(--paper);
+  text-align: left;
+}
+
+.reveal blockquote.small,
+.reveal .small blockquote {
+  font-size: 26pt;
+}
+
+.reveal .r-stack blockquote {
+  margin: 0;
+}
+
+.reveal cite {
+  display: block;
+  max-width: 50em;
+  margin-top: 18pt;
+  font-family: var(--text);
+  font-style: normal;
+  font-size: 12pt;
+  line-height: 1.45;
+  color: var(--paper-soft);
+  text-align: left;
+}
+
+.reveal cite i {
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Utilities used by the slides
+   -------------------------------------------------------------------------- */
+
+.reveal .small { font-size: 17pt; }
+.reveal .muted { color: var(--paper-soft); }
+
+.reveal .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40pt;
+  align-items: start;
+}
+
+.reveal .two-col > div {
+  border-top: 1px solid var(--rule);
+  padding-top: 14pt;
+}
+
+kbd,
+.reveal kbd {
+  font-family: var(--mono);
+  font-size: 0.78em;
+  font-weight: 400;
+  color: var(--paper);
+  background: var(--desk-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+}
+
+/* --------------------------------------------------------------------------
+   Code
+   -------------------------------------------------------------------------- */
+
+/* Structural rules that normally come from the reveal.js theme template:
+   stepped highlights clone <code> as absolutely positioned fragments, which
+   need a positioned <pre> and unwrapped lines to line up with the original. */
+.reveal .code-wrapper {
+  white-space: normal;
+}
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+.reveal pre code.fragment {
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  text-align: left;
+  word-wrap: break-word;
+  width: 100%;
+  margin: 0 0 12pt;
+  box-shadow: none;
+  font-family: var(--mono);
+  font-size: 13pt;
+  line-height: 1.5;
+}
+
+.reveal pre code {
+  display: block; /* no theme is loaded, so reveal leaves this inline */
+  overflow: auto;
+  word-wrap: normal;
+  max-height: 580px;
+  padding: 16pt 20pt;
+  box-sizing: border-box;
+  background: var(--desk-raised);
+  border-left: 2px solid var(--rule);
+  color: var(--paper);
+  font-family: var(--mono);
+  tab-size: 2;
+}
+
+.reveal code {
+  font-family: var(--mono);
+}
+
+.reveal table code {
+  font-size: 0.92em;
+}
+
+/* highlight.js in the deck's palette: tag names in blue pencil,
+   attribute values in iron-gall brown. */
+.reveal .hljs { background: var(--desk-raised); color: var(--paper); }
+.reveal .hljs-tag { color: var(--paper-soft); }
+.reveal .hljs-name { color: var(--pencil); font-weight: 500; }
+.reveal .hljs-attr { color: var(--paper); }
+.reveal .hljs-string { color: var(--iron-gall); }
+.reveal .hljs-comment { color: var(--paper-soft); font-style: italic; }
+.reveal .hljs-meta,
+.reveal .hljs-meta .hljs-string,
+.reveal .hljs-keyword { color: var(--paper-soft); }
+.reveal .hljs-symbol { color: var(--iron-gall); }
+
+.reveal .hljs-ln-numbers {
+  color: var(--paper-soft);
+  opacity: 0.5;
+  padding-right: 14pt !important;
+}
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.3;
+}
+.highlight-line,
+.reveal .highlight-line {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   Tables (cheat sheet, msDesc parts)
+   -------------------------------------------------------------------------- */
+
+.reveal table {
+  border-collapse: collapse;
+  margin: 0 0 12pt;
+}
+
+.reveal table.bordered {
+  width: 100%;
+  font-size: 13pt;
+}
+
+.reveal table.bordered th,
+.reveal table.bordered td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  padding: 7pt 14pt 7pt 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.reveal table.bordered th {
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--paper-soft);
+  background: none;
+}
+
+.reveal table.bordered td:first-child {
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--paper-soft);
+  font-size: 1.2em;
+}
+
+.reveal table.bordered code {
+  color: var(--pencil);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Facsimiles and images: a page lying on the desk
+   -------------------------------------------------------------------------- */
+
+.reveal .facs {
+  position: relative;
+  display: inline-block;
+  height: 480px;
+  margin: 0 auto;
+}
+
+.reveal .facs img,
+.reveal .slides section > img,
+.reveal .r-stack > img {
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.6);
+}
+
+.reveal .facs img {
+  height: 100%;
+  margin: 0;
+  display: block;
+}
+
+.reveal .facs .box {
+  position: absolute;
+  box-sizing: border-box;
+  /* on the cream page itself, the pencil has to be a real blue */
+  border: 2.5px solid #2b78ad;
+  /* slightly irregular corners, like a ring drawn by hand */
+  border-radius: 14px 6px 12px 5px / 6px 12px 5px 14px;
+}
+
+.reveal .facs .box::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(calc(var(--out, 0px) + 12px), -50%);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--pencil);
+  background: var(--desk);
+  padding: 1px 8px 3px;
+  border-radius: 3px;
+}
+
+.reveal .facs .box.lg {
+  border-width: 2px;
+}
+
+.reveal .facs .box.l {
+  border-width: 1.5px;
+  border-color: color-mix(in srgb, #2b78ad 75%, transparent);
+}
+
+.reveal .facs .box.l::after {
+  left: auto;
+  right: 100%;
+  transform: translate(calc(-1 * var(--out, 0px) - 12px), -50%);
+  font-size: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   "We do this all the time": the shared animations, recoloured
+   -------------------------------------------------------------------------- */
+
+.visible .underline:after {
+  background: var(--paper);
+}
+
+.strike {
+  position: relative;
+  display: inline-block;
+}
+
+.strike::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  top: 55%;
+  height: 2.5px;
+  width: 0;
+  background: var(--correction);
+  transition: width 0.7s ease-in-out 0.3s;
+}
+
+.visible .strike::after {
+  width: 104%;
+}
+
+.interlinear {
+  display: inline-block;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--pencil);
+  font-size: 0.85em;
+  vertical-align: 0.8em;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.9s;
+}
+
+.visible .interlinear {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Slides over a background image or iframe: a raised card
+   -------------------------------------------------------------------------- */
+
+.reveal .slides section[data-background-iframe] > div,
+.reveal .slides section[data-background-image] > div {
+  position: absolute;
+  right: 0;
+  width: 36%;
+  padding: 18pt 22pt;
+  background: color-mix(in srgb, var(--desk) 94%, transparent);
+  color: var(--paper);
+  border-left: 2px solid var(--pencil-deep);
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7);
+  font-size: 15pt;
+  text-align: left;
+}
+
+.reveal .slides section[data-background-iframe] > div h2,
+.reveal .slides section[data-background-image] > div h2 {
+  font-size: 28pt;
+  margin-bottom: 8pt;
+  color: var(--paper) !important;
+}
+
+.reveal .slides section[data-background-iframe] > div p,
+.reveal .slides section[data-background-image] > div p {
+  font-size: 13pt;
+  margin: 0;
+}
+
+.closer {
+  color: var(--paper-soft);
+}
+
+/* --------------------------------------------------------------------------
+   Drafts (only with ?drafts)
+   -------------------------------------------------------------------------- */
+
+.show-drafts .reveal .slides section[data-draft]::before {
+  content: "draft";
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--correction);
+  border-bottom: 1.5px solid var(--correction);
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section .fragment,
+  .strike::after,
+  .interlinear {
+    transition: none !important;
+  }
+  .current-fragment .italic,
+  .current-fragment .bold,
+  .current-fragment .yell {
+    animation: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Long code blocks and scrollbars
+   -------------------------------------------------------------------------- */
+
+.reveal pre.compact {
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+.reveal pre code {
+  scrollbar-width: none;
+}
+.reveal pre code::-webkit-scrollbar {
+  display: none;
+}
+
+.reveal section.closing p:not(.small) {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 30pt;
+  color: var(--paper);
+}
+
+/* --------------------------------------------------------------------------
+   Code with a synced explanation beside it
+   -------------------------------------------------------------------------- */
+
+.reveal .code-explained {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 40pt;
+  align-items: center;
+}
+
+.reveal .code-explained pre {
+  margin: 0;
+}
+
+.reveal .code-explained ul {
+  font-size: 19pt;
+}
+
+.reveal .code-explained li code {
+  font-size: 0.85em;
+  color: var(--pencil);
+}
+
+.reveal .code-explained cite {
+  font-size: 11pt;
+}
+
+.reveal .code-explained pre.compact {
+  font-size: 10.5pt;
+  line-height: 1.38;
+}
+.reveal .code-explained pre code {
+  max-height: 660px;
+}
