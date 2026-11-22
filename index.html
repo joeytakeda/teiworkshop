@@ -2,33 +2,323 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TEI Workshop Homepage</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="https://joeytakeda.github.io/css/CV.css"/>
+        <title>Workshops Homepage</title>
+        <link rel="stylesheet" href="./lib/pico.min.css"/>
+        <style>
+            :root{
+                --font-size: 16px;
+            }
+            body{
+                --accordion-open-summary-color: var(--accordion-close-summary-color);
+                --typography-spacing-vertical: 1.5em;
+                --spacing: 1em;
+            }
+            summary{
+               display: flex;
+            }
+            blockquote > p:last-child{
+                margin-bottom:0;
+            }
+            details summary:after{
+                float:none;
+                margin-left:auto;
+            }
+            time{
+                font-size: 0.8em;
+                color: var(--color-muted);
+                width: 14ch;
+            }
+            
+            .links{
+                columns: 2;
+            }
+
+            li{
+                text-wrap: balance;
+                padding: 0 0.5em;
+            }
+             
+            section:not(:has(>details)){
+                display:none;
+            }
+
+            .citations > li{
+                margin-left: 1rem;
+                text-indent: -1rem;
+                text-wrap: pretty;
+                list-style-type:none;
+            }
+        </style>
     </head>
     <body>
-        <h1>TEI Workshop, October 25, 2018</h1>
-        <p>This is the homepage for the TEI Workshop repository.</p>
-        <p>Editor</p>
-        <ul>
-            <li><a href="editor.html" target="_blank">Web based XML Editor</a></li>
-        </ul>
-        <p>Primary Source</p>
-        <ul>
-            <li><a href="https://open.library.ubc.ca/collections/chung/chungtext/items/1.0363195#p1z-3r0f:" target="_blank">Facsimile and Metadata</a> (UBC Repository)</li>
-            <li><a href="docs/transcription.txt" target="_blank">Primary Source Transcription</a> (text file)</li>
-        </ul>
-        <p>TEI Tools/Guidelines</p>
-        <ul>
-            <li><a href="http://teibyexample.org/xquery/TBEvalidator.xq" target="_blank">TEI Validator</a></li>
-            <li><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/" target="_blank">TEI Guidelines</a></li>
-            <li><a href="http://teicat.huma-num.fr/" target="_blank">TEI Critical Apparatus Toolkit</a></li>
-            <li><a href="http://oxgarage.tei-c.org/" target="_blank">OxGarage</a></li>
-        </ul>
-        <p>Presentation</p>
-        <ul>
-            <li><a href="oct25/TEIWorkshop_2.pptx" target="_blank">Powerpoint</a></li>
-            <li><a href="oct25/TEIWorkshop_2.pdf" target="_blank">PDF</a></li>
-        </ul>
+        <main class="container">
+            <hgroup>
+                <h1>Workshops</h1>
+                <h3>Joey Takeda, Digital Humanities Innovation Lab, Simon Fraser University</h3>
+            </hgroup>
+            <section id="current">
+                <hgroup>
+                    <h2>Current and Upcoming Workshops</h2>
+                </hgroup>
+                <details>
+                    <summary><time datetime="2026-04-01">April 1, 2026</time> Introduction to TEI Encoding (ENGL 832)</summary>
+                    <ul>
+                        <li><a href="2026-04-01/index.html">Presentation</a></li>
+                        <li><a href="2026-04-01/editor/index.html">Editor</a></li>
+                    </ul>
+                </details>
+            </section>
+            <section id="previous">
+                <hgroup>
+                    <h2>Past Workshops and Class Presentation s</h2>
+                </hgroup>
+                <details>
+                    <summary><time datetime="2024-04-17">April 17, 2024</time> CoLab TEI Introduction</summary>
+                    <ul>
+                        <li><a href="2024-04-17/index.html">Presentation</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2024-02-14">February 14, 2024</time> The Text Encoding Initiative (HSS24)</summary>
+                    <blockquote>
+                        <p>This workshop will introduce the Text Encoding Initiative (TEI): the de facto standard in the humanities for creating digital texts. In this workshop, we will discuss the scholarly and technical affordances are of using the TEI, answering why it is that so many digital humanities resources—including Early English Books Online (EEBO), Eighteenth Century Collections Online, and the Women Writers Project—use TEI to enrich their digital archives. We will also discuss the wide variety of tools and platforms built by the TEI community for creating, sustaining, and publishing TEI encoded texts. No prior experience with markup languages, text encoding, or the digital humanities necessary.</p>
+                        <cite>Digital Research Alliance of Canada, <a href="https://hss24.netlify.app/tei/">Humanities and Social Sciences Winter Series 2024</a></cite>
+                    </blockquote>
+                    <ul>
+                        <li><a href="2024-02-14/index.html">Presentation</a></li>
+                        <li>Projects:
+                            <ul class="links">
+                                <li><a href="https://loi.uvic.ca/archive/">Landscapes of Injustice Digital Archive</a></li>
+                                <li><a href="https://1890s.ca">The Yellow Nineties 2.0</a></li>
+                                <li><a href="https://winnifredeatonarchive.org">The Winnifred Eaton Archive</a></li>
+                                <li><a href="https://mapoflondon.uvic.ca">The Map of Early Modern London</a></li>
+                            </ul>
+                        </li>
+                        <li>Platforms, Editors, and Tools:
+                            <ul class="links">
+                                <li><a href="https://scholarlyediting.org">Scholarly Editing</a></li>
+                                <li><a href="https://roma.tei-c.org">Roma</a></li>
+
+                                <li><a href="https://www.oxygenxml.com/">oXygen XML Editor</a></li>
+                                <li><a href="https://teipublisher.com">TEI Publisher</a></li>
+                                <li><a href="https://leaf-writer.leaf-vre.org/">LEAF-Writer</a></li>
+                                <li><a href="https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml">VSCode + Scholarly XML Extension</a></li>
+                                <li><a href="https://teigarage.tei-c.org/">TEI Garage</a></li>
+                                <li><a href="https://github.com/TEIC/CETEIcean">CETEIcean 🐳</a></li>
+                            </ul>
+                        </li>
+                        <li>Resources:
+                            <ul class="links">
+                                <li><a href="https://dhsi.org/on-campus-courses2024/">DHSI: Text Encoding Fundamentals and their Application</a> (June 3–7, 2024)</li>
+                                
+                                <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">The TEI Guidelines</a></li>
+                                <li><a href="https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L">TEI listServ</a></li>
+                                <li><a href="https://teibyexample.org/">TEI By Example</a></li>
+                                <li><a href="https://github.com/TEIC/TEI">TEI GitHub</a></li>
+                            </ul>
+                        </li>
+                        <li>Citations:
+                            <ul class="citations">
+                                <li>O'Hara, Frank. "Having a Coke With You." In <i>The Collection Poems of Frank O'Hara</i>, edited by Donald Allen. University of California Press, 1991.</li>
+                                <li>Flanders, Julia, Syd Bauman, and Sarah Connell. "Text Encoding." <i>Doing Digital Humanities</i>, edited by Constance Crompton, Richard Lane, and Ray Siemens. Routledge, 2016.</li>
+                                <li>Beshero-Bondar, Elisa. "Declarative Markup in the Time of 'AI': Controlling the Semantics of Tokenized Strings." Presented at Balisage: The Markup Conference 2023, July 31 – August 4, 2023. In <i>Processings of Balisage: The Markup COnference 2023</i>. Balisage Series on Markup Technologies, vol. 28 (2023). <a href="https://doi.org/10.4242/BalisageVol28.Beshero-Bondar01">https://doi.org/10.4242/BalisageVol28.Beshero-Bondar01</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2023-11-08">November 08, 2023</time> Creating Digital Editions using TEI</summary>
+                    <blockquote>
+                        <p>The Text Encoding Initiative (TEI) is the de facto standard for digitizing and enriching textual materials and offers a robust, multi-lingual vocabulary for describing, analyzing, preserving, and publishing “texts” across various genres: poems, drama, manuscripts, tombstones, posters, audio recordings, music videos, et cetera.</p>
+                            
+                            <p>This workshop will serve as an introduction to the TEI as an encoding language, outlining how participants can use the TEI for creating their own digital editions. No prior experience with markup language, text encoding, or the digital humanities necessary.</p>
+                    </blockquote>
+                    <ul>
+                        <li><a href="2023-11-08/index.html">Presentation</a></li>
+                        <li>Links and Resources: 
+                            <ul class="links">
+                                <li><a href="https://pulterproject.northwestern.edu/">The Pulter Project</a></li>
+                                <li><a href="https://www.walter-benjamin.online/">Walter Benjamin Digital</a></li>
+                                <li><a href="https://www.oxygenxml.com/">oXygen XML Editor</a></li>
+                                <li><a href="https://leaf-writer.leaf-vre.org/">LEAF Writer</a></li>
+                                <li><a href="https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml">VSCode + Scholarly XML Extension</a></li>
+                                <li><a href="https://teigarage.tei-c.org/">TEI Garage</a></li>
+                                <li><a href="https://github.com/TEIC/CETEIcean">CETEIcean 🐳</a></li>
+                                <li><a href="https://scholarlyediting.org">Scholarly Editing</a></li>
+                                <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">The TEI Guidelines</a></li>
+                                <li><a href="https://teibyexample.org/">TEI By Example</a></li>
+                                <li><a href="https://github.com/TEIC/TEI">TEI GitHub</a></li>
+                                <li><a href="https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L">TEI listServ</a></li>
+                                <li><a href="https://ccdhhn.ca/">The Canadian Certificate in Digital Humanities/Certificat canadien en Humanités Numériques</a></li>
+                                <li><a href="https://www.lib.sfu.ca/about/reach-us/news-events/workshops/upcoming">SFU Research Commons Workshops</a></li>
+                                <li><a href="https://programminghistorian.org/">The Programming Historian (tutorials)</a></li>
+                                <li><a href="https://dcl.luddy.indiana.edu/cbml/">Comic Book Markup Language (CBML)</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li>Citations and Further Resources:
+                            <ul class="citations">
+                                <li>Patrick Sahle, "What is a Scholarly Digital Edition?" <i>Digital Scholarly Editing: Theories and Practices</i>, edited by Matthew James Driscoll and Elena Pierazzo. Open Book Publishers, 2016.</li>
+                                <li>Lou Burnard, "Conclusion: what <i>is</i> the TEI?" <i>What is the Text Encoding Initiative: How to Add Intelligent Markup to Digital Resources</i>. OpenEdition Press, 2014. </li>
+                                <li>Julia Flanders, Syd Bauman, and Sarah Connell. "Text Encoding." <i>Doing Digital Humanities</i>, edited by Constance Crompton, Richard Lane, and Ray Siemens. Routledge, 2016.</li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </details>
+
+                <details>
+                    <summary><time datetime="2023-03-29">March 29, 2023</time> Introduction to XPath </summary>
+                    <ul>
+                        <li><a href="2023-03-29/presentation/index.html">Presentation</a></li>
+                        <li><a href="2023-03-29/presentation/dist/hamlet.xml" download="hamlet.xml">Download Hamlet</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2023-03-17">March 17, 2023</time> Introduction to TEI </summary>
+                    <ul>
+                        <li><a href="2023-03-17/index.html">Presentation</a></li>
+                        <li><a href="data/wea_bio.zip">WEA Bio Example</a></li>
+                        <li><a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>
+                            <ul>
+                                <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html">"Performance Texts"</a>
+                                    <ul>
+                                        <li>Page beginning: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html">&lt;pb&gt;</a></li>
+                                        <li>Speech: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html">&lt;sp&gt;</a></li>
+                                        <li>Speaker: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-speaker.html">&lt;speaker&gt;</a></li>
+                                        <li>View: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-view.html">&lt;view&gt;</a></li>
+                                        <li>Sound: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sound.html">&lt;sound&gt;</a></li>
+                                        <li>Stage: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html">&lt;stage&gt;</a></li>
+                                        <li>Paragraph: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html">&lt;p&gt;</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://winnifredeatonarchive.org/docs/index.html">WEA Documentation</a> (Esp: <a href="https://winnifredeatonarchive.org/docs/encoding.html">Encoding instructions</a>)</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2022-10-26">October 26, 2022</time> TEI and the Lyon in Mourning </summary>
+                    <ul>
+                        <li><a href="2022-10-26/index.html">Presentation</a></li>
+                        <li>Exercise 1: Transcription
+                            <ul>
+                                <li><a href="https://iiif.bodleian.ox.ac.uk/iiif/viewer/390fd0e8-9eae-475d-9564-ed916ab9035c/#?c=0&amp;m=0&amp;s=0&amp;cv=36&amp;r=0&amp;xywh=-1110%2C1911%2C8467%2C5011"><i>The Tempest</i>, F1</a> from the Bodleian</li>
+                                <li><a href="2022-10-26/tempest.docx">Word Document</a></li>
+                            </ul>
+                        </li>
+                        <li>Exercise 2: Encoding
+                            <ul>
+                                <li><a href="2022-10-26/editor.html">Online editor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2022-02-10">February 10, 2022</time> Introduction to the Digital Humanities </summary>
+                    <ul>
+                        <li><a href="2022-02-10/index.html">Presentation</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2021-11-18">November 18, 2021</time> Introduction to TEI and Encoding Workshop </summary>
+                    <ul>
+                        <li><a href="2021-11-18/index.html">Presentation</a></li>
+                        <li><a href="images/v01.0068.01.jpg">Download image of "Copy of a Letter to mr Robert Forbes at My Lady Bruce's Lodgings, Leith"</a></li>
+                        <li><a href="2021-11-18/annotate.html">Exercise: Annotation</a></li>
+                        <li><a href="2021-11-18/editor.html">Exercise: Editor</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2021-10-28">October 28, 2021</time> Introduction to TEI and WEA Encoding Workshop </summary>
+                    <ul>
+                        <li><a href="2021-10-28/index.html">Presentation</a></li>
+                        <li><a href="data/wea_bio.zip">WEA Bio Example</a></li>
+                        <li><a href="https://winnifredeatonarchive.org/docs/index.html">WEA Documentation</a> (Esp: <a href="https://winnifredeatonarchive.org/docs/encoding.html">Encoding instructions</a>)</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2021-01-19">January 19, 2021</time> What is the TEI and Why Should I Care? </summary>
+                    <ul>
+                        <li><a href="2021-01-19/index.html">Presentation</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2020-11-23">November 23, 2020</time> Introduction to the Digital Humanities </summary>
+                    <ul>
+                        <li><a href="2020-11-23/presentation/index.html">Presentation</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2020-07-07">July 07, 2020</time> Introduction to the Text Encoding Initiative </summary>
+                    <ul>
+                        <li><a href="2020-07-07/july07.pdf">Presentation</a></li>
+                        <li><a href="2018-10-25/editor.html">Online Editor</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2019-04-15">April 15, 2019</time> What is Text Encoding and Why Should I Care? </summary>
+                    <ul>
+                        <li>
+                            <a href="2019-04-15/ENGLTEIWorkshop.pdf">Presentation</a>
+                        </li>
+                    </ul>
+                </details>
+                
+                <details>
+                    <summary><time datetime="2018-10-25">October 25, 2018</time> So I Want To Use the TEI... Now What? </summary>
+                    <ul>
+                        <li>Presentation 
+                            <ul>
+                                <li><a href="2018-10-25/TEIWorkshop_2.pptx">Powerpoint</a></li>
+                                <li><a href="2018-10-25/TEIWorkshop_2.pdf">PDF</a></li>
+                            </ul>
+                        </li>
+                        <li>Editor
+                            <ul>
+                                <li><a href="2018-10-25/editor.html">Web based XML Editor</a></li>
+                            </ul>
+                        </li>
+                        <li>Primary Source 
+                            <ul>
+                                <li><a href="https://open.library.ubc.ca/collections/chung/chungtext/items/1.0363195#p1z-3r0f:">Facsimile and Metadata</a> (UBC Repository)</li>
+                                <li><a href="2018-10-25/docs/transcription.txt">Primary Source Transcription</a> (text file)</li>
+                            </ul>
+                        </li>
+                        <li>TEI Tools/Guidelines 
+                            <ul>
+                                <li><a href="http://teibyexample.org/xquery/TBEvalidator.xq">TEI Validator</a></li>
+                                <li><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/">TEI Guidelines</a></li>
+                                <li><a href="http://teicat.huma-num.fr/">TEI Critical Apparatus Toolkit</a></li>
+                                <li><a href="http://oxgarage.tei-c.org/">OxGarage</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><time datetime="2018-09-20">September 20, 2018</time> What is the TEI and Why Should I Care? </summary>
+                    <ul>
+                        <li><a href="2018-09-20/TEIWorkshop_1.pdf">Presentation</a></li>
+                    </ul>
+                </details> 
+            </section>
+         <script>
+            document.querySelectorAll('a[href]').forEach(link => {
+                link.setAttribute('target','_blank');
+            });
+            document.querySelectorAll('time[datetime]').forEach(el => {
+                const date = new Date(`${el.dateTime}T12:00:00`);
+                const formatted = date.toLocaleString('en-US', {
+                    month: 'short',
+                    day: '2-digit',
+                    year: 'numeric'
+                });
+                el.innerText = formatted;
+            });
+            document.querySelector('details').open = true;
+        </script>
+        </main>
     </body>
+
 </html>

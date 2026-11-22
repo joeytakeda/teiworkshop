@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2021">
+<head>
+    <title>ENGL415 Talk</title>
+    <link href="../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../lib/reveal-4.0.2/theme/black.css"/>
+    <link rel="stylesheet" href="../css/presentation.css"/>
+    <link rel="stylesheet" href="../lib/fonts/fira-code/fira_code.css"/>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="title-slide slide">
+            <h3 class="maintitle">ENGL415: The Lyon in Mourning Project</h3>
+            <hr/>
+            <p style="text-align:center; font-size:90%">Joey Takeda, SFU DHIL</p>
+            <p style="text-align:center; font-size:90%">February 12, 2022</p>
+        </section>
+        
+        <section>
+            <h2 class="r-fit-text">What is/are the Digital Humanities</h2>
+            <ul>
+                <li class="fragment">The study of texts--broadly defined--using digital methodologies</li>
+                <li class="fragment">The study of the digital--broadly defined--using textual methodologies</li>
+                <li class="fragment">A heavily debated definition!</li>
+            </ul>
+        </section>
+        <section>
+            <blockquote>
+                At its core, then, digital humanities is more akin to a common methodological outlook than an investment in any one specific set of texts or even technologies.
+            </blockquote>
+            <cite>Matthew Kirschenbaum, "What is Digital Humanities and What's It Doing in English Departments?" (<a href="https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/f5640d43-b8eb-4d49-bc4b-eb31a16f3d06#ch01">Debates in DH</a>)</cite>
+        </section>
+        
+        <section>
+            <h2>Digital Humanities @ SFU</h2>
+            <img class="r-stretch" src="https://dhil.lib.sfu.ca/pi/images/DHIL-Logo-Horizontal.png"/>
+        </section>
+        <section>
+            <h2>The DHIL supports researchers</h2>
+            <ol class="fragmented">
+                <li>Consultations</li>
+                <li>Digital project support</li>
+                <li>Continuing project support</li>
+                <li>Exploratory work</li>
+                <li>Research-integrated training</li>
+                <li>Course-integrated training</li>
+            </ol>
+        </section>
+        
+        <section data-background-iframe="https://womensprinthistoryproject.com">
+            <div>
+                <h2>Women's Print History Project</h2>
+                <p>https://womensprinthistoryproject.com</p>
+                <p>PI: Michelle Levy</p>
+            </div>
+        </section>
+        
+        <section data-background-iframe="https://dhil.lib.sfu.ca/circus">
+            <div>
+                <h2>Reconstructing Early Circus</h2>
+                <p>https://dhil.lib.sfu.ca/circus/</p>
+                <p>PI: Leith Davis</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Textual Digital Humanities</h2>
+        </section>
+        
+        <section>
+            <p>One way to understand the digital humanities is through manipulation, adaptation, transformation, translation, conjecture, play</p>
+            <p class="fragment">Words <img src="../images/arrow.svg" class="svg"/> Data</p>
+            <p class="fragment">Words <img src="../images/arrow.svg" class="svg"/> Numbers</p>
+            <p class="fragment">Words <img src="../images/arrow.svg" class="svg"/> Words</p>
+        </section>
+        
+        <section>
+            <h4><q>Conjectural Criticism</q></h4>
+            <div>
+                <blockquote>
+                    But if the computer can count numbers like a mathematician, it can also play with letters in ways, as we shall see, that poets and textual scholars alike would recognize.
+                </blockquote>
+            </div>
+            
+            <cite>Kari Kraus, "Conjectural Criticism: Computing Past and Future Texts" (<a href="http://www.digitalhumanities.org/dhq/vol/3/4/000069/000069.html">DHQ</a>)</cite>
+        </section>
+        
+        
+        <section>
+            <h3>The Lyon in Mourning Project</h3>
+            <p class="fragment">Two interrelated goals: networks and textual scholarship</p>
+
+        </section>
+        
+        <section>
+            <h3>Describing the Text(s)</h3>
+            <p class="fragment">Who? What? Where?</p>
+            <p class="fragment">Identifying authors, senders, receivers, etc</p>
+            <p class="fragment">Classifying individual items, their genre(s), etc</p>
+            <p class="fragment">Reconciling the manuscript with the Paton edition</p>
+            <p class="fragment">Identifying people, places, objects, etc</p>
+        </section>
+        
+        <section>
+            <h3>Describing the Text(s)</h3>
+            <p class="fragment">What constitutes an item?</p>
+            <p class="fragment">Find the item!</p>
+        </section>
+        <section data-background-image="../images/0106.jpg" data-background-size="contain"></section>
+        
+        <section>
+            <h3>Digital Editing</h3>
+            <p class="fragment">The Lyon in Mourning project uses TEI-XML as a way to "mark-up," or identify, discrete segments of the text</p>
+            <p class="fragment">Striking a balance between "linguistic" and "bibliographic" codes (Jerome McGann, <i>The Textual Condition</i>)--i.e. reading across form and content, negotiating interpretation and fidelity</p>
+            <p class="fragment">What do italics <i>mean</i> in this context? What does a horizontal line signify? Do we care?</p>
+        </section>
+        
+        <section>
+            <h3>Digital Edition / Textual Editing</h3>
+            <div>
+                <div class="r-stack">
+                    <p class="fragment fade-out">At its core, textual encoding is a way of identifying and differentiating bits of text from other bits of texts.</p>
+                    <p class="fragment">We do this all the time!</p>
+                    
+                </div>
+                <p class="fragment fade-in" data-state="italic"><span class="italic">Italics</span> for emphasis</p>
+                <p class="fragment fade-in" data-state="underline"><span class="underline">Underlining</span> for titles</p>
+                <p class="fragment fade-in" data-state="bold"><span class="bold">Bold</span> for extra-emphasis</p>
+                <p class="fragment fade-in">Quotation marks for <q>outside attribution</q> or <q>skepticism</q></p>
+                <p class="fragment fade-in" data-state="yell">All capitals to <span class="yell">YELL</span></p>
+                <p class="fragment fade-in">+++</p>
+            </div>    
+        </section>
+        
+
+        <section>
+            <h3>Forbes as Transcriber</h3>
+            <p class="fragment">Forbes goes to greath lengths to represent his source material as accurately as possible</p>
+        </section>
+        
+        <section data-background-image="../images/0022.jpg" data-background-size="contain"></section>
+        
+ 
+        <section>
+            <h3>Why TEI?</h3>
+            <p class="fragment">Since TEI can represent both the linguistic and bibliographic codes, we can have multiple renderings of the same transcription</p>
+        </section>
+        
+        <section data-background-iframe="../spectator/index.html"></section>
+        
+        <section>
+            <h3>Transcription</h3>
+            <p class="fragment">No transcription is neutral</p>
+            <p class="fragment">Transcribing = Critical Editing</p>
+            <p class="fragment">Involves making critical interpretive decisions</p>
+        </section>
+        
+        <section>
+            <h3>Thanks!</h3>
+            <p>Contact: takeda@sfu.ca</p>
+            <p>DHIL: https://dhil.lib.sfu.ca</p>
+        </section>
+      
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../lib/reveal-4.0.2/reveal.esm.js";
+    import Highlight from "../lib/reveal-4.0.2/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../js/presentation.js";
+    initDeck(Reveal, { plugins: [Highlight] });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2021">
+<head>
+    <title>Introduction to TEI and WEA Encoding Workshop</title>
+    <link href="../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../lib/reveal-4.0.2/theme/black.css"/>
+    <link rel="stylesheet" href="../css/presentation.css"/>
+    <link rel="stylesheet" href="../lib/fonts/fira-code/fira_code.css"/>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section id="encoding-screenplays" class="title-slide slide">
+            <h3 class="maintitle">Encoding Screenplays</h3>
+            <hr/>
+            <p style="text-align:center; font-size:90%">Joey Takeda, SFU DHIL</p>
+            <p style="text-align:center; font-size:90%">March 17, 2023</p>
+        </section>
+<!--        <section>
+            <h3>Outline</h3>
+            <p>Markup and Text Encoding</p>
+            <p>Screenplays as Texts</p>
+            <p>Encoding in TEI</p>
+        </section>-->
+        <section>
+            <h3>Encoding, markup, et cetera...</h3>
+            <div>
+                <div class="r-stack">
+                    <p class="fragment fade-out">At its core, textual encoding is a way of identifying and differentiating bits of text from other bits of texts.</p>
+                    <p class="fragment">We do this all the time!</p>
+                    
+                </div>
+                <p class="fragment fade-in" data-state="italic"><span class="italic">Italics</span> for emphasis</p>
+                <p class="fragment fade-in" data-state="underline"><span class="underline">Underlining</span> for titles</p>
+                <p class="fragment fade-in" data-state="bold"><span class="bold">Bold</span> for extra-emphasis</p>
+                <p class="fragment fade-in">Quotation marks for <q>outside attribution</q> or <q>skepticism</q></p>
+                <p class="fragment fade-in" data-state="yell">All capitals to <span class="yell">YELL</span></p>
+                <p class="fragment fade-in">+++</p>
+            </div>
+           
+        </section>
+
+        <section>
+            <h3>Encoding, markup, et cetera...</h3>
+                <p class="fragment">But these are contextual and local</p>
+                <p class="fragment">E.g. different types of punctuation for levels of quotation</p>
+                <p class="fragment">And they are subject to varying interpretations</p>
+                <p class="fragment">E.g. I think these quotation marks denote a term, but maybe the author is just being sarcastic...</p>
+        </section>
+        
+        <section>
+            <h3>Encoding Texts as Literary Criticism</h3>
+            <p>Marking up text is an assertion of your knowledge and your interpretation of the text</p>
+            <p>What does the text (form and content) express?</p>
+        </section>
+        
+        <section>
+            <div class="r-stack">
+                <blockquote class="fragment fade-out" data-fragment-index="0">The process is analytical, strategic, and interpretive.</blockquote>
+                
+                <blockquote class="fragment current-visible" data-fragment-index="1">It is analytical, in identifying a set of components into which the text can meaningfully be broken and whose relationship can be represented</blockquote>
+                
+                <blockquote class="fragment current-visible" data-fragment-index="2">Markup is strategic, in that text encoding is always aimed (deliberately or by default) at some intellectual or practical goal</blockquote>
+                
+                <blockquote class="fragment current-visible" data-fragment-index="3">And markup is interpretive, in that the act of encoding will always take place through a connection between an observing individual and a source object.</blockquote>
+                
+            </div>
+            <cite>Julia Flanders, Syd Bauman, and Sarah Connell. "Text Encoding." <i>Doing Digital Humanities</i>, edited by Constance Crompton, Richard Lane, and Ray Siemens. Routledge, 2016.</cite>
+        </section>
+
+        <section>
+            <h3>XML</h3>
+               <div class="r-stack">
+                   <div class="fragment fade-in fade-out" data-fragment-index="0">
+                       <p>XML = eXtensible Markup Language</p>
+                       <p>XML is not a set language unto itself, but a grammar</p>
+                   </div>
+                   <div class="fragment current-visible" data-fragment-index="0">
+                       <p>There is nothing inherent about the function of XML</p>
+                       <p>It is purely a structure--a way of organizing</p>
+                       <p>Anyone can conceive of an XML dialect (e.g. it is extensible)</p>
+                   </div>
+               </div> 
+
+        </section>
+
+        <section>
+            <h3>XML is Everywhere</h3>
+                <p class="fragment">HTML (HyperText Markup Language: Every website)</p>
+                <p class="fragment">KML (Keyhole Markup Language: Google Maps)</p>
+                <p class="fragment">RDF (Resource Description Framework: Library catalogues)</p>
+                <p class="fragment">SVG (Scalable Vector Graphics: Digital Images)</p>
+                <p class="fragment">OOXML (Open Office XML: This presentation, word documents, et cetera)</p>
+        </section>
+        
+        <section>
+            <h3>XML Markup</h3>
+            <p class="fragment">Markup codifies intentions</p>
+            <div class="r-stack">
+                <p class="fragment current-visible">
+                    <code class="xml">
+                        "Sure"
+                    </code>   
+                </p>
+                
+                <p class="fragment current-visible"><code class="xml">
+                    &lt;quotation&gt;Sure&lt;/quotation&gt;
+                </code></p>
+                <p class="fragment current-visible">   <code class="xml">
+                    &lt;sarcasm&gt;Sure&lt;/sarcasm&gt;
+                </code></p>
+                <p class="fragment current-visible"> <code class="xml">
+                    &lt;skepticism&gt;Sure&lt;/skepticism&gt;
+                </code></p>
+                <p class="fragment current-visible"> <code class="xml">
+                    &lt;title&gt;Sure&lt;/title&gt;
+                </code></p>
+                
+            </div>
+           
+        </section>
+
+        <section>
+            <h3>XML</h3>
+            <p class="fragment">XML is hierarchical</p>
+            <p class="fragment">XML is a tree-like structure</p>
+            <p class="fragment">And is often described in genealogical terms</p>
+        </section>
+
+        <section>
+            <h3>XML</h3>
+            
+                <p class="fragment">Think of the hierarchy of the book:</p>
+                <p class="fragment">Book</p>
+                <p class="fragment" style="padding-left:2rem">Chapters</p>
+                <p class="fragment" style="padding-left:4rem">Sections</p>
+                <p class="fragment" style="padding-left:6rem;">Paragraphs</p>
+                <p class="fragment" style="padding-left:8rem">Sentences</p>
+                <p class="fragment" style="padding-left:10rem">Words</p>
+                <p class="fragment" style="padding-left:12rem">Letters</p>
+        </section>
+        
+        <section>
+            
+            <h3>XML</h3>
+            <pre>
+<code class="xml" style="height: 50vh" data-noescape="true">
+ &lt;book&gt;
+    &lt;chapter&gt;
+        &lt;section&gt;
+            &lt;paragraph&gt;
+                &lt;sentence&gt;
+                    &lt;word&gt;
+                        &lt;letter&gt;&lt;/letter&gt;
+                    &lt;/word&gt;
+                &lt;/sentence&gt;
+            &lt;/paragraph&gt;
+        &lt;/section&gt;
+    &lt;/chapter&gt;
+&lt;/book&gt; 
+            </code> 
+                
+            </pre>
+
+        </section>
+
+        <section>
+            <h3>XML Explained</h3>
+            
+                <p class="fragment">The two pointy brackets is called an element</p>
+                <p class="fragment">E.g. &lt;book&gt; would be called the book element</p>
+                <p class="fragment">All elements have start and end tags</p>
+                <p class="fragment">E.g. &lt;book&gt; is the start tag and &lt;/book&gt; is the end tag</p>
+               
+        </section>
+        
+        <section>
+            <h3>XML Explained</h3>
+            <p class="fragment">Elements can also have attributes and each attribute must have a value</p>
+            <p class="fragment">E.g. &lt;book type= "primary"&gt; has a type attribute with the value of primary</p>
+            <p class="fragment">(Think of attributes as you would in everyday life; people don't have "height" or "age" without a value)</p>
+            
+        </section>
+
+        <section>
+            <h3>XML Explained</h3>
+            
+                <p class="fragment">Elements cannot overlap</p>
+                <p class="fragment">&lt;sentence&gt;&lt;word&gt;Word1&lt;/word&gt;&lt;/sentence&gt; is right</p>
+                <p class="fragment">&lt;sentence&gt;&lt;word&gt;Word1&lt;/sentence&gt;&lt;/word&gt; is wrong</p>
+                <p class="fragment">Elements nest and use genealogical terms</p>
+                <p class="fragment">There is always a root element</p>
+        </section>
+        
+        <section>
+            <h3>The TEI</h3>
+            <p class="fragment">A set of guidelines for encoding text</p>
+            <p class="fragment">A non-profit organization</p>
+            <p class="fragment">A community or consortium of users</p>
+            <p class="fragment">Website: https://tei-c.org/</p>
+        </section>
+        
+        <section>
+            <h3>The TEI is</h3>
+            
+            <p class="fragment">A markup language written in XML</p>
+            <p class="fragment">Currently in its 5th  major revision (P5 4.5.0)</p>
+            <p class="fragment">Used by many projects across the world in many different languages and for many different reasons</p>
+        </section>
+        
+        <section>
+            <h3>What the TEI is not</h3>
+            
+            <p class="fragment">A language that describes how a text should be displayed online or in print: "performative and expressive significance of the input" vs  "the aesthetics of the output".</p>
+            
+            <p class="fragment">A programming language: encoding your texts in TEI does not automatically do anything to them</p>
+            <p class="fragment">Caveat: There are many, many tools for transforming TEI into other formats (Word documents, PDFs, and, of course, websites)</p>
+            
+        </section>
+       
+
+        <section>
+            <h3>Components of a (basic) TEI file</h3>
+            
+                <p class="fragment">Root &lt;TEI&gt; element</p>
+                <p class="fragment">A &lt;teiHeader&gt; that describes both the file and the primary source that you are transcribing (if applicable)</p>
+                <p class="fragment">A &lt;text&gt; that contains the text of the document</p>
+                <p class="fragment">Within text, you can have a &lt;front&gt;, &lt;body&gt;, or &lt;back&gt;</p>
+        </section>
+
+        <section>
+            <h3>TEI</h3>
+            <pre>
+                <code class="xml">
+&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+  &lt;teiHeader&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+         &lt;/titleStmt&gt;
+         &lt;publicationStmt&gt;
+            &lt;p&gt;Publication Information&lt;/p&gt;
+         &lt;/publicationStmt&gt;
+         &lt;sourceDesc&gt;
+            &lt;p&gt;Information about the source&lt;/p&gt;
+         &lt;/sourceDesc&gt;
+      &lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+      &lt;body&gt;
+         &lt;p&gt;Some text here.&lt;/p&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+                </code>
+            </pre>
+        </section>
+        
+        <section>
+            <h3>Practice: Encoding your Biographical Information</h3>
+            <p class="fragment">Download: <br/>
+                <a href="https://sfu.ca/~takeda/teiworkshop/2023-03-17/wea_bio.zip">https://sfu.ca/~takeda/teiworkshop/2023-03-17/wea_bio.zip</a></p>
+            <p class="fragment">Moving to screenshare....</p> 
+        </section>
+        
+        <section>
+            <h3>oXygen Tips</h3>
+            <p>To tag element quickly, highlight + Command + E and type in element name</p>
+            <p>Always make sure the file is valid! Validate, validate, validate! (Red checkmark OR Command + Shift + V)</p>
+
+        </section>
+        
+        <section>
+            <h3>The TEI</h3>
+            <p>Offers a rich vocabulary and method to encode:</p>
+            <div class="r-fit-text fragment">
+                <p>Bibliographic and structural features: page breaks, headers, footers, page numbers, line breaks, divisions, paragraphs, line groups, etc</p>
+                <p>Interpretative features: stage movement, emphasis, place names, proper names, dialogue direction, etc</p>
+                <p>Editorial apparatus: hands, witnesses, collation, gaps, additions, deletions, etc</p>
+                <p>Linguistic features: morphemes, feature structures, orthographic form, etc</p>
+                <p>Spoken features: incidents, pauses, shifts, "communicative phenomenon", etc</p>
+                <p>Metadata: various classification schemes, provenance, manuscript description, etc</p>
+                <p>+++++</p>   
+            </div>
+        </section>
+        
+
+        <section>
+            <h3>TEI</h3>
+            
+                <p class="fragment">Note that the TEI is huge (569 elements)</p>
+                <p class="fragment">No one uses the entirety of the TEI tagset</p>
+                <p class="fragment">Individual projects customize the TEI for their own needs, usually using a small subset of the overall tagset</p>
+                <p class="fragment">E.g. Drama projects will use the drama tagset (&lt;sp&gt; for speech, &lt;speaker&gt; for speaker, et cetera) and discard the linguistic/dictionary tagset (&lt;entry&gt; for dictionary entries, &lt;m&gt; for morpheme, etc).</p>
+        </section>
+        
+        <section>
+            <h3>Schema</h3>
+            <p class="fragment">The TEI is one big schema: a set of rules about how things are structured</p>
+            <p class="fragment">TEI projects usually customize their schema to use only a subset</p>
+            <p class="fragment">The WEA uses 151 elements (and, in reality, probably way fewer)</p>
+            <p class="fragment">And soon, we'll use more!</p>
+        </section>
+       
+        <section>
+            <h3>Screenplays</h3>
+        </section>
+        
+        <section data-background-image="../images/screenplay.png" data-background-size="contain">
+            
+        </section>
+        
+        <section data-background-image="../images/screenplay-marked.png" data-background-size="contain">
+            
+        </section>
+        
+        <section xml:space="preserve">
+            <pre>
+                            <code class="xml">
+&lt;pb n=&quot;1&quot;/&gt;
+&lt;byline&gt;
+   Treatment and dialogue by:
+   &lt;name ref=&quot;pers:WE1&quot;&gt;Winnifred Reeve&lt;/name&gt;
+&lt;/byline&gt;
+&lt;noteGrp type=&quot;annotation&quot;
+place=&quot;top right&quot;&gt;
+   &lt;note&gt;From P.1 to 38 this all new original
+   material by Reeve&lt;/note&gt;
+   &lt;note&gt;Also last sequences practically 
+   original except for block incident&lt;/note&gt;
+&lt;/noteGrp&gt;
+&lt;head&gt;Ropes&lt;/head&gt;
+&lt;opener&gt;
+   &lt;byline&gt;By
+      &lt;lb/&gt;&lt;name&gt;Wilbur Daniel
+      Steele&lt;/name&gt;
+   &lt;/byline&gt;
+&lt;/opener&gt;
+</code>
+            </pre>
+            
+        </section>
+        
+        
+        <section xml:space="preserve">
+            <pre>
+                <code class="xml">
+ &lt;p&gt;&lt;wea:slugline&gt;Look-out station.&lt;/wea:slugline&gt; Paul is 
+ smiling as he looks through glasses. The other boy, 
+ also with glasses, is looking through them at the water.&lt;/p&gt;
+   &lt;sp&gt;
+      &lt;speaker&gt;Life Guard&lt;/speaker&gt;
+      &lt;p&gt;The water&apos;s pretty rough.&lt;/p&gt;
+   &lt;/sp&gt;
+   &lt;sp&gt;
+      &lt;speaker&gt;Paul&lt;/speaker&gt;
+      &lt;p&gt;Look at that girl.&lt;/p&gt;
+   &lt;/sp&gt;
+   &lt;sp&gt;
+      &lt;speaker&gt;Life Guard&lt;/speaker&gt;
+      &lt;p&gt;And there&apos;s a powerful undertow off there.&lt;/p&gt;
+   &lt;/sp&gt;
+</code>
+            </pre>
+            
+        </section>
+        
+        
+        
+        <section>
+            <h3>The Guidelines: Some Examples</h3>
+        </section>
+        
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">
+            
+        </section>
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-castList.html">
+            
+        </section>
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-view.html">
+            
+        </section>
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sound.html">
+            
+        </section>
+        
+        <section>
+            <h3>Encoding</h3>
+        </section>
+        
+        <section>
+            <h3>Setting Up</h3>
+            <p class="r-fit-text">Download encoding package from<br/> https://jenkins.hcmc.uvic.ca/job/WEA/lastSuccessfulBuild/artifact/products/site/contribute.html</p>
+            <p>Open in oXygen</p>
+        </section>
+        
+        <section>
+            <h3>Setting Up</h3>
+            <p>Change purple lines at the top from "../sch/wea.rng" to "https://www.sfu.ca/~takeda/teiworkshop/2023-03-17/screenplay.rng"</p>
+            <div class="r-stack">
+                <code class="r-fit-text fragment current-visible" xml:space="preserve">
+&lt;?xml-model <mark>href="../sch/wea.rng"</mark> type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model <mark>href="../sch/wea.rng"</mark> type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;                    
+                </code>
+                <code class="r-fit-text fragment current-visible">
+                    
+                    &lt;?xml-model <mark>href="https://www.sfu.ca/~takeda/teiworkshop/2023-03-17/screenplay.rng"</mark> type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model <mark>href="https://www.sfu.ca/~takeda/teiworkshop/2023-03-17/screenplay.rng"</mark> type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;                    
+                    
+                </code>
+            </div>
+   
+            
+        </section>
+       
+       <section>
+           <h3>Basic Components</h3>
+           <p>Paragraphs with <code class="xml">&lt;p&gt;</code></p>
+           <p>Speeches tagged with <code class="xml">&lt;sp&gt;</code>; speaker tagged with <code class="xml">&lt;speaker&gt;</code>; text tagged with <code class="xml">&lt;p&gt;</code></p>
+           <p>Headings tagged with <code class="xml">&lt;head&gt;</code></p>
+           <p>Page beginnings: &lt;pb/&gt;</p>
+           <p>Page numbers: &lt;fw type="pageNum"&gt;</p>
+       </section>
+        
+        
+        <section>
+            <h3>Tips</h3>
+            <p>If you notice something, look through the TEI Guidelines for something that
+               might work</p>
+            <p>Use Ropes as an example (but note that the encoding is still experimental)</p>
+            <p>When in doubt, ask! </p>
+        </section>
+        <section>
+            <h3>Links</h3>
+            <p>Presentation:<br/>
+                <a href="https://sfu.ca/~takeda/teiworkshop/2023-03-17/">https://sfu.ca/~takeda/teiworkshop/2023-03-17/</a></p>
+            <p>Ropes:<br/>
+                <a href="https://sfu.ca/~takeda/teiworkshop/2023-03-17/Ropes.xml">https://sfu.ca/~takeda/teiworkshop/2023-03-17/Ropes.xml</a>
+            </p>
+            <p>TEI Guidelines:<br/>
+               <a href="https://tei-c.org">https://tei-c.org</a>
+            </p>           
+        </section>
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../lib/reveal-4.0.2/reveal.esm.js";
+    import Highlight from "../lib/reveal-4.0.2/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../js/presentation.js";
+    initDeck(Reveal, { plugins: [Highlight] });
+</script>
+    
+</body>
+</html>

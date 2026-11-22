@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2022-10">
+<head>
+    <title>TEI Workshop Homepage</title>
+    <meta charset="utf-8">
+    <link href="../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../lib/reveal-4.0.2/theme/black.css"/>
+    <link rel="stylesheet" href="../css/presentation.css"/>
+    <link rel="stylesheet" href="../lib/fonts/fira-code/fira_code.css"/>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="title-slide slide">
+            <h3 class="maintitle">Introduction to TEI</h3>
+            <hr/>
+            <p style="text-align:center; font-size:85%">Joey Takeda, SFU DHIL</p>
+            <p style="text-align:center; font-size:85%">October 26, 2022</p>
+            <hr/>
+            <p style="font-size: 70%">Slides and Materials: http://www.sfu.ca/~takeda/teiworkshop/</p> 
+        </section>
+
+        <section data-background-image="../images/native-land.png">
+            <p class="overlay-item">Unceded territory of the səl̓ilw̓ətaʔɬ (Tsleil-Waututh), kʷikʷəƛ̓əm (Kwikwetlem), Sḵwx̱wú7mesh Úxwumixw (Squamish), and xʷməθkʷəy̓əm (Musqueam) Nations</p>
+        </section>
+        <section>
+            <h3>This Workshop</h3>
+            <p class="fragment fade-in">TEI Workshop homepage: http://www.sfu.ca/~takeda/teiworkshop/</p>
+            <p class="fragment fade-in">Slides: http://www.sfu.ca/~takeda/teiworkshop/2022-10-26/</p>
+            <p class="fragment fade-in">Introduction to text encoding</p>
+            <p class="fragment fade-in">Overview of XML and TEI</p>
+            <p class="fragment fade-in">TEI Editing practice!</p>
+        </section>
+
+        <section>
+            <h3>Quick Activity: Transcribing</h3>
+            <p class="fragment fade-in">Imagine you're creating an edition of <i>The Tempest</i></p>
+            <p class="fragment fade-in">Try formatting Miranda's famous speech, including everything you think may be important to capture
+            <br/>(<a href="tempest.docx" download="tempest.docx">Downloadable DOCX</a> of speech)</p>
+            <p  class="fragment fade-in">Try to make the formatting as close to the original as possible</p>
+        </section>
+        <section>
+            <h3><a href="https://iiif.bodleian.ox.ac.uk/iiif/viewer/390fd0e8-9eae-475d-9564-ed916ab9035c/#?c=0&m=0&s=0&cv=36&r=0&xywh=-1110%2C1911%2C8467%2C5011" target="_blank">Link</a></h3>
+            <img src="../images/tempest-spread.png"/>
+        </section>
+        <section>
+            <h3>Activity Recap</h3>
+            <p>What did you notice about the text? What did you include in your transcription?</p>
+        </section>
+
+        <section>
+            <h3>Encoding</h3>
+            <p class="fragment fade-in">All acts of transcription and writing are about encoding</p>
+            <p class="fragment fade-in">Looking at textual clues to know what something is (and what it isn't)</p>
+            <p class="fragment fade-in">E.g. We think (English) paragraphs look like blocks of text; (English) sentences look like words with a period at the end; et cetera</p>
+
+        </section>
+
+        <section>
+            <h3>Encoding, markup, et cetera...</h3>
+            <div>
+                <div class="r-stack">
+                    <p class="fragment fade-out">At its core, textual encoding is a way of identifying and differentiating bits of text from other bits of texts.</p>
+                    <p class="fragment">We do this all the time!</p>
+
+                </div>
+                <p class="fragment fade-in" data-state="italic"><span class="italic">Italics</span> for emphasis</p>
+                <p class="fragment fade-in" data-state="underline"><span class="underline">Underlining</span> for titles</p>
+                <p class="fragment fade-in" data-state="bold"><span class="bold">Bold</span> for extra-emphasis</p>
+                <p class="fragment fade-in">Quotation marks for <q>outside attribution</q> or <q>skepticism</q></p>
+                <p class="fragment fade-in" data-state="yell">All capitals to <span class="yell">YELL</span></p>
+                <p class="fragment fade-in">+++</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>The Tempest</h3>
+            <div style="display:flex; flex-direction:row">
+                <img src="../images/tempest_annotated.png"/>
+                <p>Italics to mark speech prefix; placement of the page's signature; etc</p>
+            </div>
+
+        </section>
+
+        <section>
+            <h3>Encoding, markup, et cetera</h3>
+            <p class="fragment">But these are contextual and local</p>
+            <p class="fragment">E.g. different types of punctuation for levels of quotation</p>
+            <p class="fragment">And they are subject to varying interpretations</p>
+            <p class="fragment">E.g. I think these quotation marks denote a term, but maybe the author is just being sarcastic...</p>
+        </section>
+
+        <section>
+            <h3>Why should we encode texts?</h3>
+            <p class="fragment">Accessibility</p>
+            <p class="fragment">Distribution</p>
+            <p class="fragment">Flexibility</p>
+            <p class="fragment">Interoperability</p>
+            <p class="fragment">Convertibility (i.e. from one format to another)</p>
+            <p class="fragment">Analysis (Distant Reading, et cetera)</p>
+            <p class="fragment">Answering existing (and asking new) research questions</p>
+        </section>
+
+        <section>
+            <h3>How do we encode texts?</h3>
+            <p class="fragment">In the beginning: symbols (_underlined_ | **italicized** | ~struckout~)</p>
+            <p class="fragment">This describes formatting nicely, but doesn't describe *what* it is</p>
+        </section>
+
+        <section>
+            <h3>XML (Markup)</h3>
+               <div class="r-stack">
+                   <div class="fragment fade-in fade-out" data-fragment-index="0">
+                       <p>XML = eXtensible Markup Language</p>
+                       <p>XML is not a set language unto itself, but a grammar</p>
+                   </div>
+                   <div class="fragment current-visible" data-fragment-index="0">
+                       <p>There is nothing inherent about the function of XML</p>
+                       <p>It is purely a structure--a way of organizing</p>
+                       <p>Anyone can conceive of an XML dialect (e.g. it is extensible)</p>
+                   </div>
+               </div> 
+
+        </section>
+
+        <section>
+            <h3>XML is Everywhere</h3>
+                <p class="fragment">HTML (HyperText Markup Language: Every website)</p>
+                <p class="fragment">KML (Keyhole Markup Language: Google Maps)</p>
+                <p class="fragment">RDF (Resource Description Framework: Library catalogues)</p>
+                <p class="fragment">SVG (Scalable Vector Graphics: Digital Images)</p>
+                <p class="fragment">OOXML (Open Office XML: This presentation, word documents, et cetera)</p>
+        </section>
+
+        <section>
+            <h3>XML</h3>
+            <p class="fragment">XML is hierarchical</p>
+            <p class="fragment">XML is a tree-like structure</p>
+            <p class="fragment">And is often described in genealogical terms</p>
+        </section>
+
+        <section>
+            <h3>XML</h3>
+            
+                <p class="fragment">Think of the hierarchy of the book:</p>
+                <p class="fragment">Book</p>
+                <p class="fragment" style="padding-left:2rem">Chapters</p>
+                <p class="fragment" style="padding-left:4rem">Sections</p>
+                <p class="fragment" style="padding-left:6rem;">Paragraphs</p>
+                <p class="fragment" style="padding-left:8rem">Sentences</p>
+                <p class="fragment" style="padding-left:10rem">Words</p>
+                <p class="fragment" style="padding-left:12rem">Letters</p>
+        </section>
+        
+        <section>
+            
+            <h3>XML</h3>
+            <pre>
+<code class="xml" style="height: 50vh" data-noescape="true">
+ &lt;book&gt;
+    &lt;chapter&gt;
+        &lt;section&gt;
+            &lt;paragraph&gt;
+                &lt;sentence&gt;
+                    &lt;word&gt;
+                        &lt;letter&gt;&lt;/letter&gt;
+                    &lt;/word&gt;
+                &lt;/sentence&gt;
+            &lt;/paragraph&gt;
+        &lt;/section&gt;
+    &lt;/chapter&gt;
+&lt;/book&gt; 
+            </code> 
+                
+            </pre>
+
+        </section>
+
+        <section>
+            <h3>XML Explained</h3>
+            
+                <p class="fragment">The two pointy brackets is called an element</p>
+                <p class="fragment">E.g. &lt;book&gt; would be called the book element</p>
+                <p class="fragment">All elements have start and end tags</p>
+                <p class="fragment">E.g. &lt;book&gt; is the start tag and &lt;/book&gt; is the end tag</p>
+               
+        </section>
+        
+        <section>
+            <h3>XML Explained</h3>
+            <p class="fragment">Elements can also have attributes and each attribute must have a value</p>
+            <p class="fragment">E.g. &lt;book type= "primary"&gt; has a type attribute with the value of primary</p>
+            <p class="fragment">(Think of attributes as you would in everyday life; people don't have "height" or "age" without a value)</p>
+            
+        </section>
+
+        <section>
+            <h3>XML Explained</h3>
+            
+                <p class="fragment">Elements cannot overlap</p>
+                <p class="fragment">&lt;sentence&gt;&lt;word&gt;Word1&lt;/word&gt;&lt;/sentence&gt; is right</p>
+                <p class="fragment">&lt;sentence&gt;&lt;word&gt;Word1&lt;/sentence&gt;&lt;/word&gt; is wrong</p>
+                <p class="fragment">Elements nest and use genealogical terms</p>
+                <p class="fragment">E.g. the &lt;book&gt; is the parent of &lt;chapter&gt;. Words are descendants of a paragraph.</p>
+        </section>
+
+        <section>
+            <h3>XML Explained</h3>
+            <p>There is always a root element</p>
+            <pre>
+<code class="xml" style="height: 50vh" data-noescape="true">
+ &lt;shelf&gt;
+    &lt;book title="Fifteen Dogs" author="André Alexis"&gt;
+        &lt;chapter&gt;
+            ...
+        &lt;/chapter&gt;
+    &lt;/book&gt;
+    &lt;book title="I Am A Cat" author="Natsume Sōseki"&gt;
+        &lt;chapter&gt;
+            &lt;section&gt;
+                ...
+            &lt;/section&gt;
+         &lt;/chapter&gt;
+    &lt;/book&gt;
+ &lt;/shelf&gt;
+            </code>
+
+            </pre>
+        </section>
+        <section>
+            <h3>XML Explained</h3>
+            <pre>
+<code class="xml" style="height: 50vh" data-noescape="true">
+&lt;bookcase&gt;
+    &lt;shelf&gt;
+        &lt;book title="Fifteen Dogs" author="André Alexis"&gt;
+             ...
+        &lt;/book&gt;
+        &lt;book title="I Am A Cat" author="Natsume Sōseki"&gt;
+            ...
+        &lt;/book&gt;
+    &lt;/shelf&gt;
+    &lt;shelf&gt;
+        &lt;book title="Chorus of Mushrooms" author="Hiromi Goto"&gt;
+            ...
+        &lt;/book&gt;
+        &lt;book title="The Jade Peony" author="Wayson Choy"&gt;
+            ...
+        &lt;/book&gt;
+    &lt;/shelf&gt;
+&lt;/bookcase&gt;
+            </code>
+
+            </pre>
+        </section>
+
+        <section>
+            <h3>Questions? (Break?)</h3>
+        </section>
+
+
+        <section>
+            <h3>The Problem</h3>
+            <figure>
+                <img src="../images/standards.png" alt="Image from XKCD: How Standards Proliferate"/>
+                <p>https://xkcd.com/927/</p>
+                <figcaption style="visibility:hidden">
+                    <p>Situation: There are 14 competing standards.</p>
+                    <p>14!? Ridiculous! We need to develop one universal standard that covers everyone's use cases. Yeah!</p>
+                    <p>Soon: Situation: There are 15 competing standards.</p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>The TEI Solution</h3>
+            
+                <p class="fragment">All texts must be called &lt;text&gt;</p>
+                <p class="fragment">All divisions (whether they be chapters, sections, et cetera) must be called &lt;div&gt;</p>
+                <p class="fragment">All paragraphs must be called &lt;p&gt;</p>
+                <p class="fragment">All words must be called &lt;w&gt;</p>
+                <p class="fragment">+++</p>
+        </section>
+
+        <section>
+            <h3>The TEI</h3>
+            <p class="fragment">A set of guidelines for encoding text</p>
+            <p class="fragment">A non-profit organization</p>
+            <p class="fragment">A community or consortium of users</p>
+            <p class="fragment">Website: https://tei-c.org/</p>
+        </section>
+
+        <section>
+            <h3>The TEI</h3>
+            <p class="fragment">Currently in its 5th major revision (P5 4.5.0)</p>
+            <p class="fragment">Used by many projects across the world in many different languages and for many different reasons</p>
+        </section>
+        
+        <section>
+            <h3>Who uses the TEI?</h3>
+            <div class="fragment">
+                <p>Early English Books Online: https://www.proquest.com/eebo/</p>
+                <p>Oxford Text Archive: https://ota.bodleian.ox.ac.uk/repository/xmlui/</p>
+                <p>The Map of Early Modern London: https://mapoflondon.uvic.ca/</p>
+                <p>Landscapes of Injustice: https://loi.uvic.ca/archive/</p>
+            </div>
+        </section>
+        
+        <section data-background-iframe="https://mapoflondon.uvic.ca/">
+                
+        </section>
+        
+        <section>
+            <h3>Components of a (basic) TEI file</h3>
+            
+                <p class="fragment">Root &lt;TEI&gt; element</p>
+                <p class="fragment">A &lt;teiHeader&gt; that describes both the file and the primary source that you are transcribing (if applicable)</p>
+                <p class="fragment">A &lt;text&gt; that contains the text of the document</p>
+                <p class="fragment">Within text, you can have a &lt;front&gt;, &lt;body&gt;, or &lt;back&gt;</p>
+        </section>
+
+        <section>
+            <h3>TEI</h3>
+            <pre>
+                <code class="xml">
+&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+  &lt;teiHeader&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+         &lt;/titleStmt&gt;
+         &lt;publicationStmt&gt;
+            &lt;p&gt;Publication Information&lt;/p&gt;
+         &lt;/publicationStmt&gt;
+         &lt;sourceDesc&gt;
+            &lt;p&gt;Information about the source&lt;/p&gt;
+         &lt;/sourceDesc&gt;
+      &lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+      &lt;body&gt;
+         &lt;p&gt;Some text here.&lt;/p&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h3>What the TEI is not</h3>
+            <p class="fragment">A language that describes how a text should be displayed online or in print: "performative and expressive significance of the input" vs  "the aesthetics of the output".</p>
+            <p class="fragment">A programming language: encoding your texts in TEI does not automatically do anything to them</p>
+            <p class="fragment">Caveat: There are many, many tools for transforming TEI into other formats (Word documents, PDFs, and, of course, websites)</p>
+        </section>
+        
+                
+        <section data-background-iframe="https://mapoflondon.uvic.ca/stow_1598_CORN1.htm">
+        </section>
+        
+        
+        <section>
+            <h3>The TEI</h3>
+            <p>Offers a rich vocabulary and method to encode:</p>
+            <div class="r-fit-text">
+                <p class="fragment">Bibliographic and structural features: page breaks, headers, footers, page numbers, line breaks, divisions, paragraphs, line groups, etc</p>
+                <p class="fragment">Interpretative features: stage movement, emphasis, place names, proper names, dialogue direction, etc</p>
+                <p class="fragment">Editorial apparatus: hands, witnesses, collation, gaps, additions, deletions, etc</p>
+                <p class="fragment">Linguistic features: morphemes, feature structures, orthographic form, etc</p>
+                <p class="fragment">Spoken features: incidents, pauses, shifts, "communicative phenomenon", etc</p>
+                <p class="fragment">Metadata: various classification schemes, provenance, manuscript description, etc</p>
+                <p class="fragment">+++++</p>   
+            </div>
+        </section>
+        
+              <section>
+            <h3>TEI</h3>
+                <p class="fragment">Note that the TEI is huge (585 elements)</p>
+                <p class="fragment">No one uses the entirety of the TEI tagset</p>
+                <p class="fragment">Individual projects customize the TEI for their own needs, usually using a small subset of the overall tagset</p>
+                <p class="fragment">E.g. Drama projects will use the drama tagset (&lt;sp&gt; for speech, &lt;speaker&gt; for speaker, et cetera) and discard the linguistic/dictionary tagset (&lt;entry&gt; for dictionary entries, &lt;m&gt; for morpheme, etc).</p>
+        </section>
+                
+        <section>
+            <h3>Questions so far?</h3>
+        </section>
+        
+        
+        <section>
+            <h3>The Guidelines: Some Examples</h3>
+        </section>
+
+
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">
+
+        </section>
+
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-expan.html">
+
+        </section>
+
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html">
+
+        </section>
+
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html">
+
+        </section>
+
+        <section>
+            <h3>Encoding Exercise!</h3>
+            <p>Let's try encoding the speech!</p>
+            <p>Online editor: <a href="editor.html" target="_blank">https://sfu.ca/~takeda/teiworkshop/2022-10-26/index.html</a></p>
+        </section>
+        <section>
+            <h3>Recap</h3>
+            <p>Thoughts? Reflections?</p>
+        </section>
+        <section>
+            <h3>Resources</h3>
+            <p>TEI Guidelines: https://tei-c.org</p>
+            <p>TEI By Example: https://teibyexample.org/</p>
+           
+        </section>
+        <section>
+        <h3>Get in touch!</h3>
+         <p>My email: takeda@sfu.ca</p>
+    	<p>Digital Humanities Innovation Lab: dhil@sfu.ca</p>
+    	<p>DHIL's website: https://dhil.lib.sfu.ca</p>
+    	
+        </section>
+        <section>
+            <h3>Thanks!</h3>
+            <p>You all for attending!</p>
+            <p>Thanks to Ali Moore, Nicole White, and Sarah Zhang for your suggestions
+            and comments on earlier versions of this workshop</p>
+        </section>
+
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../lib/reveal-4.0.2/reveal.esm.js";
+    import Highlight from "../lib/reveal-4.0.2/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../js/presentation.js";
+    initDeck(Reveal, { plugins: [Highlight] });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>First page of Winnifred Eaton's <title level="a">You Can't Run Away From Yourself</title></title>
+            </titleStmt>
+            <publicationStmt>
+                <p>For instructional use only for SFU's TEI Workshop.</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Page taken from Karen Skinazi's CWRC collection: https://cwrc.ca/islandora/object/cwrc%3Adc4d539a-faf7-461d-929b-2522cfdd9e85</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="img/we.jpeg"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <head>You Can't Run Away From Yourself</head>
+            <opener>
+                <byline>By<lb/>Winnifred Eaton Reeve <lb/>(Onoto Watanna)</byline>
+            </opener>
+            <div>
+                <p>I was tired of writing and sick of New York. I felt like a poor little fly caught in the cogs of its mighty machinery. An immense nostalgia took possession of me—a longing for something other than I had known. Writing became a sort of torment—somehing I had literally to dirve myself to. Many a time I have laid my head down among my papers and pencils and cried—hopelessly, for there seemed no escape for me. The were many dependent upon me. I suppose I was in a sort of pathological condition.</p>
+            </div>
+
+            
+        </body>
+    </text>
+</TEI>

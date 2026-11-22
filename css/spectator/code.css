@@ -1,0 +1,21 @@
+@import '../../lib/highlight.js-10.4.0/styles/darcula.css';
+
+body{
+    /*  background:0% 0% / auto repeat rgb(171, 184, 195); */
+}
+
+.text{
+    display:flex;
+    height:100vh;
+    align-content:center;
+    justify-content:center;
+}
+pre{
+    max-width: 115ch;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px;
+    white-space:pre-wrap;
+    height:95vh;
+    margin:auto;
+    overflow-y:auto;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="tempest" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Tempest (Excerpt)</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Joey Takeda / SFU</publisher>
+                <license>CC-BY</license>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Bodleian F1</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <sp>
+                <speaker><!--Speaker prefix goes here--></speaker>
+                <lg>
+                    <l><!--Line of poetry--></l>
+                    <l><!--Line of poetry--></l>
+                </lg>
+            </sp>
+        </body>
+    </text>
+</TEI>

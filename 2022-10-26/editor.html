@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TEI Workshop #2</title>
+        <link type="text/css" rel="stylesheet" href="../css/CETEIcean.css"/> 
+        <style type="text/css" media="screen">
+    body{
+    max-height:80vh;
+    overflow-y:hidden;
+    
+    }
+    #content{
+        display:flex;
+
+        margin:0 auto;
+        justify-content:center;
+    }
+    
+    #content > div{
+        flex: 0  0 50%;
+        margin-top:2rem;
+        height:80vh;
+        overflow-y:auto;
+        padding: 0 3rem;
+    }
+    
+    #editor{
+        border-right: 1px solid #efefef;
+        padding-left:1rem!important;
+    }
+    
+    #instructions{
+    position:absolute;
+    background: white;
+    padding:.75rem;
+    z-index:99999;
+    top:5%;
+    left:2%;
+    border: solid 1px black;
+     }
+     
+     #instructions.invisible{
+     display:none;
+     }
+     
+     #buttons{
+     display:flex;
+     justify-content:space-between;
+     background:#efefef;
+     align-content:center;
+     width:100%;
+     }
+     
+     #buttons > div{
+        flex: 0 0 50%;
+     }
+     
+     img{
+        width:100%!important;
+        height:auto!important;
+     }
+
+     .no-lb tei-lb{
+         display:none;
+     }
+
+     .no-pb tei-pb{
+         display:none;
+     }
+     
+     #right{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+     }
+     tei-del{
+        text-decoration:line-through;
+     }
+     #right > button{
+     flex: 1 1 auto;
+     };
+   .invisible{
+     display:none;
+     }
+     
+     #deletions{
+     
+     float:right;
+     }
+     
+     #view{
+        width:100%;
+        height:100%;
+     }
+     .nodels tei-del{
+        display:none!important;
+     }
+     
+     .nodels tei-add{
+        vertical-align:initial!important;
+     }
+
+     #controls {
+         display: flex;
+         flex-direction: column;
+         margin-left: auto;
+         margin-top: 1rem;
+         border-top: 1px solid black;
+         padding-top: 1rem;
+     }
+
+     #controls > div{
+         margin-left: 45vw;
+     }
+     #closeButton{
+     text-align:right;
+     font-weight:bold;
+     }
+     teiHeader{
+         border:1px solid #efefef;
+         padding:1rem;
+         font-size:0.8rem;
+         display:block;
+     }
+
+     publisher, license, titleStmt > title{
+         display:block;
+     }
+
+     publisher:before, license:before, titleStmt > title:before{
+         content: attr(data-origname) ': ';
+         text-transform: capitalize;
+     }
+
+     sourceDesc:before{
+         content: 'Source: ';
+         text-transform: capitalize;
+     }
+
+     sp{
+         display:flex;
+         flex-direction:column;
+         max-width: 50%;
+     }
+
+
+     sp > speaker{
+         text-transform: uppercase;
+         font-variant: small-caps;
+         display:block;
+         margin:1rem 0 0.7rem 0;
+
+     }
+     
+     fw, l{
+     	display:block;
+     }
+     
+     fw[type='signature']{
+     	text-align:center;
+     }
+
+     fw[type='catchword']{
+         display:block;
+         text-align:right;
+     }
+
+     pb{
+         height:2px;
+         display:block;
+         background:#efefef;
+         width:100%;
+         margin: 0.5rem 0;
+     }
+
+     choice > reg{
+         display:none;
+     }
+     
+     choice > expan{
+     	display:none;
+     }
+
+     .no-pb choice > reg,
+     .no-pb choice > expan{
+         display:inline;
+     }
+
+     .no-pb fw,
+     .no-pb pb,
+     .no-pb choice > orig,
+     .no-pb choice > abbr
+     {
+         display:none;
+     }
+
+</style>
+    </head>
+    <body>
+     
+
+        <div id="buttons">
+            <div id="left">
+                <button id="view" type="submit">View</button>
+            </div>
+            <div id="right">
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        
+        
+        
+        <div id="content">
+        <div id="editor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        </div>
+         <div id="cetei">
+             
+         </div>
+            
+        </div>
+        <div id="controls">
+            <div>
+                <label for="pb">Hide bibliographic features</label>
+                <input type="checkbox" id="pb"/>
+            </div>
+
+
+            </div>
+
+        </div>
+        
+        <script src="../lib/ace-1.4.1/ace.js" 
+            type="text/javascript" charset="utf-8"></script>
+        <script src="../lib/ceteicean/CETEI.js"></script>
+        <script src="js/workshop.js"></script>
+  
+
+
+        
+    </body>
+</html>

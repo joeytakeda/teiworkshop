@@ -1,0 +1,148 @@
+
+html{
+    font-size: 1rem;
+}
+
+body{
+    font-family: "EB Garamond";
+}
+
+
+.pb{
+    background:white;
+    max-width: 44rem;
+    border:1px solid #efefef;
+    padding:1.5rem .4rem;
+    display:grid;
+    margin: 1rem auto;
+    grid-template-columns:21rem 21rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.docEdition{
+    text-align:right;
+}
+
+.docTitle{
+    font-size:4.5rem;
+    text-align:center;
+    margin-top:1rem;
+    padding-bottom:2rem!important;
+}
+
+.docDate{
+    text-align:center;
+    margin: 1rem 0;
+}
+
+.docEdition{
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+}
+
+.epigraph{
+    margin:1rem 0;
+    padding: 0 .5rem;
+    font-size: 1.75rem;
+    text-align:center;
+}
+
+.cit .bibl{
+    font-style:normal;
+}
+
+.expan, .corr{
+    display:none;
+}
+
+.front .note,
+.front .docDate{
+    font-size: 1.2rem;
+}
+
+.cb{
+    font-size:0.9rem;
+    margin:0 auto;
+}
+
+.fw{
+    display:block;
+    text-align:right;
+}
+
+.item{
+    font-size: 0.875em;
+}
+
+.item > .lb:first-child,
+.item:nth-child(n + 5) > .lb:nth-child(2){
+    font-size: 1rem;
+    font-weight:bold;
+    text-align:center;
+    text-align-last:center;
+}
+
+
+div.p{
+    line-height: 1.1;
+    margin-top:.2rem;
+}
+
+.seg[data-type='dropCap']{
+    font-size:calc(4em + 3px);
+    line-height: 1em;
+    float:left;
+    padding-right:.1em;
+    top:-3px;
+    position:relative;
+}
+
+.p:not(:first-child) > .lb:first-child{
+    margin-left:1rem;
+}
+.lb:not(:last-child){
+    text-align: justify;
+    text-align-last: justify;
+}
+
+.div .head{
+    text-transform:uppercase;
+    font-size: 1.08rem;
+    font-weight:bold;
+    font-style:italic;
+    letter-spacing: 5px;
+    text-align:center;
+    margin: .35rem 0;
+}
+div.front{
+    grid-column: 1 / span 2;
+}
+
+.back{
+    border-top: 1px solid black;
+    width:100%;
+    grid-column: 1 / span 2;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+}
+
+.back > .docImprint{
+    text-align:right;
+    font-size: 1.15rem;
+}
+
+.back .pubPlace{
+    margin-right: 1rem;
+    font-style:italic;
+    letter-spacing: 3px;
+}
+
+.back .lb{
+    text-align:right;
+    text-align-last:right;
+}
+
+.back .lb:last-child{
+    text-align: center;
+    text-align-last: center;
+    margin-left: 10.5rem;
+}

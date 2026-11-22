@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="METR1">
+
+  <teiHeader>
+      <fileDesc>
+
+         <titleStmt>
+
+            <title>Metropolis Coronata</title>
+
+            <respStmt>
+               <resp ref="PERS1.xml#aut">Author<date when-custom="1615" datingMethod="includes.xml#julianSic"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/MUND1.htm">Anthony Munday</name>
+            </respStmt>
+
+            <respStmt>
+               <resp ref="PERS1.xml#prt">Printer<date when-custom="1615" datingMethod="includes.xml#julianSic"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/PURS1.htm">George Purslowe</name>
+            </respStmt>
+
+            <respStmt>
+               <resp ref="PERS1.xml#trc">First Transcriber<date when="2013"/></resp>
+               <name type="org" ref="https://mapoflondon.uvic.ca/EEBO3.htm">EEBO-TCP</name>
+            </respStmt>
+
+            <respStmt>
+               <resp ref="PERS1.xml#trc">MoEML Transcriber<date when="2013"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/MCFI1.htm">Kim McLean-Fiander</name>
+            </respStmt>
+            <respStmt>
+               <resp ref="PERS1.xml#trc">MoEML Transcriber</resp>
+               <name ref="https://mapoflondon.uvic.ca/VIRA1.htm">Zaqir Virani</name>
+            </respStmt>
+           <respStmt>
+             <resp ref="PERS1.xml#mrk">Markup Editor<date when="2019"/></resp>
+             <name ref="https://mapoflondon.uvic.ca/HORN6.htm">Chris Horne</name>
+           </respStmt>
+           <respStmt>
+             <resp ref="PERS1.xml#mrk">Encoder<date when="2019"/></resp>
+             <name ref="https://mapoflondon.uvic.ca/LEBE1.htm">Kate LeBere</name>
+           </respStmt>
+                <respStmt>
+               <resp ref="PERS1.xml#mrk">Encoder<date when="2013"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/MCFI1.htm">Kim McLean-Fiander</name>
+            </respStmt>
+            <respStmt>
+               <resp ref="PERS1.xml#mrk">Markup Editor</resp>
+               <name ref="https://mapoflondon.uvic.ca/VIRA1.htm">Zaqir Virani</name>
+            </respStmt>
+
+            <respStmt>
+               <resp ref="PERS1.xml#top">Toponymist</resp>
+               <name ref="https://mapoflondon.uvic.ca/VIRA1.htm">Zaqir Virani</name>
+            </respStmt>
+
+            <respStmt>
+               <resp ref="PERS1.xml#mrk">Markup Editor<date when="2013"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/MACD1.htm">Quinn MacDonald</name>
+            </respStmt>
+       
+            <respStmt>
+               <resp ref="PERS1.xml#cse">CSS Editor</resp>
+               <name ref="https://mapoflondon.uvic.ca/MCFI1.htm">Kim McLean-Fiander</name>
+            </respStmt>
+        
+            <respStmt>
+               <resp ref="PERS1.xml#cse">CSS Editor</resp>
+               <name ref="https://mapoflondon.uvic.ca/VIRA1.htm">Zaqir Virani</name>
+            </respStmt>
+           <respStmt>
+             <resp ref="PERS1.xml#mrk">Final Markup Editor <date notBefore="2013-11"/></resp>
+             <name ref="https://mapoflondon.uvic.ca/MILL2.htm">Sarah Milligan</name>
+           </respStmt>
+
+           <respStmt>
+             <resp ref="PERS1.xml#dtm">Data Manager<date notBefore="2015"/></resp>
+             <name ref="https://mapoflondon.uvic.ca/LAND2.htm">Tye Landels</name>
+           </respStmt>
+           <respStmt>
+             <resp ref="PERS1.xml#prg">Junior Programmer<date notBefore="2015"/></resp>
+             <name ref="https://mapoflondon.uvic.ca/TAKE1.htm">Joey Takeda</name>
+           </respStmt>
+            <respStmt>
+               <resp ref="PERS1.xml#prg">Programmer<date notBefore="2011"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/HOLM3.htm">Martin Holmes</name>
+            </respStmt>
+            <respStmt>
+               <resp ref="PERS1.xml#rth">Associate Project Director<date notBefore="2015"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/MCFI1.htm">Kim McLean-Fiander</name>
+            </respStmt>
+            <respStmt>
+               <resp ref="PERS1.xml#pdr">Project Director<date notBefore="1999"/></resp>
+               <name ref="https://mapoflondon.uvic.ca/JENS1.htm">Janelle Jenstad</name>
+            </respStmt>
+         </titleStmt>
+
+
+      
+         <publicationStmt>
+      <publisher>The Map of Early Modern London</publisher><idno type="URL">http://mapoflondon.uvic.ca/includes.xml</idno><pubPlace>Victoria, BC, Canada</pubPlace><address>
+        <addrLine>Department of English</addrLine>
+        <addrLine>P.O.Box 3070 STNC CSC</addrLine>
+        <addrLine>University of Victoria</addrLine>
+        <addrLine>Victoria, BC</addrLine>
+        <addrLine>Canada</addrLine>
+        <addrLine>V8W 3W1</addrLine>
+    </address><date when="2016">2016</date><distributor>University of Victoria</distributor><idno type="ISBN">978-1-55058-519-3</idno><authority>
+          <name ref="https://mapoflondon.uvic.ca/JENS1.htm">Janelle Jenstad</name>
+          <email>london@uvic.ca</email>
+        </authority><availability>
+            <p>Copyright held by <title level="m">The Map of Early Modern London</title> on behalf of the contributors.</p>
+            <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
+              <p>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. </p>
+            </licence>
+            <p>Further details of licences are available from our
+              <ref target="licence.xml">Licences</ref> page. For more
+              information, contact the project director, <name ref="https://mapoflondon.uvic.ca/JENS1.htm">Janelle Jenstad</name>, for
+              specific information on the availability and licensing of content
+              found in files on this site.</p>
+        </availability>
+    </publicationStmt>
+    
+
+         <sourceDesc>
+    <!--       <bibl corresp="mol:MUND5"/>-->
+        <p>Documentary witness transcribed in this edition: <bibl><author>M., A.</author>
+            <title level="m">Metropolis Coronata, The Triumphes of Ancient Drapery</title>.
+          <pubPlace>London</pubPlace>, <date when-custom="1615" calendar="includes.xml#julianSic" datingMethod="includes.xml#julianSic">1615</date>. STC <idno type="STC">18275</idno>. Henry E. Huntington
+            Library and Art.</bibl> Gallery copy, as filmed by EEBO. <idno type="DEEP">630</idno>.</p>
+      </sourceDesc>
+
+      </fileDesc>
+      <profileDesc>
+      <textClass>
+        <catRef scheme="includes.xml#molDocumentTypes" target="includes.xml#mdtPrimarySourceLibraryMayoral"/>
+      </textClass>
+        
+        <abstract>
+          <p>Commemorative pageant book prepared for the inauguration of Sir John Jolles as Lord Mayor of London on October 30, 1615. Pageants coordinated by Anthony 
+            Munday on behalf of the Worshipful Company of the Drapers. Book printed by George Purlowe. Diplomatic transcription prepared by the MoEML Team. See
+            https://mapoflondon.uvic.ca/METR1.htm for full credits and editorial procedures.</p>
+        </abstract>
+
+    </profileDesc>
+
+
+      <encodingDesc>
+        <listPrefixDef>
+        <prefixDef ident="mol" matchPattern="(.+)(#.+)?" replacementPattern="../../$1.htm$2">
+          <p>Most <title level="m">MoEML</title> documents, or significant fragments with <att>xml:id</att> attributes, can
+            be addressed using the <code>mol:</code> prefix and accessed through the web application
+            with their id + <code>.xml</code>.</p>
+        </prefixDef>
+        <prefixDef ident="molagas" matchPattern="(.+)" replacementPattern="http://mapoflondon.uvic.ca/agas.htm?locIds=$1">
+          <p>The molagas prefix points to the shape representation of a location on 
+            <title level="m">MoEML</title>’s OpenLayers3-based
+          rendering of the Agas Map.</p>
+        </prefixDef>
+        <prefixDef ident="moleebo" matchPattern="([0-9]+)\|([0-9]+)" replacementPattern="http://eebo.chadwyck.com/fetchimage?vid=$1&amp;page=$2&amp;width=1200">
+          <p>Links to page-images in the Chadwyck-Healey <title level="m">Early English Books Online</title> (EEBO)
+            repository. Note that this is a subscription service, and may not be accessible to those
+            accessing it from locations outside member institutions.</p>
+        </prefixDef>
+        <prefixDef ident="molebba" matchPattern="(.+)" replacementPattern="http://ebba.english.ucsb.edu/ballad/$1">
+          <p>Links to page-images in the <title level="m">English Broadside Ballad Archive</title> (EBBA).</p>
+        </prefixDef>
+        <prefixDef ident="mdt" matchPattern="(.+)" replacementPattern="includes.xml#$1">
+          <p>The mdt (<title level="m">MoEML</title> Document Type) prefix used on <gi>catRef</gi>/<att>target</att> points
+            to a central taxonomy in the includes file.</p>
+        </prefixDef>
+        <prefixDef ident="mdtlist" matchPattern="(.+)" replacementPattern="$1.xml">
+          <p>The mdtlist (<title level="m">MoEML</title> Document Type listing) prefix used in linking attributes points to a listings page constructed from a category in the central MDT taxonomy in the includes file. There are two variants, one with the plain <att>xml:id</att> of the category, meaning all documents in the specified category, and one with the suffix <q>_subcategories</q>, meaning all subcategories of the category.</p>
+        </prefixDef>
+        <prefixDef ident="molgls" matchPattern="(.+)" replacementPattern="GLOSS1.xml#$1">
+          <p>The molgls (<title level="m">MoEML</title> gloss) prefix used on <gi>term</gi>/<att>corresp</att> points
+            to a a glossary entry in the GLOSS1.xml file.</p>
+        </prefixDef>
+        <prefixDef ident="molvariant" matchPattern="(.*)\|(.+)" replacementPattern="spelling_variants.xml#$2">
+          <p>This molvariant prefix is used on <gi>ref</gi>/<att>target</att> attributes during automated 
+          generation of gazetteer index files. It points to an element in the generated variant spellings
+          listing file which lists all documents which contain a particular spelling variant for a 
+          location.</p>
+        </prefixDef>
+        <prefixDef ident="molajax" matchPattern="(.+)" replacementPattern="../../ajax/$1.xml">
+          <p>This molajax prefix is used on <gi>ref</gi>/<att>target</att> attributes during the static build 
+          process, to specify links which point to MoEML resources which should not be loaded into the source 
+          page during standalone processing; instead, these should be turned into links to the XML source 
+          documents, and at HTML page load time, these should be turned into AJAX calls. This is to handle 
+          the scenario in which a page such as an A-Z index of the whole site would end up containing 
+          virtually the whole site inside itself.</p>
+        </prefixDef>
+        <prefixDef ident="molstow" matchPattern="(.+)|(.+)" replacementPattern="http://hcmc.uvic.ca/stow/$1/SL$1_$2.jpg">
+          <p>The molstow prefix is used on <att>facs</att> attributes to link to the HCMC verison of the Stow facsimiles.
+          Usually the first group is the year (1633) and then last is the image number (0001).</p>
+        </prefixDef>
+      </listPrefixDef>
+        <editorialDecl>
+          <p>These digital editions are diplomatic transcriptions<!--tag with link to instructions for diplomatic transcriptions, when ready -TL-->. Our goal has been to provide clean, readable TEI transcriptions of all the extant mayoral shows from 1585 to 1639. Because this corpus has never before been made available in one place, we provide XML base texts that other scholars can repurpose according to our Creative Commons Licence.</p><p><title level="m">MoEML</title> transcriptions of the mayoral shows are based intially on the <ref type="bibl" target="BIBL1.xml#EEBO1">EEBO-TCP</ref> transcriptions. A <title level="m">MoEML</title> research assistant or contributing scholar has carefully checked the TCP transcription at least once against the EEBO images (and sometimes against the Early English Books I microfilms when the film is clearer). We silently correct errors in TCP transcriptions and fill in many of the gaps left by TCP transcribers. When we make surmises about characters or supply characters in places where the text has been cropped, damaged, overinked, or underinked, we record our supplied values using <gi>supplied</gi>. The transcription is checked again by another <title level="m">MoEML</title> research assistant, and finally by the <name ref="https://mapoflondon.uvic.ca/JENS1.htm">Project Director</name> or <name ref="https://mapoflondon.uvic.ca/MCFI1.htm">Assistant Project Director</name>. Users may report transcription errors via the Send Feedback link on each page.</p>
+          
+          <p>We treat title pages, dedications, and prefaces as front matter, encoded with the <gi>front</gi> element. We treat speeches, narrative descriptions, and interpretations as the body of the text, encoded with the <gi>body</gi> element. We treat colophons and concluding statements, including the word <quote>Finis</quote>, as back matter, encoded with the <gi>back</gi> element.
+                            </p>
+          
+          <normalization method="silent">
+            
+            <p>Our practice has been to preserve most of the typographical, orthographical, and compositorial features of the original text. We use <ref target="encoding_practices.xml#encoding_practices_text_styles_CSS">CSS styling</ref> to describe the peculiarities of font and justification. We also include links to the page images on <ref type="bibl" target="BIBL1.xml#EEBO2">EEBO</ref>; users who subscribe to EEBO may thus view the pages at any point and judge our transcription thereof for themselves.</p><p>Our encoders follow these rules for preserving or regularizing the text:
+                
+                <table rows="11" cols="2">
+                    <row role="label">
+                        <cell role="label" rows="1" cols="1">
+                            Textual Component
+                        </cell>
+                        <cell role="label" rows="1" cols="1">
+                            Rule
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Long ſ
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>TCP transcriptions do not preserve the long ſ. We have restored the long ſ through a series of find-and-replace functions based on typical early modern printing house habits, followed by a careful human checking against the digital images of the original.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Capitalization
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>We preserve the capitalization of the source, including the second upper-case letter after a woodblock dropped capital.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Italicization
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>We preserve the italicization of words by tagging them with a <gi>hi</gi> element with a <att>style</att> value of <val>font-style: italic;</val>. We consider italicization to be a <!--<term corresp="molgls:BICO1">-->bibliographic code<!--</term>--> rather than a <!--<term corresp="molgls:LICO1">-->linguistic code<!--</term>-->.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Interchangeable Characters
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>We retain the interchangeable u/v and i/j and the use of vv for w. These are not marked up with any encoding.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Ligatures
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>We retain the vowel digraphs  using the appropriate Unicode characters (e.g., æ). Typographical ligatures (e.g., ﬂ) have been silently expanded.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Nasal Tildes
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>We retain the nasal tilde over vowels (e.g., õ) using the appropriate Unicode characters.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Spacing Within Lines
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                     <p><title level="m">MoEML</title> closes up extra spaces between words and punctuation marks. However, we retain the spacing in authorial initials, such as A. M. (for Anthony Munday). We have added a single space after a comma when the comma has been used to separate two words.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Lineation
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p><title level="m">MoEML</title> preserves the line breaks in verse sections and the line wrapping in prose sections of mayoral shows. Prose line breaks have been encoded with a self-closing <gi>lb</gi> element. All line breaks in verse are produced by the use of <gi>l</gi> elements contained by <gi>lg</gi> elements.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Hyphenation
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p><title level="m">MoEML</title> transcriptions of mayoral shows preserve the hyphenation of words, both within and at the end of lines.</p>
+                        </cell>
+                    </row>
+                    <row role="data">
+                        <cell role="data" rows="1" cols="1">
+                            Quotation Marks
+                        </cell>
+                        <cell role="data" rows="1" cols="1">
+                            <p>All quotation marks are retained in the text and are represented by appropriate Unicode
+                                characters. We do not use the <gi>quote</gi> element for quotations in primary-source texts. <title level="m">MoEML</title> practice calls for curly apostrophes and straight double quotation marks in both transcriptions and born-digital texts.</p>
+                        </cell>
+                    </row>
+                </table>
+                </p>
+            
+          </normalization>
+          
+          <interpretation>
+            <p>We have interpreted and encoded toponyms, names, and dates. The encoding of toponyms requires some research to point the toponym to the right location file (and thence to the map), but the relative stability of the processional route has meant that we have high confidence in our encoding of toponyms in the mayoral shows. When our encoding has veered into interpretation, such as in our decision to encode abstract nouns as allegorical characters even when it is not completely clear that the abstraction is embodied by an actor, we have encoded with the goal of building analytical capacity into our texts, such as the capacity for users to search for characters like Time across the corpus of mayoral shows. For our treatment of early modern dates, see our encoding instructions at <ref target="encoding_dates.xml">Encode a Date</ref>. Other than toponyms, names, and dates, we have undertaken no interpretative encoding.</p>
+          </interpretation>
+        
+      </editorialDecl>
+      <tagsDecl>
+        <rendition scheme="css" xml:id="METR1_lmlabel">display: block; float: left; margin-left:
+          -5em; width: 5em;</rendition>
+        <rendition xml:id="METR1_speaker">display: block; margin-right: 0.25em;float: left; padding-left: 1em;</rendition>
+      </tagsDecl>
+      <p>Our editorial and encoding practices are documented in detail in the <ref target="praxis.xml">Praxis</ref> section of our website.</p>
+    </encodingDesc>
+  
+
+      <!--
+        Changes recorded here are only major changes or those resulting from 
+        automated processing. Later changes should be placed first. A complete
+        record of the history of any of our files is available through the Subversion
+        log.
+      -->
+      <revisionDesc status="published"><change who="PERS1.xml#TAKE1" when="2019-05-09">Added <att>xml:id</att>s to <gi>pb</gi> elements using utilities/add_sig_ids_to_shows.xsl.</change>
+        <change who="PERS1.xml#HORN6" when="2019-05-02">Checked transcription and inline CSS.</change>
+        <change who="PERS1.xml#TEMP6" when="2018-10-23">Began implementing show into new template.</change>
+<change who="PERS1.xml#ELHA1" when="2018-08-01">Collapsed element rendition using XSLT.</change>
+      <change who="PERS1.xml#TAKE1" when="2018-04-28">Changed calendar value from "julian" to "julianSic" using XSLT.</change>
+         <change who="PERS1.xml#TAKE1" when="2015-06-23">Standardized <gi>respStmt</gi>s for JENS1, MCFI1, and HOLM3 and added TAKE1 as Junior Programmer.</change>
+         <change who="PERS1.xml#HOLM3" when="2014-09-29">Added XInclude for <gi>listPrefixDef</gi> in the header.</change>
+         <change who="PERS1.xml#VIRA1" when="2014-01-28">Added marginal padding throughout</change>
+         <change who="PERS1.xml#HOLM3" when="2014-01-13">Transformed the use of <gi>supplied</gi> and its <att>reason</att> attribute
+      to conform with TEI Guidelines and our updated schema.</change>
+         <change who="PERS1.xml#HOLM3" when="2013-12-19">Added global publicationStmt through XInclude.</change>
+         <change who="PERS1.xml#HOLM3" when="2013-12-16">Standardized the use of @resp in editorial notes.</change>
+         <change who="PERS1.xml#HOLM3" when="2013-08-23">Eliminated superfluous catRef elements from the
+        header.</change>
+         <change who="PERS1.xml#HOLM3" when="2013-08-13">Put <gi>change</gi> elements inside
+          <gi>revisionDesc</gi> into the correct (latest first) order.</change>
+         <change who="PERS1.xml#HOLM3" when="2013-08-12">Added <gi>profileDesc</gi> containing document type
+        information expressed in <gi>catRef</gi> elements.</change>
+         <change who="PERS1.xml#MACD1" when="2013-07-02">Tidied front section.</change>
+         <change when="2013-03-20" who="PERS1.xml#HOLM3">Revised encoding of front matter to serve as a model
+        for updating obsolete encoding in other files.</change>
+         <change when="2013-03-13" who="PERS1.xml#MCFI1">Began transcription/encoding.</change>
+      </revisionDesc>
+
+
+  </teiHeader>
+
+  <text style="width: 35em; padding-left: 5em; padding-right: 5em;">
+    <front>
+      <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=1" n="A2r" xml:id="METR1_sig_A2r"/>
+      <titlePage>
+        <docTitle style="text-align: center;">
+          <titlePart type="main" style="line-height: 200%;">
+            <hi style="font-size: 350%; letter-spacing: 0.2em;">METROPOLIS</hi>
+            <lb/>
+            <hi style="font-size: 275%; letter-spacing: 0.2em;">CORONATA,</hi>
+          </titlePart>
+          <lb/>
+
+          <titlePart type="sub"><hi style="font-size: 200%; letter-spacing: 0.2em; line-height: 175%;">THE TRIVMPHES
+              OF</hi><lb/>
+            <hi style="display:block; margin-top: -.6rem;"><hi style="font-size: 200%; font-style: italic; padding-right: .25em;">Ancient</hi>
+            <hi style="font-size: 200%; font-variant: small-caps; letter-spacing: 0.25em;"><name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>:</hi></hi><lb/>
+          </titlePart>
+
+          <titlePart type="alt"><hi style="font-style: italic; font-size: 200%;">OR</hi>,<lb/><lb/>
+            <hi style="font-size: 200%;">Rich Cloathing of <ref target="ENGL2.htm">England</ref>,
+              <!-- KMF: I removed the ref:mol tag around England for the time being. ENGL2 is for the topic of England not the location of England; perhaps a new xml:id should be created for the location and then this tag should be changed? -->
+              in a ſe</hi><lb type="hyphenInWord"/>
+            <hi style="font-style: italic; font-size: 125%;">cond Yeeres performance</hi>. </titlePart>
+          <lb/>
+          <lb/>
+          <titlePart type="desc">
+            <hi style="font-size: 150%;">In Honour of the aduancement of <name ref="https://mapoflondon.uvic.ca/JOLL1.htm">Sir
+                  <hi style="font-variant: small-caps;">Iohn</hi><lb/>
+                <hi style="font-variant: small-caps;">Iolles</hi></name>, <hi style="font-style: italic;">Knight</hi>, <hi style="font-style: italic;">to the high
+                Office of Lord</hi></hi><lb/>
+            <hi style="font-size: 125%;">Maior of <ref style="font-style: italic;" target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>, and taking his Oath</hi><lb/>
+            <hi style="font-size: 100%;">for the ſame authoritie, on <hi style="font-style: italic;">Monday</hi>,<lb/>
+              <hi style="font-style: italic;">being the</hi>
+              <date when-custom="1615-10-30" datingMethod="includes.xml#julianSic" calendar="includes.xml#julianSic">30. <hi style="font-style: italic;">day of</hi> October.<lb/>
+                <hi style="letter-spacing: .15rem;">1615</hi></date>.<lb/><lb/></hi>
+            
+            <hi style="font-style: italic; font-size: 125%; word-spacing: .1rem;">Performed in heartie affection to him, and at the</hi><lb/>
+            <hi style="font-size: 125%; word-spacing: -.1rem;">bountifull charges of his worthy Brethren the truely</hi><lb/>
+            <hi style="font-size: 100%;"><hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Honourable Society of
+                  Drapers</name><hi style="font-style: normal;">,</hi> the firſt that re</hi><lb type="hyphenInWord"/>
+              ceiued ſuch Dignitie in this Citie.</hi><lb/></titlePart>
+          <lb/>
+        </docTitle>
+        <figure>
+          <figDesc>Horizontal rule</figDesc>
+        </figure>
+        <lb/>
+
+        <byline style="text-align: center;">
+          <hi style="font-style: italic; font-size: 100%;">Deuiſed</hi><hi style="font-style: normal;">,</hi>
+          <hi style="font-style: italic; font-size: 100%;">and written</hi><hi style="font-style: normal;">,</hi>
+          <hi style="font-style: italic; font-size: 100%;">by</hi>
+          <docAuthor><name style="font-style: normal; font-size: 115%;" ref="https://mapoflondon.uvic.ca/MUND1.htm">A.M.</name></docAuthor>
+          <hi style="font-style: italic; font-size: 100%;">Citizen</hi><hi style="font-style: normal;">,</hi>
+          <hi style="font-style: italic; font-size: 100%;">and Draper</hi><lb/>
+          <hi style="font-size: 100%;">of</hi>
+          <hi style="font-size: 100%; font-variant: small-caps; letter-spacing: 0.2em;"><ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>.</hi>
+        </byline>
+        <lb/>
+
+        <figure>
+          <figDesc>Horizontal rule</figDesc>
+        </figure>
+        <lb/>
+
+        <figure>
+          <figDesc>Printer’s ornament</figDesc>
+        </figure>
+        <lb/>
+
+        <figure>
+          <figDesc>Horizontal rule</figDesc>
+        </figure>
+        <lb/>
+
+        <docImprint style="text-align: center;">Printed at <pubPlace style="font-style: italic;"><ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref></pubPlace>, by <publisher style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/PURS1.htm" style="font-style: italic;">George
+            Purſlowe</name></publisher>. <docDate><date when-custom="1615" datingMethod="includes.xml#julianSic" calendar="includes.xml#julianSic">1615</date></docDate>.</docImprint>
+
+      </titlePage>
+
+    </front>
+
+    <body>
+        <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=2" n="A2v" xml:id="METR1_sig_A2v"/>
+      <div type="show" xml:id="METR1_Show">
+        <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=2" n="A3r" xml:id="METR1_sig_A3r"/>
+
+        <head style="text-align: center;">
+          <figure>
+            <figDesc>Printer’s ornament</figDesc>
+          </figure><lb/>
+          <hi style="font-size: 250%; letter-spacing: 0.25em;">METROPOLIS</hi><lb/>
+          <hi style="font-style: italic; font-size: 175%; letter-spacing: 0.2em; display: block;">CORONATA:</hi><lb/>
+          <hi style="letter-spacing: .2rem; font-size: 125%; display: block;">OR,</hi><lb/>
+          <hi style="font-size: 150%; padding-top: .75rem;">The olde
+            <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>
+            and Cloathing</hi><lb/>
+          <hi style="font-style: italic;">of <ref target="ENGL2.htm">England</ref></hi>,
+          <hi style="font-style: italic;">triumphing a ſecond Yeere</hi>.<lb/>
+          <hi style="text-align:center; display: block; font-size: 150%;">(*<hi style="vertical-align: -.7rem;">*</hi>*)</hi>
+          <lb/>
+        </head>
+
+        
+      <p style="margin-left: 6rem;" xml:id="METR1_d2e680_1" next="#METR1_d2e680_2"><hi style="float: left; font-size: 725%; margin-right: 0.05em; padding: 0; line-height: 90%; display: inline-block; border: solid 1pt black;" xml:id="METR1_WCI_1">H</hi>Auing in our laſt yeeres diſcourſe of<lb/>
+          <ref style="font-style: italic;" type="mol:bibl" target="https://mapoflondon.uvic.ca/HIMA1.htm">Himatia
+            Poleos</ref>, ſufficiently approued<lb/> the true antiquitie, and primary Ho<lb type="hyphenInWord"/> nour of <ref target="ENGL2.htm">England</ref>s
+         <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Draperie</name>,
+          heere<lb/> in the Citie of <ref style="font-style: italic;" target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>,
+          firſt
+          granted<lb/> by <name ref="https://mapoflondon.uvic.ca/RICH2.htm">King <hi style="font-variant: small-caps; letter-spacing: .2em;">Richard</hi> the firſt</name>, and ſe<lb type="hyphenInWord"/>conded by his brother
+            <name ref="https://mapoflondon.uvic.ca/JOHN1.htm">King <hi style="font-style: italic;">Iohn</hi></name>, by
+          enſtalling that fa<lb type="hyphenInWord"/>mous noble Gentleman, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/FITZ5.htm">Sir Henry Fitz-Alwine</name><lb/> Knight, in the
+          firſt dignity of L. Maior of <ref style="font-style: italic;" target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>,<lb/> wherein he continued (by yeerely election<hi style="font-style: italic;">)</hi> the ſpace<lb/> of
+          twenty foure yeeres and an halfe, and longer had<lb/> done, if hee had longer liued:
+          Seeing likewiſe, that<lb/>
+          <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>
+          triumpheth now two yeers together, by ſuc<lb type="hyphenInWord"/>ceſſion of two Lord
+          Maiors in one and the ſame So<lb type="hyphenInWord"/>ciety: I held it not fit (finding my
+          ſelfe not barren of<lb/> inuention, in a Theame of ſuch ſcope and large ex<lb type="hyphenInWord"/>tendure) to runne againe the ſame courſe of antique<lb/> honour:
+          but rather to iumpe with the time, which<lb/>
+      </p>
+<fw type="signature" style="text-align: center; letter-spacing: .25rem;">A3</fw>
+      <fw type="catchword" style="margin-right: 6.2rem; margin-top: -1.2em; text-align: right;">euer-</fw>
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=3" n="A3v" xml:id="METR1_sig_A3v"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis
+            Coronata.</fw>
+<p style="margin-left: 6rem;" xml:id="METR1_d2e680_2" prev="#METR1_d2e680_1">
+       
+          <choice resp="PERS1.xml#MILL2"><sic>uermore</sic><corr>euermore</corr></choice> affecteth nouelty, in a new forme of this ſe<lb type="hyphenInWord"/>cond yeeres triumph, prepared
+          for that honourable<lb/>and worthy brother of
+          <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>,
+            <name ref="https://mapoflondon.uvic.ca/JOLL1.htm">Sir <hi style="font-style: italic;">Iohn Iolles</hi></name>,
+          Knight<lb/> and Alderman, on the day of his entrance into ſo<lb/> high a dignitie. </p>
+        <p style="margin-left: 6rem; text-indent: 1.5em;">
+          <seg type="interestingSnippet" xml:id="METR1_on_monday">On <hi style="font-style: italic;">Monday</hi>, being the <date when-custom="1615-10-30" datingMethod="includes.xml#julianSic" calendar="includes.xml#julianSic">30. of <hi style="font-style: italic;">October</hi>,
+            1615</date>. ac<lb type="hyphenInWord"/>cording to auncient and moſt honourable
+            cuſtome,<lb/> the L. Maior being to paſſe by water to <ref target="https://mapoflondon.uvic.ca/WEST6.htm">Weſtmin<lb type="hyphenInWord"/>ſter</ref>, in company of his worthy Brethren, and atten<lb type="hyphenInWord"/>ded by all other Companies in their ſeuerall Bardges<lb/> made
+            fit for triumph, after ſuch manner as formerly<lb/> hath been obſerued:</seg> The firſt
+          deuice that welcom<lb type="hyphenInWord"/>meth him to the water, is an inuention proper
+          to that<lb/> nature, and thought apt to conduct him in his paſ<lb type="hyphenInWord"/>ſage. <seg type="interestingSnippet" xml:id="METR1_he_being">He being both a Draper and
+            Stapler, and theſe<lb/>
+            two profeſſions (in former times) appertaining to the<lb/> Brethren of <hi style="font-style: italic;"><ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>s</hi>
+            <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>,
+            trading only in wools<lb/> and woollen cloth, the then chiefe riches of the king<lb type="hyphenInWord"/>dome: both theſe myſteries meeting together ſo con<lb type="hyphenInWord"/>ueniently in one man, I did account it as a ſinne in me<lb/> to
+            ſunder them</seg>, and therefore made vſe of that Creaſt<lb/> or Cognizaunce of the
+          Golden Fliece, giuen by aun<lb type="hyphenInWord"/>cient Heraldrie to them both, and
+          remaining ſtill in<lb/> firme force with the Draper, as their Eſcutchion of<lb/> Armes
+          maketh manifeſt.</p>
+
+        
+      <p style="margin-left: 6rem; text-indent: 1rem;" xml:id="METR1_d2e864_1" next="#METR1_d2e864_2">In a goodly <hi style="font-style: italic;">Argoe</hi>,<!--note type="editorial" resp="mol:MILL2">The Argo is the ship that <name ref="mol:JASO1">Jason</name> and the <name ref="mol:ARGO1">Argonauts</name> sailed to retrieve
+          the Golden Fleece.</note--> ſhaped ſo neere as Art could<lb/> yeeld it, to that of
+          ſuch auncient and honourable<lb/> fame, as conuaied <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/JASO1.htm">Iaſon</name> and his valiant <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/ARGO1.htm">Argonautes</name> of<lb/>
+          <hi style="font-style: italic;">Greece</hi>, to fetch away the Golden fleece from <hi style="font-style: italic;">Cholchos</hi>;<lb/> we make vſe of that memorable hiſtorie,
+          as fit both for<lb/> the time and occaſion. Therein aloft ſitteth <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/MEDE2.htm">Medea</name>,<lb/> whoſe loue to <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/JASO1.htm">Iaſon</name>, was his beſt meanes
+          for obtaining<lb/>
+          </p>
+<fw type="catchword" style="margin-right: 4.5rem; text-align: right;">the</fw>
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=3" n="A4r" xml:id="METR1_sig_A4r"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+      <p style="margin-left: 6rem;" xml:id="METR1_d2e864_2" prev="#METR1_d2e864_1">
+        the Golden fleece: And therefore, as ſtill witneſ<lb type="hyphenInWord"/>ſing the fiery zeale
+          of her affection towards him, ſhe<lb/>ſitteth playing with his loue-lockes, and
+          wantoning<lb/> with him in all pleaſing daliance, to compaſſe the<lb/> more ſettled
+          aſſurance of his conſtancy: His noble<lb/> Companions, as <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HERC1.htm">Hercules</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TELA1.htm">Telamon</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/ORPH1.htm">Orpheus</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/CAST3.htm">Caſtor</name>,<lb/>
+        <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/POLL1.htm">Pollux</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/CALA1.htm">Calais</name> and <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/ZETH1.htm">Zethes</name> the Sonnes of <name ref="https://mapoflondon.uvic.ca/BORE2.htm" style="font-style: italic;">Boreas</name>, are<lb/>
+          ſeated about him in their ſeuerall degrees, attired in<lb/> faire guilt Armours, bearing
+          triumphall Launces,<lb/> wreathed about with Lawrell, Shields honoured with<lb/> the
+          Impreſſe of the Golden fleece, and their heads<lb/> circled with Lawrell, according to the
+          manner of all<lb/> famous Conquerors. This <hi style="font-style: italic;">Argoe</hi> is
+          rowed by diuers<lb/> comely Eunuches, which continually attended on<lb/>
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/MEDE2.htm">Medea</name>, and ſhe fauouring
+          them but to paſſe vnder the<lb/> fleece of Golde, had all their garments immediatly<lb/>
+          ſprinkled ouer with golde, euen as if it had ſhowred<lb/> downe in droppes vpon them, and
+          ſo they rowe on in<lb/>
+          <hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/JASO1.htm">Iaſon</name>s</hi> triumph.</p>
+        
+      <p style="margin-left: 6rem; text-indent: 1rem;" xml:id="METR1_d2e999_1" next="#METR1_d2e999_2">Hauing thus borrowed the helpe of this well<lb/> knowne
+          ſtorie, to honour the day of our <hi style="font-style: italic;"><ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref> Ia</hi><lb type="hyphenInWord"/><hi style="font-style: italic;">ſon:</hi><!--note type="editorial" resp="mol:MCFI1">The phrase <quote>our <ref target="mol:LOND5">London</ref>
+              <name ref="mol:JASO1">Iason</name></quote> refers to <name ref="mol:JOLL1">Sir John Jolles</name>.</note--> we doe
+          Poetically inferre, that <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name> hauing<lb/> declared himſelfe kinde in their comming hither, and<lb/>
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/THAM3.htm">Thameſis</name> ſhewen her
+          ſelfe as gracious, in paſſing ouer<lb/> her watry boſome, To make his triumph more maie<lb type="hyphenInWord"/>call<!-- KMF, could this word be "magical"? Should we attach a note since it is a very strange spelling? SM -->,
+          they lend the aſſiſtance of their Sea Chariot,<lb/> wherein they vſe to ſport themſelues
+          on their watry<lb/> regiment, it being ſhaped like to a Whale, or the<lb/> huge Leuiathan<!--note resp="mol:LEBE1" type="editorial">Sea monster in the Old Testament.</note--> of the Sea. Therein is placed the<lb/> ſhadow of <name ref="https://mapoflondon.uvic.ca/FITZ5.htm">Sir <hi style="font-style: italic;">Henry Fitz-Alwine</hi></name>, to
+          grace this dayes<lb/> honour, both by water and land, and by him are ſea<lb type="hyphenInWord"/>ted eight royall Vertues, bearing the Enſignes of<lb/>
+          </p>
+<fw type="catchword" style="margin-right: 6rem; text-align: right;">Armes</fw>
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=4" n="A4v" xml:id="METR1_sig_A4v"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+      <p style="margin-left: 6rem;" xml:id="METR1_d2e999_2" prev="#METR1_d2e999_1"> 
+        Armes of eight honourable Drapers and
+          Staplers,<lb/>
+          with beautiful ſhields, that declare each mans name,<lb/>
+          <hi style="font-style: italic;">vz</hi>. <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/PULT1.htm">Poultney</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/CROW1.htm">Cromer</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/EYRE1.htm">Aeyre</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/WOTT3.htm">Wotton</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/GEDN1.htm">Sidney</name>,<!--note type="editorial" resp="mol:MCFI1">No one called <quote>Sidney</quote>
+            appears to have been a Draper or lord mayor of <ref target="mol:LOND5">London</ref>.
+            <quote>Sidney</quote> is probably a transcription error for <quote>Gedney</quote>, as there was a <name ref="mol:GEDN1">John Gedney</name> who
+            was a Draper and lord mayor of <ref target="mol:LOND5">London</ref> from <date datingMethod="mol:julianSic" from-custom="1427" to-custom="1428">1427—1428</date> and from <date datingMethod="mol:julianSic" from-custom="1447" to-custom="1448">1447—1448</date>.</note-->
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/BULL4.htm">Bulloin</name>,<!--note type="editorial" resp="mol:MCFI1"><name ref="mol:MUND1">Munday</name> is almost certainly referring to <name ref="mol:BULL4">Geoffrey Boleyn</name> who was lord
+            mayor of <ref target="mol:LOND5">London</ref> in <date calendar="mol:julianSic" datingMethod="mol:julianSic" when-custom="1457">1457</date>. <name ref="mol:BULL4">Boleyn</name>, however, was not a
+            Draper but a Mercer.</note--><lb/>
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/CAPP1.htm">Capell</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/CHAM7.htm">Champion</name>. Many more we
+          could haue brought<lb/> to <choice><abbr>accõpanie</abbr><expan>accompanie</expan></choice> them, but neither place nor time might<lb/> afford
+          it: only theſe are remembred for their high de<lb type="hyphenInWord"/>ſeruings, as our
+          Chronicles (at large) doe more am<lb type="hyphenInWord"/>ply declare, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/FAME1.htm">Fame</name> triumphing in the top,
+          and <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name><lb/> guiding
+          the way before. No ſooner is my Lord and<lb/> his Brethren ſeated in their Bardge, and
+          ſuch ſilence<lb/> obtained as the ſeaſon can beſt permit: but <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/FITZ5.htm">Fitz<hi style="font-style: normal;">-</hi>Al<lb type="hyphenInWord"/>wine</name> ſaluteth him
+          in this manner.<lb/><lb/></p>
+      
+
+      
+          <figure>
+            <figDesc>Printer’s ornament</figDesc>
+          </figure><lb/><lb/>
+      <label place="inline" style="text-align: center;">
+        <hi style="font-size: 150%;"><name ref="https://mapoflondon.uvic.ca/FITZ5.htm"><hi style="font-style: italic;">Sir</hi> Henry Fitz-Alwine</name>s <hi style="font-style: italic;">Speech on</hi></hi>
+          <lb/>
+          <hi style="font-size: 125%;">the Water, at the <ref target="https://mapoflondon.uvic.ca/THRE3.htm">three
+            Cranes</ref>.</hi>
+          <lb/><lb/>
+      </label>
+
+          
+          <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e1229_1" next="#METR1_d2e1229_2">
+            <l><hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_1">I</hi>T is now a compleate yeere,</l>
+            <l>Since in the borrowed ſhape I beare</l>
+            <l>Of olde <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/FITZ5.htm">Fitz-Alwine</name>, I was rayſde from reſt.</l>
+            <l>On that dayes Triumph fully was expreſt</l>
+            <l>The honour due by graue Antiquitie,</l>
+            <l>Then giuen to <ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>s
+              <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Draperie</name>,</l>
+            <label rendition="#METR1_lmlabel" style="font-style: normal;" place="margin-left"><name ref="https://mapoflondon.uvic.ca/RICH2.htm">K. Richard<lb/> the Firſt</name>.</label>
+            <l>By Royall <name style="font-style: normal; font-variant: small-caps; letter-spacing: .2em;" ref="https://mapoflondon.uvic.ca/RICH2.htm">Richard</name>, who in me,</l>
+            <l>Firſt ſtilde the name of <hi style="font-style:normal;">Maioraltie:</hi></l>
+            <l>Which I held foure and twenty yeere,</l>
+            <l>As in good Records may appeare.</l>
+
+            </lg>
+<fw style="text-align: right; font-style: italic; margin-right: 5rem;" type="catchword">
+              In
+            </fw>
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=4" n="B1r" xml:id="METR1_sig_B1r"/>
+
+            <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+              Metropolis Coronata.
+            </fw>
+          <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e1229_2" prev="#METR1_d2e1229_1" next="#METR1_d2e1229_3">
+            
+            <l>In all this time my labouring ſoule,</l>
+            <l>Not quitted from the high controule</l>
+            <l>Of diuine Poeſie; hath waited ſtill</l>
+            <l>Vpon her great commanding will;</l>
+            <l>By information, that another</l>
+            <l>Of mine owne band, a Draper Brother,</l>
+            <l>Was to ſucceed in dign<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">i</supplied>tie;</l>
+            <l> Of <hi style="font-style: normal;"><ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>s</hi> famous Maioraltie,</l>
+            <l>This was a motiue of ſuch might,</l>
+            <l>That made me houer day and night,</l>
+            <l>To honour this ſolemnitie,</l>
+            <l>With whatſoere remaines in me.</l>
+            <l>Two Drapers to ſucc<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied>ede each other?</l>
+            <l> I beeing their firſt aduanced Brother:</l>
+            <l>To both muſt my affection prooue</l>
+            <l>Of cordiall and ſincereſt loue.</l>
+            <l>Then Sir, as I am taught to know yee,</l>
+            <l>So doe theſe goodly Enſign<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied>s ſh<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied>w yee</l>
+            <l>Draper and
+              Stapler;
+              ſo was I,</l>
+            <l>And both but one Societie</l>
+            <l>In thoſe graue times when woollen Cloth</l>
+            <l>Seru’d beſt for King and ſubiect both.</l>
+            <l>The Draper and the
+              Stapler
+              then</l>
+            <l>I tell yee were right worthy men,</l>
+            <l>And did more needy ſoules maintaine,</l>
+            <l>Then I feare will be ſeene againe.</l>
+            <l>But times muſt haue their reuolution,</l>
+            <l>And each their ſeu<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied>rall execut<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">i</supplied>on.</l>
+            <l>But paſſe wee them; And come to ſay</l>
+            <l> What Honours now doe <supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">crowne</supplied> this day<supplied reason="broken-type" evidence="external" resp="PERS1.xml#HORN6" source="BIBL1.xml#BERG24">.<note type="editorial" resp="PERS1.xml#HORN6">Type broken in original. Text proofed against <ref type="bibl" target="BIBL1.xml#BERG24">David M. Bergeron’s transcription</ref></note></supplied></l>
+            <l>The Golden Fl<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied>ece b<supplied reason="gap-in-inking" evidence="internal" resp="PERS1.xml#HORN6">ein</supplied>g th<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e</supplied> cr<supplied reason="gap-in-inking" evidence="internal" resp="PERS1.xml#HORN6">e</supplied>ſt</l>
+            <l> Of ancient
+              <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapery</name>;
+              we <supplied reason="gap-in-inking" evidence="external" resp="PERS1.xml#HORN6" source="BIBL1.xml#BERG24">digeſ<note type="editorial" resp="PERS1.xml#HORN6">Original insufficeintly inked. Text proofed against <ref type="bibl" target="BIBL1.xml#BERG24">David M. Bergeron’s transcription</ref></note></supplied>t</l>
+            </lg>
+<fw style="text-align: center; font-style: italic;" type="signature">
+              B<lb/>
+            </fw>
+            <fw style="text-align: right; margin-top: -1em; font-style: italic; margin-right: 5rem;" type="catchword">
+              The
+            </fw>
+            
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=5" n="B1v" xml:id="METR1_sig_B1v"/>
+            <!--Images 5 & 6 in EEBO-TCP (sig. B1v-B2r) are the same. [KMF]-->
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+              Metropolis Coronata.
+            </fw>
+          <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e1229_3" prev="#METR1_d2e1229_2" next="#METR1_d2e1229_4">
+            
+          <l>The ſtory of the Golden Fleece,</l>
+            <l>Fetcht by the <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/ARGO1.htm">Argonautes</name> of Greece</l>
+            <l>From <hi style="font-style: normal;">Cholcos</hi> in reſemblance here,</l>
+            <l>Where <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/JASO1.htm">Iaſon</name> and
+              thoſe Greekes appeare,</l>
+            <l>Which in that trauaile did partake,</l>
+            <l>Both for his loue and honours ſake.</l>
+            <l><hi style="font-style: normal;"><name ref="https://mapoflondon.uvic.ca/MEDE2.htm">Medea</name>s</hi> powerfull
+              charmes preuailde,</l>
+            <l>And all thoſe dreadfull Monſters quailde,</l>
+            <l>That kept the Fleece in their protection,</l>
+            <l>Which then was wonne by her direction.</l>
+            <l>By way of Morall application,</l>
+            <l>Your Honour may make ſome relation</l>
+            <l>Vnto your ſelfe out of this ſtorie,</l>
+            <l>You are our <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/JASO1.htm">Iaſon</name>,
+                <ref target="https://mapoflondon.uvic.ca/LOND5.htm">London</ref>s glorie,<!--note style="font-style: normal;" type="editorial" resp="mol:MCFI1">The appositional phrases <quote>our <name ref="mol:JASO1">Iaſon</name></quote> and <quote><ref target="mol:LOND5">London</ref>s glorie</quote> refer to <name ref="mol:JOLL1">Sir John Jolles</name>.</note--></l>
+            <l>Now going to fetch that fleece of Fame,</l>
+            <l>That euer muſt renowne your name.</l>
+            <l>An Oath of Faith and Fealtie</l>
+            <l>Vnto his ſacred Maieſtie,</l>
+            <l>That makes you his Great Deputie</l>
+            <l>Or Image of Authoritie.</l>
+            <l>No Monſters dare confront your way.</l>
+            <l>Imagine then, as well you may,</l>
+            <l>That all this faire and goodly Fleete,</l>
+            <l>Do in meere loue (on purpose) meete,</l>
+            <l>Like to thoſe <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/ARGO1.htm">Argonautes</name> of <hi style="font-style: normal;">Greece</hi>,</l>
+            <l>That then fetcht home their Golden Fleece,</l>
+            <l>To tend the <hi style="font-style: normal;">Argoe</hi> where you ride,</l>
+            <l>Behind, before, on euery ſide</l>
+            <l>With all applauding melodie,</l>
+            <l>That beſt this day may dignifie.</l>
+            <l><name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name> and
+              gracious <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/THAM3.htm">Thameſis</name>,</l>
+            <l> To honour ſuch a day as this, </l>
+          </lg>
+<fw style="text-align: right; font-style: italic; margin-right: 5rem;" type="catchword">
+              Haue
+            </fw>
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=5" n="B2r" xml:id="METR1_sig_B2r"/>
+
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+              Metropolis Coronata.
+            </fw>
+          <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e1229_4" prev="#METR1_d2e1229_3">
+            
+            <l>Haue ſent out of their watry ſtore</l>
+            <l>Their owne Sea Chariot, which before</l>
+            <l>They nere would part with. But as now,</l>
+            <l>Their sacred Deities allow</l>
+            <l>Our vſe thereof, which we employ,</l>
+            <l>To make more full this day of ioy.</l>
+            <l>Eight Royall Vertues take the paine</l>
+            <l> Eight honoured Enſignes to ſuſtaine</l>
+            <l> Of eight Lord Maiors, as you may ſee</l>
+            <l>Deſcribed by their Heraldrie,</l>
+            <l>Drapers, and
+              Staplers
+              Brethren kinde,</l>
+            <l>Leauing rare monuments behinde</l>
+            <l>Of their affection to this Citie,</l>
+            <l>For the poores good whom they did pittie.</l>
+            <l style="font-style: normal;">
+              <name ref="https://mapoflondon.uvic.ca/PULT1.htm">Poultney</name>, <name ref="https://mapoflondon.uvic.ca/CROW1.htm">Cromer</name>, <name ref="https://mapoflondon.uvic.ca/EYRE1.htm">Eyre</name>, <name ref="https://mapoflondon.uvic.ca/WOTT3.htm">Wotton</name>,
+            </l>
+            <l style="font-style: normal;">
+              <name ref="https://mapoflondon.uvic.ca/GEDN1.htm">Sidney</name>,<!--note type="editorial" resp="mol:MILL2">As mentioned above, <quote>Sidney</quote> is probably a transcription error for
+                <quote><name ref="mol:GEDN1">Gedney</name></quote>.</note--> <name ref="https://mapoflondon.uvic.ca/BULL4.htm">Bullen</name>,<!--note type="editorial" resp="mol:MILL2">As
+                  mentioned above, <name ref="mol:MUND1">Munday</name> is almost certainly referring to <quote><name ref="mol:BULL4">Geoffrey Boleyn</name>;</quote>
+                  however, <name ref="mol:BULL4">Boleyn</name> was a Mercer, not a Draper.</note-->
+                <name ref="https://mapoflondon.uvic.ca/CAPP1.htm">Capell</name>, <name ref="https://mapoflondon.uvic.ca/CHAM7.htm">Champion</name>.
+            </l>
+            <l>Time checks me, that I may not tell</l>
+            <l>Their ſeuerall deedes. Nor fits it well</l>
+            <l>In ſerious buſineſſe to delay<hi style="font-style: normal;">:</hi></l>
+            <l>On then a Gods name, lets away.</l>
+            <lb/>
+            <lb/>
+          </lg>
+        
+        <p style="margin-left: 6rem; text-indent: 1.5em;">The Speech being ended, the Companies witneſ<lb type="hyphenInWord"/>ſing their ioy for his taking water, and the ſame fur<lb type="hyphenInWord"/>ther confirmed by a gallant peale of Ordenance: wee<lb/> waite on
+          my Lord ſo farre as conueniently we may,<lb/> euermore hauing care of our further
+          employment in<lb/> the land ſeruice, the time being ſo ſhort, and our pre<lb type="hyphenInWord"/>paration requiring ſuch decencie in order: yet much<lb/> abuſed by
+          neglect in marſhalling, and hurried away<lb/> with too impudent haſtineſſe, albeit ſo
+          aduiſedly ſet<lb/> downe in proiect, that nothing but meere wilfulneſſe<lb/> can miſplace
+          them.<lb/></p>
+
+        <fw type="signature" style="text-align: center; letter-spacing: .25rem;" xml:id="METR1_B2r">B2</fw>
+        <fw style="text-align: right; margin-top: -1em; font-style: italic; margin-right: 5.1rem; letter-spacing: .25rem;" type="catchword">
+          THE
+        </fw>
+        
+        <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=7" n="B2v" xml:id="METR1_sig_B2v"/>
+
+      
+      <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: 1.5rem;" type="header">
+          Metropolis Coronata.
+        </fw>
+        
+
+        <label place="inline" style="text-align: center; font-size: 135%;">
+          <hi style="font-style: italic;">The Shewes appointed for ſeruice on</hi><lb/>
+            <hi style="font-style: normal;">the <hi style="letter-spacing: 0.25em;">LAN</hi>D.</hi>
+          <lb/><lb/>
+        </label>
+
+        
+      <p style="margin-left: 6rem;" xml:id="METR1_d2e1783_1" next="#METR1_d2e1783_2">
+          <hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_2">F</hi>Irſt, a faire and beautifull Shippe, ſtiled by the<lb/> Lord Maiors name, and
+          called the <hi style="font-style: italic;">Ioell</hi><!--KMF: Gloss? Or insert an editorial note?-->, appea<lb type="hyphenInWord"/>ring to bee lately returned, from trafficking<lb/> Wool and Cloth with other remote
+          Countryes;<lb/> vſhereth the way for her worthy Owners ſeruice, and<lb/> is well gouerned
+          by her Captaine, Maſter, Mate, &amp;c.<lb/>
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name>, who hath been
+          auſpicious to all her aduen<lb type="hyphenInWord"/>tures, and <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/THAM3.htm">Thameſis</name>, by bringing her
+          alwaies ſafely<lb/> within her owne bounds, beeing mounted in trium<lb type="hyphenInWord"/>phall manner, the one on a pelletted Lyon, the ſup<lb type="hyphenInWord"/>porter to the 
+          <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapers</name> Armes, and the other on a ſea-<lb/>Horse, belonging to the Lord Maiors Armorie,
+          doe<lb/> both (with their preſence) appro<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">u</supplied>e this dayes de<lb type="hyphenInWord"/>lighting. Then followeth a goodly Ramme or Gol<lb type="hyphenInWord"/>den Fleece, the
+          honoured Creaſt (as already hath<lb/> been ſayd) to <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapers</name> and
+          <name ref="https://mapoflondon.uvic.ca/STAP8.htm" type="org">Staplers</name>,
+          hauing (on each<lb/> ſide) a houſewifely Virgin ſitting, ſeriously imployed<lb/> in
+          Carding and Spinning Wooll for Cloth, the ve<lb type="hyphenInWord"/>ry beſt commoditie
+          that euer this Kingdome yeelded.<lb/> The <hi style="font-style: italic;">Argoe</hi>
+          ſucceedeth this Fleece or Ramme, accor<lb type="hyphenInWord"/>ding to our former
+          deſcription: and then, in ſtead<lb/> of <hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name>s</hi> Whale on the water, commeth another<lb/>
+          Sea-deuice, tearmed <hi style="font-style: italic;">The Chariot of Mans life</hi>, an<lb type="hyphenInWord"/>ſwerable in all respects to <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name><hi style="font-style: italic;">s</hi> relation thereof; as<lb/> alſo that
+          other Monument of <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/LOND6.htm">London</name>
+          and her twelue<lb/> Daughters,<!--note type="editorial" resp="mol:MCFI1">The <quote>twelve daughters</quote> refer to the
+            twelve principal guilds of the City of <ref target="mol:LOND5">London</ref>.</note--> at this time imploying <hi style="font-style: italic;">Metropolis
+            Coro</hi><lb type="hyphenInWord"/><hi style="font-style: italic;">nata</hi>,<!--note type="editorial" resp="mol:MCFI1">An allegorical representation of the City of <ref target="mol:LOND5">London</ref>.</note--> the Kings chiefe Citty and Chamber, moſt de<lb type="hyphenInWord"/>
+          </p>
+<fw type="catchword" style="margin-right: 5rem; text-align: right;">ſertfully </fw>
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=7" n="B3r" xml:id="METR1_sig_B3r"/>
+      <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+      <p style="margin-left: 6rem;" xml:id="METR1_d2e1783_2" prev="#METR1_d2e1783_1">
+          ſertfully crowned, as being the ancient Mother of<lb/> the whole Land, and firſt receiuing
+          honour, by the<lb/> triple imperiall Crownes of
+          <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Draperie</name>.<lb/></p>
+          <p style="margin-left: 6rem; text-indent: 1rem;">
+          After all theſe ſhewes, thus ordered in their ap<lb type="hyphenInWord"/>pointed places, followeth another deuice of Huntſ<lb type="hyphenInWord"/>men, all clad in greene, with their Bowes, Arrowes<lb/> and Bugles,
+          and a new ſlaine Deere carried among<lb/> them. It ſauoureth of <name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle <hi style="font-style: italic;">Robert de la Hude</hi></name>, ſome<lb type="hyphenInWord"/>time the noble <name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle of <hi style="font-style: italic;">Huntington</hi></name>, and Sonne in<lb/> Law (by
+          Marriage) to olde <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/FITZ5.htm">Fitz-Alwine</name>, raiſed by<lb/> the Muſes all-commanding power, to honour
+          this<lb/> Triumph with his Father. During the time of his<lb/> out-lawed life, in the
+          Forreſt of merry <hi style="font-style: italic;">Sh<supplied resp="PERS1.xml#MCFI1" reason="gap-in-inking" evidence="internal">ir<!--note type="editorial" resp="mol:MCFI1">Gap in inking. Missing letters obvious from context.</note--></supplied>wood</hi>,
+          and<lb/> elſewhere, while the cruell oppreſſion of a moſt vn<lb type="hyphenInWord"/>naturall couetous Brother hung heauy vpon him,<lb/>
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD2.htm">Gilbert de la Hude</name>, Lord
+          Abbot of <hi style="font-style: italic;">Chriſtall</hi> Abbey,<!--note type="editorial" resp="mol:MILL2">I.e.,
+          Kirkstall Abbey.</note--><lb/> who had all, or moſt of his Lands in morgage: hee<lb/>
+          was commonly called <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin
+            Hood</name>, and had a gallant<lb/> company of men (Out-lawed in the like manner)
+          that<lb/> followed his downecaſt fortunes, and honoured him<lb/> as their Lord and Maſter;
+          as <name ref="https://mapoflondon.uvic.ca/LIJO1.htm">little <hi style="font-style: italic;">Iohn</hi></name>
+          <name style="font-style:italic;" ref="https://mapoflondon.uvic.ca/SCAR1.htm">Scathlocke</name>,<lb/>
+          <name ref="https://mapoflondon.uvic.ca/MUCH1.htm"><hi style="font-style: italic;">Much</hi> the Millers ſonne</name>,
+            <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/BRAN1.htm">Right-hitting
+            Brand</name>,<!--note type="editorial" resp="mol:MCFI1"><name ref="mol:MUND1">Munday</name> appears to have invented the character of
+            <soCalled>Right Hitting Brand</soCalled> in the Robin Hood stories. In later periods, this character is
+            sometimes called <soCalled>Hard-Hitting Brand</soCalled>.</note--> <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryar<lb/>
+            <hi style="font-style: italic;">Tuck</hi></name>, and many more. In which condition of
+          life<lb/> we make inſtant vſe of him, and part of his braue<lb/> Bowmen, fitted with Bowes
+          and Arrowes, of the like<lb/> ſtrength and length, as good Records deliuer teſti<lb type="hyphenInWord"/>monie, were then vſed by them in their killing of<lb/> Deere.</p>
+
+        <p style="margin-left: 6rem; text-indent: 1.5em;" xml:id="METR1_d2e1784_1" next="#METR1_d2e1784_2">Now, becauſe after my Lords landing, protracti<lb type="hyphenInWord"/>on of time neceſſarily required to be auoyded, in re<lb type="hyphenInWord"/>gard of the Lords of his Maieſties moſt honourable<lb/> priuie
+          Councell, and other great perſonages, inuited<lb/></p>
+          <fw type="signature" style="text-align: center; letter-spacing: .25rem;">B3</fw>
+          <fw type="catchword" style="margin-right: 5.4rem; text-align: right; margin-top: -1.2em;">gueſts</fw>
+          
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=8" n="B3v" xml:id="METR1_sig_B3v"/>
+      <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+        <p style="margin-left: 6rem;" xml:id="METR1_d2e1784_2" prev="#METR1_d2e1784_1">
+          gueſts to this ſolemne Feaſt: ſuch speeches as ſhould<lb/> haue beene ſpoken to him by the
+          way, were referred<lb/> till his Honours returne to <ref target="https://mapoflondon.uvic.ca/STPA2.htm">Saint <hi style="font-style: italic;">Paules</hi></ref> in the after<lb type="hyphenInWord"/>noone. And then, another man, of no meane<lb/> ſufficiency, both for knowledge and
+          exquiſite vſe of<lb/> action, who had in the morning guided and directed<lb/>
+          <hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name>s Whale</hi>, made in
+          the forme of a Triumphall<lb/> Chariot on the water, and held the ſame office in the<lb/>
+          other Chariot vpon the Land of <hi style="font-style: italic;">Mans life:</hi> neere<lb/>
+          to the <ref target="https://mapoflondon.uvic.ca/LITT2.htm">little Conduit in Cheapſide</ref>, hee deliuereth<lb/> this
+          briefe ſpeech (importing a narration of the o<lb type="hyphenInWord"/>ther deuiſes) to the
+          Lord Maior in manner follow<lb type="hyphenInWord"/>ing.<lb/><lb/></p>
+
+
+        <label place="inline" style="text-align: center;">
+          <hi style="font-size: 150%;">The Speech of <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name> in the after<lb type="hyphenInWord"/></hi>
+          <hi style="font-style: italic;">noone, at the Lord Maiors going<lb/> to</hi>
+          <ref style="font-variant: small-caps; letter-spacing: 0.25em;" target="https://mapoflondon.uvic.ca/STPA2.htm">PAVLES</ref>.<lb/>
+          <lb/></label>
+
+
+          
+          <p style="margin-left: 6rem; margin-top: -.7rem;" xml:id="METR1_d2e2138_1" next="#METR1_d2e2138_2">
+            <hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_3">H</hi>Onourable Lord, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name> hath nothing elſe to tel<lb/> you, but the briefe meaning of theſe
+            ſeuerall<lb/> inuentions. The water-deuices haue already<lb/> ſufficiently ſpoken
+            themselues. This Ship, bearing<lb/> your owne name, and called the <hi style="font-variant: small-caps; letter-spacing: 0.2em;">Ioel</hi>, trafficking<lb/>
+            <hi style="font-style: italic;"><ref target="ENGL2.htm">England</ref>s</hi>
+            Drapery
+            with all other Countries, as by the<lb/> goodly Ramme or golden Fleece of <ref style="font-style: italic;" target="ENGL2.htm">England</ref><!-- KMF: ENGL2 is for the topic of England not the location of England; perhaps a new xml:id should be created for the location and then this tage should be changed? -->
+              appea<lb type="hyphenInWord"/>reth, where two Houſwifely Virgins ſit carding<lb/> and
+            ſpinning, is (after many happie voyages) re<lb type="hyphenInWord"/>turned to honour the
+            day of her worthie Owner, be<lb type="hyphenInWord"/> ing ſafely brought home by <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/NEPT1.htm">Neptune</name> and <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/THAM3.htm">Thameſis</name>,<lb/> who
+            (mounted on a Lyon and Sea-horſe) vouch<lb type="hyphenInWord"/>ſafe their attendance on
+            your triumph. And in ſtead<lb/> of that Sea Chariot, which waited on the <hi style="font-style: italic;">Argoe</hi> in<lb/>
+          </p>
+<fw type="catchword" style="margin-right: 5.3rem; margin-top:-0.6rem; text-align: right;">the</fw>
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=8" n="B4r" xml:id="METR1_sig_B4r"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+          <p style="margin-left: 6rem;" xml:id="METR1_d2e2138_2" prev="#METR1_d2e2138_1" next="#METR1_d2e2138_3">
+            the morning, they bring another, graced with the<lb/> ſame Royall Vertues, and Enſignes of
+            Armes be<lb type="hyphenInWord"/>longing to thoſe honourable <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapers</name>. On the top is<lb/>
+            placed a Spheare or Globe, intimating the world,<lb/> created for the vſe of man, and
+            ſuch expence of time<lb/> as is allotted him. It is ſupported by the foure Ele<lb type="hyphenInWord"/>ments, Water, Earth, Ayre, and Fire, as their figures<lb/> and
+            Emblemes doe aptly declare. It runneth on ſe<lb type="hyphenInWord"/>uen wheeles,
+            deſcribing the ſeuen ages of man; his<lb/> Infancie, Child-hood, Adoleſcency, or
+            Stripling e<lb type="hyphenInWord"/>ſtate, Youth-hood, Man-hood, Age, and Ages extre<lb type="hyphenInWord"/>mity, or decrepit condition: all of them ſubiected to<lb/> the
+            power of the ſeuen Planets, as on each wheele<lb/> they beare their Characters. It is
+            drawne by two Ly<lb type="hyphenInWord"/>ons and two Horſes of the Sea, figuring what
+            ſwift<lb/> motion haſtneth on the minutes, houres, months and<lb/> yeeres of our
+            frailtie: and the whole frame or body<lb/> guided by <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name>, as Coach-man to the lif<supplied resp="PERS1.xml#KAET1" reason="gap-in-inking" evidence="internal">e o</supplied>f man.<lb/>
+            That other goodly Monument or Pageant, with the<lb/> glorious Sunne in continuall motion
+            ouer it, apper<lb type="hyphenInWord"/>taining to the <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">Drapers Armory</name>; preſents yee <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/LOND6.htm">London</name><lb/> in the ſupreme
+            place of eminence, and the twelue<lb/> Companies (her twelue Daughters<hi style="font-style: italic;">)</hi> all ſeated
+            about<lb/> her in their due degrees, onely Drapery is
+            neereſt to<lb/> her, as being the firſt and chiefeſt honoured Society<lb/> before all
+            other.<!--note type="editorial" resp="mol:MCFI1"><name ref="mol:MUND1">Munday</name> is incorrect in ranking the <name ref="mol:DRAP3" type="org">Drapers</name> as the first
+            in precedence. The <name type="org" ref="mol:MERC3">Mercers</name> were actually ranked first.</note--> As ſupports to <hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/LOND6.htm">London</name>s</hi> flouriſhing<lb/>
+            happineſſe, and continuance of the ſame in true tran<lb type="hyphenInWord"/>quilitie:
+            foure goodly Mounts <hi style="font-style: italic;">(</hi>as ſtrong and defen<lb type="hyphenInWord"/>ſiue bulwarkes) are
+            rayſed about her, bearing Em<lb type="hyphenInWord"/>blemes of thoſe foure eſpeciall
+            qualities, which make<lb/> any Common-wealth truly happy. Learned Religi<lb type="hyphenInWord"/>
+            </p>
+<fw type="catchword" style="margin-right: 6rem; margin-top:-0.9rem; text-align: right;">on,</fw>
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=9" n="B4v" xml:id="METR1_sig_B4v"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">Metropolis Coronata.</fw>
+          <p style="margin-left: 6rem;" xml:id="METR1_d2e2138_3" prev="#METR1_d2e2138_2">
+on, Militarie Diſcipline, Nauigation, and Home<lb type="hyphenInWord"/>bred Husbandrie.</p>
+          <lb/>
+
+          <lg style="margin-left: 6rem; font-style: italic;">
+            <l>For thus<hi style="font-style: normal;">,</hi> my Lord<hi style="font-style: normal;">,</hi> I truely vnderſtand<hi style="font-style: normal;">,</hi></l>
+            <l>No greater Croſſe can hap to any Land,</l>
+            <l>Then lacke of Schollars<hi style="font-style: normal;">,</hi> Souldiers<hi style="font-style: normal;">,</hi> Saylers<hi style="font-style: normal;">,</hi>
+                Husband-men<hi style="font-style: normal;">,</hi></l>
+            <l>Long may we haue them all, <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name> ſayes <hi style="font-style: normal;">Amen.</hi></l>
+          </lg>
+        
+
+        <lb/>
+        <p style="margin-left: 6rem; text-indent: 1.5em;">Euening haſtening on ſpeedily, and thoſe
+          vſuall<lb/>Ceremonies at <ref style="font-style: italic;" target="https://mapoflondon.uvic.ca/STPA2.htm">Paules</ref> being accompliſhed: darke<lb type="hyphenInWord"/>neſſe becommeth
+          like bright day, by bountifull al<lb type="hyphenInWord"/>lowance of lighted Torches, for
+          guyding all the ſe<lb type="hyphenInWord"/>uerall ſhewes, and my Lord homeward. The
+          way<lb/> being ſomewhat long, the order of march appeared<lb/> the more excellent and
+          commendable, euen as if it<lb/> had been a Royall Maske,<note type="editorial" resp="PERS1.xml#MCFI1">A royal
+            masque was a form of courtly entertainment involving music, singing, dancing, acting and
+            elaborate costume and stage designs. Masques were developed to celebrate and flatter
+            their wealthy patrons.</note><!--KMF: Gloss this? Or insert an editorial note? (Who is the pronoun "their" replacing? Slightly unclear. SM)-->
+          prepared for the marriage<lb/> of an immortall Deitie, as in the like nature we hold<lb/>
+          the Lord Maior, to be this day ſolemnely married to<lb/>
+          <hi style="font-style: italic;"><name ref="https://mapoflondon.uvic.ca/LOND6.htm">London</name>s</hi> ſupreame
+          Dignitie, by repreſenting the awe<lb type="hyphenInWord"/>full authority of ſoueraigne
+          Maieſtie. No ſooner<lb/> commeth he to his owne Gate, but there our ſuppo<lb type="hyphenInWord"/>ſed <name ref="https://mapoflondon.uvic.ca/FITZ5.htm">Sir <hi style="font-style: italic;">Henry
+              Fitz-Alwine</hi></name>, on behalfe of the <name ref="https://mapoflondon.uvic.ca/DRAP3.htm" type="org">honou<lb type="hyphenInWord"/>rable company of
+          Drapers</name>,
+          who made no ſpare of<lb/> their bounty, for full performance of this dayes ſo<lb type="hyphenInWord"/>lemne Honor; ſpeaketh this ensuing ſpeech.<lb/></p>
+        <lb/>
+        <lb/>
+        <lb/>
+        <lb/>
+        <fw type="catchword" style="margin-right: 4rem; text-align: right;">
+          <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/FITZ5.htm">Fitz-</name>
+        </fw>
+      
+      <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=9" n="C1r" xml:id="METR1_sig_C1r"/>
+
+      <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: 1.5rem;" type="header">
+        Metropolis Coronata.
+      </fw>
+      
+
+
+        <label place="inline" style="text-align: center;">
+          <hi style="font-size: 150%; font-style: italic;"><name ref="https://mapoflondon.uvic.ca/FITZ5.htm">Fitz-Alwine</name>s</hi> 
+          <hi style="font-size: 150%; font-style: italic;">Speech to the
+          Lord</hi><lb/> Maior at Night.<lb/></label>
+        <lb/>
+
+          <lg style="margin-left: 6rem; font-style: italic;">
+            <l><hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_4">N</hi>Ow honour’d Lord<hi style="font-style: normal;">,</hi> ſince day is done<hi style="font-style: normal;">,</hi></l>
+            <l>And you to your owne houſe are come<hi style="font-style: normal;">,</hi></l>
+            <l>With all delight that we can make yee<hi style="font-style: normal;">:</hi></l>
+            <l>Me thinks we ſhould not yet forſake yee<hi style="font-style: normal;">,</hi></l>
+            <l>But that ſtrict <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/TIME2.htm">Time</name> will haue it ſo<hi style="font-style: normal;">,</hi></l>
+            <l>And parts vs<hi style="font-style: normal;">,</hi> whether we will or no<hi style="font-style: normal;">.</hi></l>
+            <l>All then my Lord that I ſhall ſay<hi style="font-style: normal;">,</hi></l>
+            <l>Is<hi style="font-style: normal;">,</hi> that your Honour would well weigh</l>
+            <l>Your worthie-minded Brethrens loue<hi style="font-style: normal;">,</hi></l>
+            <l>Who haue in firme affection ſtroue<hi style="font-style: normal;">;</hi></l>
+            <l>How beſt they might renowne this day<hi style="font-style: normal;">:</hi></l>
+            <l>In h<supplied resp="PERS1.xml#KAET1" reason="ink-smudged" evidence="internal">ono</supplied>uring you<hi style="font-style: normal;">.</hi> And I dare ſay<hi style="font-style: normal;">,</hi></l>
+            <l>That neuer men did more deſire</l>
+            <l>To ſtretch their loue and bounty higher</l>
+            <l>Then they haue done<hi style="font-style: normal;">,</hi> and could afford</l>
+            <l>For ſuch a worthy minded Lord<hi style="font-style: normal;">,</hi></l>
+            <l>Which they by me humbly commend</l>
+            <l>Still at your ſeruice: <hi style="font-style: normal;">So I end.</hi></l>
+          </lg>
+        
+        <lb/>
+
+        <p style="margin-left: 6rem; text-indent: 1.5em;">Afterward, as occaſion beſt preſenteth it ſelfe,<lb/> when
+          the heate of all other employments are calmly<lb/>ouerpaſt: <name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle <hi style="font-style: italic;">Robin Hood</hi></name>, with <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer <hi style="font-style: italic;">Tuck</hi></name>, and his<lb/> other braue
+          Hunteſ-men, attending (now at laſt) to<lb/> diſcharge their duty to my Lord, which the
+          buſie<lb/> turmoile of the whole day could not before affoord:<lb/> they ſhewe themſelues
+          to him in this order, and<lb/>
+          <name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle <hi style="font-style: italic;">Robin</hi></name> himselfe
+          thus ſpeaketh: </p>
+        <fw type="signature" style="text-align: center;">C</fw>
+        <fw style="text-align: right; margin-top: -1em; font-style: italic; margin-right: 5rem;" type="catchword">
+          The
+        </fw>
+        
+        <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=10" n="C1v" xml:id="METR1_sig_C1v"/>
+      <figure style="padding-top: 2rem; padding-bottom: 2rem;">
+        <figDesc>Printer’s ornament</figDesc>
+      </figure>
+      <label place="inline" style="text-align: center; padding-bottom: .5rem;">
+            <hi style="font-size: 150%; font-style: italic;">The Speech ſpoken by</hi>
+            <name ref="https://mapoflondon.uvic.ca/HOOD1.htm"><hi style="font-size: 150%;"><hi style="font-style: italic;">Earle</hi> Robert</hi><lb/>
+              <hi style="font-size: 125%;">de la Hude</hi></name>, <hi style="font-style: italic; font-size: 125%;">commonly called</hi><lb/><name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name>.<lb/>
+          </label>
+          
+      <figure style="padding-bottom: .5rem;">
+            <figDesc>Horizontal rule</figDesc>
+          </figure>
+            
+            <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e2657_1" next="#METR1_d2e2657_2">
+              <l><hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_5">S</hi>Ince Graues may not their Dead containe<hi style="font-style: normal;">,</hi></l>
+            <l> Nor in their peacefull ſleepes remaine<hi style="font-style: normal;">,</hi></l>
+            <l>But Triumphes and great Showes muſt vſe them<hi style="font-style: normal;">,</hi></l>
+            <l>And we vnable to refuſe them:</l>
+            <l> It ioyes me that <name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle <hi style="font-style: normal;">Robert
+                  Hood</hi></name>,</l>
+            <l> Fetcht from the Forreſt of merrie <hi style="font-style: normal;">Shirwood,</hi></l>
+            <l>With theſe my Yeomen tight and tall,</l>
+            <l>Braue Huntſmen and good Archers all:</l>
+            <l>Muſt in this Iouiall day partake,</l>
+            <l> Prepared for your Honours ſake.</l>
+            <l>No ſooner was I rayſde from reſt,</l>
+            <l>And of my former ſtate poſſeſt</l>
+            <l>As while I liu’d: But being alone,</l>
+            <l>And of my Yeomen ſeeing not one:</l>
+            <l> I with my Bugle gaue a call,</l>
+            <l> Made all the Woods to ring withall.</l>
+            <l> Immediatly came <name ref="https://mapoflondon.uvic.ca/LIJO1.htm">little <hi style="font-style: normal;">Iohn</hi></name>,</l>
+            <l>And <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/SCAR1.htm">Scathlock</name>
+              followed him anon,</l>
+            <l>With <name ref="https://mapoflondon.uvic.ca/MUCH1.htm"><hi style="font-style: normal;">Much</hi> the honeſt
+                Millars Sonne</name>.</l>
+            <l>And ere ought elſe could be done,</l>
+            <l>The frollicke <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Frier</name> came tripping in,</l>
+            <l>His heart vpon a merrie pinne. </l>
+
+            </lg>
+<fw style="text-align: right; font-style: italic; margin-right: 4.5rem;" type="catchword">
+              Mareſt
+            </fw>
+
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=10" n="C2r" xml:id="METR1_sig_C2r"/>
+
+      <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+              Metropolis Coronata.
+            </fw>
+            <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e2657_2" prev="#METR1_d2e2657_1">
+            
+            <l>Maſter (quoth he) in yonder brake,</l>
+              <l>A Deere is hid for <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/MARI2.htm">Marian</name><hi style="font-style: normal;">s</hi> ſake,</l>
+            <l>Bid <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/SCAR1.htm">Scathlock</name>,
+                <name style="font-style:normal;" ref="https://mapoflondon.uvic.ca/LIJO1.htm">Iohn</name>, or honeſt
+                <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/BRAN1.htm">Brand</name>,</l>
+            <l>That hath the happy hitting hand,</l>
+            <l>Shoote right and haue him. And ſee my Lord</l>
+            <l>The deed performed with the word.</l>
+            <l> For <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin</name> and his
+              Bow-men bolde,</l>
+            <l>Religiouſly did euer holde,</l>
+            <l>Not emptie-handed to be ſeene,</l>
+            <l>Were’t but at feaſting on a Greene.</l>
+            <l>Much more then, when ſo high a day</l>
+            <l>Calls our attendance: All we may,</l>
+            <l> Is all too little, tis your grace,</l>
+            <l>To winke at weakeneſſe in this caſe.</l>
+            <l>So fearing to be ouer-long,</l>
+            <l> End all with our olde hunting Song.</l>
+            </lg>
+          
+
+
+        <label place="inline" style="display: block; margin-right: 0.25em;float: left; padding-left: 1em;"><name style="font-style: normal; margin-left: 3rem; margin-left: 6rem;" ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>.</label>
+            <lg style="font-style: italic; margin-left: 6rem; margin-top: 0rem; margin-bottom: 0rem;">
+            <l style="margin-left: 6rem;">But good Maſter ere they ſing,</l>
+            <l>Fauour me to moue one thing.</l>
+            <l>A boone, a boone, for <name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer
+                  Tuck</name>,</l>
+            <l>Who begges it with a lowly ducke.</l>
+          </lg>
+
+          
+        <label place="inline" style="display: block; margin-right: 0.25em; float: left; padding-left: 1em;"><name style="font-style: normal; margin-left: 13rem;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Rob</name>.</label> 
+        <lg style="font-style: italic; margin-left: 13em;"><!--margin-top: -.6rem !important; JENS1 deleted this styling because it was making lines overlap-->
+            <l>What is it <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>?</l>
+         </lg>
+
+
+        <label place="inline" style="display: block; margin-right: 0.25em;float: left; padding-left: 1em;"><name style="font-style: normal; margin-left: 6rem;" ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>. </label>
+            
+        <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e2888_1" next="#METR1_d2e2888_2"> <!--margin-top: -.7rem; JENS1 deleted this styling because it was making lines overlap.-->
+            <l>Since we are thus rayſde from our reſt,</l>
+            <l>In honour of this famous feaſt,</l>
+            <l>And for his ſake that may commaund,</l>
+            <l>(Next to my Maſter) heart and hand,</l>
+            <l>Of mee and all theſe good Yeomen:</l>
+            <l>Ere we returne to ground agen,</l>
+            <l>Seeing iolly <hi style="font-style: normal;">Christmas</hi> drawes ſo neere,</l>
+            <l>When as our ſeruice may appeare,</l>
+            <l>Of much more merit then as now,</l>
+            <l>Which doth no larger ſcope allow,</l>
+            </lg>
+<fw type="signature" style="text-align: center; letter-spacing: .25rem;">C2</fw>
+            <fw style="text-align: right; font-style: italic; margin-top: -1.2em; margin-right: 5rem;" type="catchword">
+              Then
+            </fw>
+            <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=11" n="C2v" xml:id="METR1_sig_C2v"/>
+            <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+              Metropolis Coronata.
+            </fw>
+            <lg style="margin-left: 6rem; font-style: italic;" xml:id="METR1_d2e2888_2" prev="#METR1_d2e2888_1">
+            
+            <l>Then that which is already done;</l>
+            <l>Your loue, my Lord, ſo much hath won</l>
+            <l>Vpon the <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name> and his Compeeres,</l>
+            <l> As we could wiſh to liue whole yeeres,</l>
+            <l>To yeeld you pleaſure and delight,</l>
+            <l>Be it by day, or be it by night.</l>
+            <l>For we haue choiſe delights in ſtore,</l>
+            <l> Command them, and I craue no more.</l></lg>
+          
+
+        <lg style="margin-left: 6rem; font-style: italic;"><!--margin-top: -.7rem; JENS1 removed this styling because it was making lines overlap-->
+             <l style="margin-left: 1rem;"><name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Rob</name>. 
+           You heare (my Lord) the <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>s motion,</l>
+            <l>Out of meere loue, and pure deuotion.</l>
+            <l>You ſee beſide that all my men,</l>
+            <l>(For any ſeaſon, where or when,)</l>
+            <l> Second his ſute. May it pleaſe you then,</l>
+            <l>Not to diſlike his kinde requeſt,</l>
+            <l><name ref="https://mapoflondon.uvic.ca/HOOD1.htm">Earle <hi style="font-style: normal;">Robin</hi></name> frankly
+              doth proteſt,</l>
+            <l>We will all ſtriue to do our beſt,</l>
+            <l>When any occaſion ſhall require,</l>
+            <l> The offer of our merry <name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>,</l>
+            <l>For ſuch a worthy minded Lord,</l>
+            <l><name style="font-style: normal;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name> ſeales
+              it with his word.</l>
+          </lg>
+          
+
+
+        <label place="inline" style="display: block; margin-right: 0.25em;float: left; padding-left: 1em;"><name style="font-style: normal; margin-left: 6rem;" ref="https://mapoflondon.uvic.ca/TUCK1.htm">Fryer</name>.</label>
+        <lg style="margin-left: 6rem; font-style: italic;"><!--margin-top: -.7rem; JENS1 took out this styling because it was making lines overlap-->
+            <l>Thankes my deare Domine,</l>
+            <l>And to you noble Homine,</l>
+            <l>For to this Indenter,<!--KMF: Gloss this?--></l>
+            <l><name ref="https://mapoflondon.uvic.ca/TUCK1.htm">Frier <hi style="font-style: normal;">Tuck</hi></name>
+              ſubſcribes Libenter.<!--KMF: Gloss this?--></l>
+            <l>Now leſt we offer wrong,</l>
+            <l>Fall to your <hi style="font-style: normal;">Sing Song.</hi></l></lg>
+            
+          
+          <lb/>
+          <lb/>
+          <fw style="text-align: right; font-style:italic; margin-right: 3rem;" type="catchword">The</fw>
+        
+
+        <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=11" n="C3r" xml:id="METR1_sig_C3r"/>
+
+      <figure style="padding-top: 2rem; padding-bottom: 2rem;">
+        <figDesc>Printer’s ornament</figDesc>
+      </figure>
+      
+          <label place="inline" style="text-align: center; padding-bottom: 1rem;">
+            <hi style="font-size: 150%; line-height: 150%;">The Song of <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name> and<lb/>
+              <hi style="font-size: 80%;">his <name ref="https://mapoflondon.uvic.ca/HUNT15.htm">Hunteſ-men</name>.</hi></hi>
+            <lb/>
+          </label>
+          
+          <lg style="margin-left: 6rem; padding-bottom: 1rem;">
+            <l><hi style="float: left; font-size: 360%; margin-right: 0.05em; padding: 0; font-style: normal; line-height: 90%; display: inline-block;" xml:id="METR1_DC_6">N</hi>Ow wend we together, my merry men all,</l>
+            <l style="text-indent: 1.5em;">Vnto the Forreſt ſide-a:</l>
+            <l style="text-indent: 1em;">And there to strike a Buck or a Doae,</l>
+            <l style="text-indent: .5em;">Let our cunning all be tride-a.</l>
+          </lg>
+      <lg style="margin-left: 6rem; padding-bottom: 1rem;">
+            <l> Then goe we merrily, merrily on,</l>
+            <l style="text-indent: 1em;">To the Green-wood to take vp our ſtand,</l>
+            <l>Where we will lye in waite for our Game,</l>
+            <l style="text-indent: 1em;">With our bent Bowes all in our hand.</l>
+          </lg>
+      <lg style="margin-left: 6rem; padding-bottom: 1rem;">
+            <l>What life is there like to <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name>?</l>
+            <l style="text-indent: 1em;">It is ſo pleasant a thing a:</l>
+            <l>In merry <hi style="font-style: italic;">Shirwood</hi> he ſpends his dayes,</l>
+            <l style="text-indent: 1em;">As pleaſantly as a King a.</l>
+          </lg>
+      <lg style="margin-left: 6rem; padding-bottom: 1rem;">
+            <l> No man may compare with <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin
+                  Hood</name>,</l>
+            <l style="text-indent: 1em;">With <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name>, <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/SCAR1.htm">Scathlocke</name> and <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/LIJO1.htm">Iohn</name>:</l>
+            <l>Their like was neuer, nor neuer will be,</l>
+            <l style="text-indent: 1em;">If in caſe that they were gone.</l>
+          </lg>
+          <fw type="signature" style="text-align: center; letter-spacing: .25rem;">C3</fw>
+          <fw type="catchword" style="margin-right: 6rem; text-align: right; margin-top: -1.2em;">They</fw>
+      
+          <pb facs="https://search.proquest.com/eebo/docview/8/pageLevelImage/?imgSeq=12" n="C3v" xml:id="METR1_sig_C3v"/>
+          <fw style="text-align: center; font-style: italic; font-size: 150%; padding-bottom: .5rem;" type="header">
+            Metropolis Coronata.
+          </fw>
+      
+      <lg style="margin-left: 6rem; padding-bottom: 1rem;">
+            <l> They will not away from merry <hi style="font-style: italic;">Shirwood</hi>,</l>
+            <l style="text-indent: 1em;">In any place elſe to dwell:</l>
+            <l>For there is neither City nor Towne,</l>
+            <l style="text-indent: 1em;">That likes them halfe ſo well.</l>
+          </lg>
+      <lg style="margin-left: 6rem; padding-bottom: 3rem;">      
+            <l> Our liues are wholly giuen to hunt,</l>
+            <l style="text-indent: 1em;">And haunt the merrie Greene-wood:</l>
+            <l>Where our beſt ſeruice is daily ſpent,</l>
+            <l style="text-indent: 1em;">For our Maſter <name style="font-style: italic;" ref="https://mapoflondon.uvic.ca/HOOD1.htm">Robin Hood</name>.</l>
+          </lg>
+          
+        
+      
+      <trailer style="display:block; text-align: center; font-variant: small-caps; letter-spacing: 0.4em; margin-top: 1rem;">
+        FINIS.
+      </trailer>
+        <figure style="padding-top: 4rem; padding-bottom: 8rem;">
+          <figDesc>Printer’s ornament</figDesc>
+        </figure>
+      <lb/>
+      </div>
+    </body>
+  </text>
+</TEI>

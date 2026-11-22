@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Excerpts from First Draft of Fred Wah's <title level="m">Breathin' My Name With a Sigh</title></title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <pb n="1" facs="https://fredwah.ca/sites/default/files/A9_Breathin%20My%20Name%20with%20a%20Sigh%28CHP%20first%20draft%29.pdf#page=4"/>
+         <div type="poem">
+            <lg>
+               <l>I like the purity of all things seen</l>
+               <l>through the accumulation of thrust</l>
+               <l>forward especially the vehicle</l>
+               <l>container maybe / or <soCalled>thing</soCalled> called body</l>
+               <l>because time seems to be only <emph>it</emph> appears</l>
+               <l>to look into the green mountain valleys</l>
+               <l>or through them to the rivers &amp; nutrient creeks</l>
+               <l><emph>where</emph> was never the problem animal is</l>
+               <l>I still have my own name its what they call me</l>
+               <l><q>breathin</q> my name with a sigh<note place="foot">Unsure whether or not the terminal quotation mark here is intentional or whether the entire line is meant to be in quotation marks.</note></l>
+            </lg>
+         </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="v01.0077.01"
+     xml:lang="en"
+     n="vol1.016">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="Paton">Letter to Mr. Robert Forbes</title>
+            <title type="Steuart">Letters from and to <persName ref="prs:MDOND1">Major MacDonell</persName> when in <placeName ref="plc:CARL1">Carlisle Castle</placeName></title>
+            <title type="Forbes">Copy of a Letter to Mr Robert Forbes at My Lady Bruce's Lodgings Leith</title>
+            <respStmt>
+               <resp>Encoder</resp>
+               <name ref="team:KM1"/>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Part of the Networking Jacobites project at SFU.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <list>
+               <item>
+                  <idno type="TRP_DOC_ID">829645</idno>
+               </item>
+               <item>
+                  <idno type="TRP_COLL_ID">125158</idno>
+               </item>
+            </list>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <locus type="Forbes" from="77" to="78"/>
+         <locus type="Paton" n="1" from="40" to="41"/>
+         <limItem type="letter">
+            <note><quote source="Forbes" from="68" to="68">the following Copies of Letters [...] are faithfully
+               transcrib'd from the Major's own Hand-writ, with a Return to one of them, transcrib'd from an Holograph
+               of the Writer.</quote></note>
+            <correspDesc>
+               <correspAction type="sent">
+                  <persName ref="prs:MDOND1"/>
+                  <date when="1746-09-28"/>
+                  <placeName ref="plc:CARL1"/>
+                  <placeName type="via"/>
+               </correspAction>
+               <correspAction type="received">
+                  <persName ref="prs:FORBR1"/>
+                  <placeName ref="plc:LADY1"/>
+               </correspAction>
+            </correspDesc>
+            <noteGrp type="acknowledgements" value="true">
+               <note><quote>I wrote you &amp; Mr Moir a joint Letter about ten days agoe.</quote></note>
+            </noteGrp>
+            <noteGrp type="compliments_to" value="true">
+               <note><persName ref="prs:SCOTM1">My Lady Bruce</persName>;
+                  <persName>Mr (Hugh) Clerk's Family</persName>
+                  <quote>but <persName ref="prs:CLERM2">Miss Mally</persName> in particular </quote>;
+                  <persName>the rest of the honest Folks in that City (Leith)</persName></note>
+            </noteGrp>
+            <noteGrp type="enclosed_in" value="false"/>
+            <noteGrp type="enclosures" value="false"/>
+            <noteGrp type="requests" value="false"/>
+            <noteGrp type="remediation" value="false"/>
+            <noteGrp type="inForbes" value="false"/>
+            <note type="mediaMentioned">
+            </note>
+            <note type="peopleMentioned">
+               <persName ref="prs:FORBR1">Dr Sir/you</persName>;
+               <persName>all your Leith Friends</persName>;
+               <persName ref="prs:MDOND1">I/a broken ill-us'd Major</persName>;
+               <persName ref="prs:SCOTM1">My Lady Bruce</persName>; <persName>Mr (Hugh) Clerk's Family</persName>;
+               <persName ref="prs:CLERM2">Miss Mally</persName>; <persName>honest Folks in that City (Leith)</persName>;
+               <persName>Mr Moir</persName>
+            </note>
+            <note type="placesMentioned">
+               <placeName>the Scaffold</placeName>; <placeName ref="plc:LEIT1">that City</placeName>
+            </note>
+            <note type="objectsMentioned">
+               <p/>
+            </note>
+         </limItem>
+      </profileDesc>
+      <revisionDesc status="metadataDone">
+         <change who="team:JT1" when="2021-11-10" status="metadataDone">Added transcription from
+            <ref target="https://transkribus.eu/lite/collection/125158/doc/829645">Transkribus</ref>.</change>
+         <change who="team:KM1" when="2021-07-26" status="metadataDone">Entered metadata.</change>
+         <change who="team:JT1" when="2021-07-19" status="empty">Generated file from Google spreadsheet.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+            <pb facs="lib:108"/>
+            <lb facs="lib:108.1"/>(77)
+            <lb facs="lib:108.2"/>Copy of a Letter to Mr Ro-
+            <lb facs="lib:108.3"/>vert Forbes at My Lady
+            <lb facs="lib:108.4"/>Bruce's Lodgings Leith.
+            <lb facs="lib:108.5"/>Dr Sir Wishing from my whole
+            <lb facs="lib:108.6"/>Heart, that these may find you &amp;
+            <lb facs="lib:108.7"/>all your Leith Friends in good
+            <lb facs="lib:108.8"/>Health, I have had a little bit
+            <lb facs="lib:108.9"/>Fever some Days past; but, God
+            <lb facs="lib:108.10"/>be blessed, I am now in good
+            <lb facs="lib:108.11"/>Health, Heart &amp; Spirits; and
+            <lb facs="lib:108.12"/>if it is my Fate to goe to the
+            <lb facs="lib:108.13"/>Scaffold, I dare say, that I'll
+            <lb facs="lib:108.14"/>goe to Death, as a Christian &amp;
+            <lb facs="lib:108.15"/>a Man of Honour ought to do.
+            <lb facs="lib:108.16"/>But it is possible, that a broken
+            <lb facs="lib:108.17"/>ill-usd Major may be a Colo-
+            <lb facs="lib:108.18"/>nel before he dies. You'll
+            <lb facs="lib:108.19"/>make my Compliments to My
+            <lb facs="lib:108.20"/>Lady Bruce, Mr Clerks Family,
+            <lb facs="lib:108.21"/>but Miss Mally in particular, &amp;
+            <lb facs="lib:108.22"/>the rest of the honest Folks in
+            <lb facs="lib:108.23"/>that City, &amp; accept of the same
+            <lb facs="lib:108.24"/>from him, who is with the greatest
+            <lb facs="lib:108.25"/>Sincerety, affection &amp; Esteem,
+            <lb facs="lib:108.27"/>Castle Caslisle
+            <lb facs="lib:108.26"/>My Dr Sir
+            <lb facs="lib:108.28"/>Sept 20th, Your most affte &amp; obedient Serv
+            <lb facs="lib:108.29"/>while Donald MacDonell
+            <lb facs="lib:108.30"/>1746
+            <lb facs="lib:108.31"/>P-S
+            <pb facs="lib:109"/>
+            <lb facs="lib:109.1"/>(78)
+            <lb facs="lib:109.2"/>P-S: I wrote you &amp; Mr Moir
+            <lb facs="lib:109.3"/>a joint Letter about ten days agoe.
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TEI Workshop: Image Annotation</title>
+        <link rel="stylesheet" href="../lib/annotorious-2.5.10/annotorious.min.css"></link>
+        <link rel="stylesheet" href="../lib/bootstrap-5.0.2/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="css/annotate.css"></link>
+
+        <script src="../lib/annotorious-2.5.10/annotorious.min.js"></script>
+        <script src="../lib/annotorious-shape-labels/annotorious-shape-labels.min.js"></script>
+    </head>
+    <body>
+        <main>
+           <aside class="d-flex bg-light shadow-sm m-3 rounded position-sticky left-0 ">
+               <div>
+                   <label for="img-size" class="form-label">Image Size</label>
+                   <input type="range" class="form-range" value="100" min="10" max="150" id="img-size">
+                   <span id="img-size-val"></span>
+               </div>
+               <div>
+                   <button class="btn btn-danger" id="clear">Remove all</button>
+               </div>
+
+
+           </aside>
+            <article>
+                <img id="image" src="../images/v01.0068.01.jpg"/>
+            </article>
+        </main>
+        <script src="js/annotate.js"></script>
+    </body>
+</html>

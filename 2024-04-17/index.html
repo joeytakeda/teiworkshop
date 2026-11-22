@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2024">
+<head>
+    <title>Introduction to TEI</title>
+    <meta charset="utf-8"/>
+    <link href="../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../lib/reveal-5.0.4/reveal.css"/>
+    <link rel="stylesheet" id="theme" href="../lib/reveal-5.0.4/theme/black.css"/>
+    <link rel="stylesheet" href="../css/presentation.css"/>
+    <link rel="stylesheet" href="../lib/reveal-5.0.4/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="../lib/fonts/fira-code/fira_code.css"/>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="title-slide slide" data-background-image="../images/TEI_Logo.png" data-background-opacity="0.8" data-background-size="15%" data-background-position="bottom left">
+            <h2 class="maintitle">CoLab TEI Introduction</h2>
+            <hr/>
+            <p style="text-align:center; font-size:90%">Joey Takeda</p>
+            <p style="text-align:center; font-size:90%">Digital Humanities Innovation Lab, Simon Fraser University</p>
+            <p style="text-align:center; font-size:90%">April 17, 2024</p>
+        </section>
+       
+        
+       <section data-background-image="../images/native-land.png">
+        <div>
+            <p>Unceded territory of the səl̓ilw̓ətaʔɬ (Tsleil-Waututh), kʷikʷəƛ̓əm (Kwikwetlem), Sḵwx̱wú7mesh Úxwumixw (Squamish), and xʷməθkʷəy̓əm (Musqueam) Nations</p>
+        </div>
+       </section>
+
+       <section>
+        <h3>About Me</h3>
+        <p>Developer at the Digital Humanities Innovation Lab, SFU Library</p>
+        <p>Elected member of the TEI Technical Council</p>
+        <p>Technical Director of the Winnifred Eaton Archive</p>
+        <p class="fragment">TEI superfan</p>
+       </section>
+
+
+       <section>
+         <h3>The TEI</h3>
+         <img class="r-stretch" src="../images/TEI_Logo_Horizontal_Light.png">
+        </section>
+
+        <section>
+            <h3>The TEI: A Brief History</h3>
+                <p class="fragment">Began in the 1987 with the Pougkeepsie Principles</p>
+                <p class="fragment">Proposal 1 (P1) released 1990</p>
+                <p class="fragment">HTML (v1) appears</p>
+                <p class="fragment">P3 (1994): Picking up steam</p>
+                <p class="fragment">HTML 4.01 (1999)</p>
+                <p class="fragment">P4 (2002): P3, but make it XML</p>
+                <p class="fragment">P5 (2007): The current version</p>
+                <p class="fragment">P6 (?????)</p>
+        </section>
+
+        <section>
+            <h3>The TEI</h3>
+            <p class="fragment">Is a markup language written in XML</p>
+            <p class="fragment">Used by many projects across the world in many different languages and for many different reasons</p>
+        </section>
+        <section>
+            <h3>The TEI</h3>
+            <p class="fragment">A set of building blocks for describing texts and scaffolding analysis</p>
+        </section>
+
+        <section>
+            <h3>What is markup?</h3>
+            <p class="fragment">Markup refers to a <i>structured</i> way to identify and separate textual information</p>
+            <p class="fragment">The most common form of markup is a structure called XML (aka "pointy brackets")</p>
+        </section>
+
+        <section>
+            <h3>XML</h3>
+               <div class="r-stack">
+                   <div class="fragment fade-in fade-out" data-fragment-index="0">
+                       <p>XML = eXtensible Markup Language</p>
+                       <p>XML is not a set language unto itself, but a grammar</p>
+                   </div>
+                   <div class="fragment current-visible" data-fragment-index="0">
+                       <p>There is nothing inherent about the function of XML</p>
+                       <p>It is purely a structure--a way of organizing</p>
+                       <p>Anyone can conceive of an XML dialect (e.g. it is extensible)</p>
+                   </div>
+               </div> 
+        </section>
+
+
+        <section>
+            <h3>XML</h3>
+            <p class="fragment">XML is hierarchical</p>
+            <p class="fragment">XML is a tree-like structure</p>
+            <p class="fragment">And is often described in genealogical terms</p>
+        </section>
+        
+        <section data-auto-animate>
+            
+            <h3>XML</h3>
+            <pre data-id="a"><code data-trim data-line-numbers="|2|1,5,9,13|4|1,13|1-13|1,2|5-9" data-fragment-index="1">
+                <ingredients>
+                    <item>chocolate</item>
+                    <item quantity="1" measure="tbsp">butter</item>
+                    <item quantity="2" measure="tbsp">
+                        <choice>
+                            <option>cherry brandy</option>
+                            <option>kirsch</option>
+                            <option>coffee</option>
+                        </choice>
+                    </item>
+                    <item quantity="2-3" measure="tbsp">sugar</item>
+                    <item quantity="2">large eggs</item>
+                </ingredients>
+            </code></pre>
+            <div class="r-stack fragment" data-fragment-index="0">
+                <p class="fragment fade-out " data-fragment-index="1">The two pointy brackets is called an element</p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="1">E.g. <kbd>&lt;item&gt;</kbd> = the item element</p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="2">All elements have start and end tags<br/><kbd>&lt;ingredients&gt;</kbd> is the start tag and <kbd>&lt;/ingredients&gt;</kbd> is the end tag</p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="3">Elements can also have attributes (<kbd>@quantity</kbd>)<br>
+                    Attributes must have a value: <kbd>&lt;item <mark>quantity="2"</mark>&gt;</kbd>.</p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="4">All XML structures have a "root" (or container) element</p>    
+                <p class="fragment fade-out  current-visible" data-fragment-index="5"> Elements nest and use genealogical terms</p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="6">The <kbd>ingredients</kbd> element is a parent of <kbd>item</kbd></p>
+                <p class="fragment fade-out  current-visible" data-fragment-index="7"><kbd>&lt;option&gt;</kbd>s are children of <kbd>&lt;choice&gt;</kbd> </p>
+        
+            </div>
+            <cite>Adapted from Nigella Lawson's "Chocolate Cherry Mousse" from the New York Times</cite>
+        </section>
+        
+
+        <section>
+            <h3>XML Explained</h3>
+            <!--Colour code these -->
+                <p class="fragment">Elements cannot overlap</p>
+                <p class="fragment r-fit-text">✅ <kbd><span>&lt;shelf&gt;</span><mark>&lt;book&gt;</mark>Anna Karenina<mark>&lt;/book&gt;</mark>&lt;/shelf&gt;</kbd></p>
+                <p class="fragment r-fit-text">❌ <kbd>&lt;shelf&gt;<mark>&lt;book&gt;</mark>Anna Karenina&lt;/shelf&gt;<mark>&lt;/book&gt;</mark></kbd></p>
+        </section>
+
+
+        <section>
+            <h3>Semantics v. Display</h3>
+            <p class="fragment">Semantic or Descriptive markup = encoding <i>what</i> the thing is</p>
+            <p class="fragment">Display or Presentational markup = encoding <i>how</i> you want that thing to look</p>
+        </section>
+
+        <section>
+            <h3>Map of Early Modern London Example</h3>
+            <p><a href="https://mapoflondon.uvic.ca/stow_1598_CORN1.htm">https://mapoflondon.uvic.ca/stow_1598_CORN1.htm</a></p>
+        </section>
+
+        <section>
+            <h3>Encoding Texts as Literary Criticism</h3>
+            <p>Marking up text is an assertion of your knowledge and your interpretation of the text</p>
+            <p>What does the text (form and content) express?</p>
+        </section>
+
+        
+
+        <section>
+            <h3>Components of a (basic) TEI file</h3>
+                <p class="fragment">Root &lt;TEI&gt; element</p>
+                <p class="fragment">A &lt;teiHeader&gt; that describes both the file and the primary source that you are transcribing (if applicable)</p>
+                <p class="fragment">Optionally, a &lt;facsimile&gt; element that describes the facsimile you are encoding</p>
+                <p class="fragment">A &lt;text&gt; that contains the text of the document</p>
+                <p class="fragment">Within text, you can have a &lt;front&gt;, &lt;body&gt;, or &lt;back&gt;</p>
+        </section>
+
+        <section data-auto-animate>
+            <pre data-id="tei-example">
+                <code data-trim data-line-numbers>
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+&lt;!--...--&gt;
+&lt;/TEI&gt;
+                </code>
+            </pre>
+        </section>
+        <section data-auto-animate>
+            <pre data-id="tei-example">
+                <code data-trim data-line-numbers="4-16">
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+  &lt;teiHeader&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+         &lt;/titleStmt&gt;
+         &lt;publicationStmt&gt;
+            &lt;p&gt;Publication Information&lt;/p&gt;
+         &lt;/publicationStmt&gt;
+         &lt;sourceDesc&gt;
+            &lt;p&gt;Information about the source&lt;/p&gt;
+         &lt;/sourceDesc&gt;
+      &lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;!--...--&gt;
+&lt;/TEI&gt;
+                </code>
+            </pre>
+        </section>
+        <section data-auto-animate>
+            <pre data-id="tei-example">
+                <code data-trim data-line-numbers="17-21">
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+  &lt;teiHeader&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+         &lt;/titleStmt&gt;
+         &lt;publicationStmt&gt;
+            &lt;p&gt;Publication Information&lt;/p&gt;
+         &lt;/publicationStmt&gt;
+         &lt;sourceDesc&gt;
+            &lt;p&gt;Information about the source&lt;/p&gt;
+         &lt;/sourceDesc&gt;
+      &lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+      &lt;body&gt;
+         &lt;p&gt;Some text here.&lt;/p&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="fragment" src="../images/letter-closer-diagram.png"/>
+                <img class="fragment" src="../images/letter-closer-diagram_p1.png"/>
+                <img class="fragment" src="../images/letter-closer-diagram_p2.png"/>
+                <img class="fragment" src="../images/letter-closer-diagram_p3.png"/>
+                <img class="fragment" src="../images/letter-closer-diagram_p4.png"/>
+            </div>
+       </section>
+
+               
+      
+       <section>
+        <h3>The TEI</h3>
+        <p>Offers a rich vocabulary and method to encode:</p>
+        <div class="r-fit-text">
+            <p class="fragment">Bibliographic and structural features: page breaks, headers, footers, page numbers, line breaks, divisions, paragraphs, line groups, etc</p>
+            <p class="fragment">Interpretative features: stage movement, emphasis, place names, proper names, dialogue direction, etc</p>
+            <p class="fragment">Editorial apparatus: hands, witnesses, collation, gaps, additions, deletions, etc</p>
+            <p class="fragment">Linguistic features: morphemes, feature structures, orthographic form, etc</p>
+            <p class="fragment">Spoken features: incidents, pauses, shifts, "communicative phenomenon", etc</p>
+            <p class="fragment">Metadata: various classification schemes, provenance, manuscript description, etc</p>
+            <p class="fragment">+++++</p>   
+        </div>
+        
+    </section>
+
+
+    <section>
+        <h3>The Process of Marking Up Texts</h3>
+        <div class="r-stack">
+            <blockquote class="fragment fade-out" data-fragment-index="0">The process is analytical, strategic, and interpretive.</blockquote>
+            
+            <blockquote class="fragment current-visible" data-fragment-index="1">It is analytical, in identifying a set of components into which the text can meaningfully be broken and whose relationship can be represented</blockquote>
+            
+            <blockquote class="fragment current-visible" data-fragment-index="2">Markup is strategic, in that text encoding is always aimed (deliberately or by default) at some intellectual or practical goal</blockquote>
+            
+            <blockquote class="fragment current-visible" data-fragment-index="3">And markup is interpretive, in that the act of encoding will always take place through a connection between an observing individual and a source object.</blockquote>
+            
+        </div>
+        <cite>Julia Flanders, Syd Bauman, and Sarah Connell. "Text Encoding." <i>Doing Digital Humanities</i>, edited by Constance Crompton, Richard Lane, and Ray Siemens. Routledge, 2016.</cite>
+    </section>
+
+
+    <section>
+        <h3>What to encode?</h3>
+        
+        <p class="fragment">Input =/= Output</p>
+        <p class="fragment">Encode what you care about and what you have time to encode</p>
+        <p class="fragment">If you don't encode it, you can't do much with it</p>
+        <p class="fragment">But: you don't need to encode or retain everything</p>
+    </section>
+    
+    <section>
+        <h3>But if you tag it, you can aggregate it</h3>
+        <p><a href="https://winnifredeatonarchive.org/pseudonyms.html">WEA Pseudonyms</a></p>
+    </section>
+
+    <section>
+        <pre data-id="tei-example">
+            <code>
+&lt;byline&gt;
+(By &lt;name ref=&quot;pers:WE1&quot;&gt;Winifred Reeve&lt;/name&gt;,
+&lt;name ref=&quot;pers:WE1&quot;&gt;Onoto Watanna&lt;/name&gt;)
+&lt;/byline&gt;
+            </code>
+        </pre>
+    </section>
+
+
+
+
+        <section>
+            <h3>TEI</h3>
+                <p class="fragment">Note that the TEI is huge (586 elements)</p>
+                <p class="fragment">No one uses the entirety of the TEI tagset</p>
+                <p class="fragment">Individual projects customize the TEI for their own needs, usually using a small subset of the overall tagset</p>
+                <p class="fragment">E.g. Drama projects will use the drama tagset (&lt;sp&gt; for speech, &lt;speaker&gt; for speaker, et cetera) and discard the linguistic/dictionary tagset (&lt;entry&gt; for dictionary entries, &lt;m&gt; for morpheme, etc).</p>
+        </section>
+
+        <section>
+            <h3>TEI Schema and Customization</h3>
+            <p class="fragment">Customization of the TEI schema is crucial</p>
+            <p class="fragment">It provides useful guidance for new encoders</p>
+            <p class="fragment">It clearly describes how you use elements</p>
+            <p class="fragment">It narrates your intentions to be interoperable</p>
+        </section>
+
+        
+
+        <section>
+            <h3>The Guidelines: Some Examples</h3>
+        </section>
+        
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">
+            
+        </section>
+        
+        <section data-background-iframe="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html">
+            
+        </section>
+        
+        <section>
+            <h3>The TEI isn't just about texts!</h3>
+            <p class="fragment">Or, at the very least, "texts" narrowly defined</p>
+        </section>
+
+        <section>
+            <h3>Image Annotation</h3>
+            <p><a href="https://mariage.uvic.ca/la_femme_battant.html">Mariage</a></p>
+        </section>
+
+        <section>
+            <h3>Where the TEI excels</h3>
+            <p class="fragment">Connecting things</p>
+            <p class="fragment">Structuring things</p>
+            <p class="fragment">Describing things</p>
+            <p class="fragment">Aggregating things</p>
+        </section>
+
+        <section>
+            <h3>Learning more about the TEI</h3>
+            <p>The TEI Guidelines: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></p>
+            <p>TEI GitHub: <a href="https://github.com/TEIC/TEI">https://github.com/TEIC/TEI</a></p>
+            <p>TEI listServ: <a href="https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L">https://listserv.brown.edu/cgi-bin/wa?A0=TEI-L</a></p>
+        </section>
+
+
+
+
+        <!--Not available-->
+<!--         
+        <section data-background-iframe="//localhost:3000/leafwriter/dist/">
+        </section> -->
+      
+        
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../lib/reveal-5.0.4/reveal.esm.js";
+    import Highlight from "../lib/reveal-5.0.4/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../js/presentation.js";
+    initDeck(Reveal, { plugins: [Highlight] });
+</script>
+    
+</body>
+</html>

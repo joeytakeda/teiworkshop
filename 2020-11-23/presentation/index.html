@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ENGL820 Presentation</title>
+        <link rel="stylesheet" href="../../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../../lib/reveal-4.0.2/theme/black.css"/>
+        <style>
+            [data-background-iframe]{
+                        z-index:9000;
+            }
+            [data-background-iframe] > div{
+                position: absolute; 
+                width: 40%;
+                right: 0;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2);
+                background-color: rgba(0, 0, 0, 0.9); 
+                color: #fff; 
+                padding: 20px; 
+                font-size: 20px; 
+                text-align: left;
+    
+            }
+            
+            [data-background-iframe] > div.hidden{
+                display:none
+            }
+            
+            .closer{
+                position:absolute;
+                top:10px;
+                right:10px;
+                font-size:1.1rem;
+                cursor:pointer;
+                opacity: 0.8;
+            }
+            .closer:hover{
+                opacity:1;
+            }
+            
+            .reveal img.svg{
+                margin:0;
+                }
+                
+            cite{
+            font-size:14px;
+            margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2 class="r-fit-text">Introduction to the Digital Humanities</h2>
+                    <p>Joey Takeda</p>
+                    <p>User Interface Developer, SFU DHIL</p>
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">What is/are the Digital Humanities</h2>
+                    <ul>
+                        <li class="fragment">The study of texts--broadly defined--using digital methodologies</li>
+                        <li class="fragment">The study of the digital--broadly defined--using textual methodologies</li>
+                        <li class="fragment">A heavily debated definition!</li>
+                    </ul>
+                </section>
+                <section>
+                    <blockquote>
+                        At its core, then, digital humanities is more akin to a common methodological outlook than an investment in any one specific set of texts or even technologies.
+                    </blockquote>
+                    <cite>Matthew Kirschenbaum, "What is Digital Humanities and What's It Doing in English Departments?" (<a href="https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/f5640d43-b8eb-4d49-bc4b-eb31a16f3d06#ch01">Debates in DH</a>)</cite>
+                </section>
+
+                <section>
+                    <h2>Digital Humanities @ SFU</h2>
+                    <img class="r-stretch" src="https://dhil.lib.sfu.ca/pi/images/DHIL-Logo-Horizontal.png"/>
+                </section>
+                <section>
+                    <h2>The DHIL supports researchers</h2>
+                    <ol class="fragmented">
+                        <li>Consultations</li>
+                        <li>Digital project support</li>
+                        <li>Continuing project support</li>
+                        <li>Exploratory work</li>
+                        <li>Research-integrated training</li>
+                        <li>Course-integrated training</li>
+                    </ol>
+                </section>
+
+                <section data-background-iframe="https://womensprinthistoryproject.com">
+                    <div>
+                        <h2>Women's Print History Project</h2>
+                        <p>https://womensprinthistoryproject.com</p>
+                        <p>PI: Michelle Levy</p>
+                    </div>
+                    
+                </section>
+                
+                <section data-background-iframe="https://dhil.lib.sfu.ca/circus">
+                    <div>
+                        <h2>Reconstructing Early Circus</h2>
+                        <p>https://dhil.lib.sfu.ca/circus/</p>
+                        <p>PI: Leith Davis</p>
+                    </div>
+                </section>
+                
+                <section data-background-iframe="https://dhil.lib.sfu.ca/gpi">
+                    <div>
+                        <h2>Gendered Personification Index</h2>
+                        <p>https://dhil.lib.sfu.ca/gpi/</p>
+                        <p>PI: Rawia Inaim</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Textual Digital Humanities</h2>
+                </section>
+
+                <section>
+                    <p>One way to understanding digital humanities is through manipulation, adaptation, transformation, translation, conjecture, play</p>
+                    <p class="fragment">Words <img src="../../images/arrow.svg" class="svg"/> Data</p>
+                    <p class="fragment">Words <img src="../../images/arrow.svg" class="svg"/> Numbers</p>
+                    <p class="fragment">Words <img src="../../images/arrow.svg" class="svg"/> Words</p>
+                </section>
+                <section>
+                    <h4><q>Conjectural Criticism</q></h4>
+                    <div class="r-stack">
+                        <blockquote class="fragment fade-out" data-fragment-index="0">
+                           But if the computer can count numbers like a mathematician, it can also play with letters in ways, as we shall see, that poets and textual scholars alike would recognize.
+                        </blockquote>
+                        <blockquote class="fragment current-visible" data-fragment-index="0">
+                            <p>We might, for starters, imagine conjecture as a knowledge toolkit designed to perform "what if" analyses across a range of texts. In this view, the text is a semiotic system whose discrete units of information can be artfully manipulated into alternate configurations that may represent past or future states</p>
+                        </blockquote> 
+                    </div>
+              
+                    <cite>Kari Kraus, "Conjectural Criticism: Computing Past and Future Texts" (<a href="http://www.digitalhumanities.org/dhq/vol/3/4/000069/000069.html">DHQ</a>)</cite>
+                </section>
+                <section>
+                    <h4>"Deformance and Interpretation"</h4>
+                    <div class="r-stack">
+                        <blockquote class="fragment fade-out" data-fragment-index="0">
+                           Deformance does want to show that the poem's intelligibility is not a function of the interpretation, but that all interpretation is a function of the poem's systemic intelligibility.
+                        </blockquote>
+                        <blockquote class="fragment current-visible r-fit-tex" data-fragment-index="0">
+                            Interpreting a poem after it has been deformed clarifies the secondary status of the interpretation. [...] Good, bad, mediocre poems, by whatever measure or judgment: in so far as they are poetically made, they share this special kind of intelligibility.
+                        </blockquote> 
+                    </div>
+                    <cite style="display:block">Jerome McGann and Lisa Samuels, "Deformance and Interpretation" (from <i>Radiant Textuality</i>, but also available on this <a href="http://www2.iath.virginia.edu/jjm2f/old/deform.html">badly designed website</a>)</cite>
+                </section>
+                <section data-background-iframe="../../spectator/index.html" data-background-interactive="true">
+                    
+                </section>
+                <section>
+                    <h2>Thanks!</h2>
+                    <ul>
+                        <li>Everyone for listening!</li>
+                        <li>Leith for inviting me</li>
+                        <li>The DHIL (Remi Castonguay, Rebecca Dowson, Michael Joyce, Sophia Han, Saba Akhyani)</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Feel free to contact the DHIL!</p>
+                    
+                    <ul>
+                        <li>My email: takeda@sfu.ca</li>
+                        <li>DHIL: dhil@sfu.ca</li>
+                    </ul>
+                </section>
+    
+                <section>
+                    <p>Some "Digital Humanities" Projects (unordered and not exhaustive)</p>
+                    <ul class="r-fit-text">
+                        <li><a href="https://derridas-margins.princeton.edu/">Derrida's Margins</a> (Princeton)</li>
+                        <li><a href="http://hedothepolice.org/">He Do the Police in Different Voices</a> (San Diego State University)</li>
+                        <li><a href="https://shakespeareandco.princeton.edu/">Shakespeare and Company Project</a> (Princeton)</li>
+                        <li><a href="https://mapoflondon.uvic.ca/">The Map of Early Modern London</a> (University of Victoria)</li>
+                        <li><a href="https://www.yhchang.com/">Young-Hae Chang Heavy Industries</a> (Young-Hae Chang) [Note: Lots of quick moving/flashing images]</li>
+                        <li><a href="http://www.highmuckamuck.ca/">High Muck a Muck: Playing Chinese</a> (Fred Wah + the High Muck a Muck Collective)</li>
+                        <li><a href="https://dhil.lib.sfu.ca/doceww/">Database of Early Canadian Women Writers</a></li>
+                        
+                    </ul>
+                    <p style="font-size:12px; list-style-type:none; position:absolute; bottom:-80px; right:0;">Note: Not all of these projects necessarily <em>call</em> themselves digital humanities...</p>
+                </section>
+                <section>
+                    <p>Further Reading / Resources / Works Cited</p>
+                    <ul class="r-fit-text">
+                        <li>Johnson, Jessica Marie. "<a href="https://doi.org/10.1215/01642472-7145658">Markup Bodies: Black [Life] Studies and Slavery [Death] Studies at the Digital Crossroads</a>." <i>Social Text</i>, vol. 36, no. 4, 2018.</li>
+                        <li>Kraus, Kari. "<a href="http://www.digitalhumanities.org/dhq/vol/3/4/000069/000069.html">Conjectural Criticism: Computing Past and Future Texts</a>." DHQ, vol. 3, no. 4, 2009. </li>
+                        <li>McGann, Samuel, and Lisa Roberts. "Deformance and Interpretation" <i>Radiant Textuality</i>, Palgrave, 2001, pp. 105–136.
+                        <li>Risam, Roopika. <a href="https://www.jstor.org/stable/j.ctv7tq4hg"><i>New Digital Worlds: Postcolonial Digital Humanities in Theory, Praxis, and Pedagogy</i></a>.Northwestern University Press, 2019.</li>
+                        <li style="border-top: 1px solid #efefef; margin-top:1rem; padding-top:1rem;"><a href="https://www.lib.sfu.ca/help/publish/dh/dhil/resources">DHIL Resources page</a> (lots of helpful tutorials, links, descriptions)</li>
+                        <li><a href="https://dhdebates.gc.cuny.edu/">Debates in the Digital Humanities</a></li>
+                        <li><a href="http://digitalhumanities.org/dhq/">Digital Humanities Quarterly</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Credits</p>
+                    <ul class="r-fit-text">
+                        <li>Spectator transcription adapted from: http://www2.scc.rutgers.edu/spectator/text/march1711/no1.html</li>
+                        <li>Modern view style adapted from: https://github.com/lucagez/medium.css/</li>
+                        <li>Code view adapted from: https://carbon.now.sh/</li>
+                    </ul>
+                </section>
+     
+            </div>
+        </div>
+        <script src="../../lib/reveal-4.0.2/reveal.js"></script>
+        <script type="module">
+            import { initDeck } from "../../js/presentation.js";
+            initDeck(window.Reveal, { element: document.querySelector(".slides"), options: { hash: true } });
+        </script>
+    </body>
+
+</html>

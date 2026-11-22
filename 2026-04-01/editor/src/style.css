@@ -1,0 +1,422 @@
+/* ── Reset & variables ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1a1208;
+  --parchment: #f5efe0;
+  --cream: #ede4cc;
+  --rust: #8b3a1e;
+  --gold: #b8892a;
+  --olive: #5a6334;
+  --border: #c8b07a;
+  --panel-bg: #faf6ed;
+  --code-bg: #1e1b2e;
+  --header-h: 52px;
+  --snippet-h: 34px;
+  --status-h: 28px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+#header {
+  height: var(--header-h);
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  border-bottom: 3px solid var(--gold);
+  flex-shrink: 0;
+}
+
+#header h1 {
+  font-family: "IM Fell English", serif;
+  font-size: 1.25rem;
+  color: var(--parchment);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+#header h1 span {
+  color: var(--gold);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--parchment);
+  transition: all 0.15s;
+}
+.btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.btn.primary {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #a0441f;
+  border-color: #a0441f;
+}
+
+/* ── Snippet bar ─────────────────────────────────────────────────────────── */
+.snippet-bar {
+  height: var(--snippet-h);
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+.snippet-bar label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--rust);
+  margin-right: 4px;
+  white-space: nowrap;
+}
+.snip {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  background: var(--parchment);
+  color: var(--ink);
+  white-space: nowrap;
+  transition: all 0.12s;
+}
+.snip:hover {
+  background: var(--rust);
+  color: #fff;
+  border-color: var(--rust);
+}
+
+/* ── Workspace ───────────────────────────────────────────────────────────── */
+#workspace {
+  display: flex;
+  height: calc(100vh - var(--header-h) - var(--snippet-h) - var(--status-h));
+}
+
+.pane {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.pane-header {
+  height: 32px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.pane-header .pane-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+.pane-header .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rust);
+  flex-shrink: 0;
+}
+.pane-header small {
+  font-size: 0.65rem;
+  color: #888;
+  margin-left: auto;
+}
+
+#divider {
+  width: 5px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  position: relative;
+  transition: background 0.15s;
+}
+#divider:hover,
+#divider.dragging {
+  background: var(--gold);
+}
+#divider::after {
+  content: "⋮";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--ink);
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ── CodeMirror overrides ────────────────────────────────────────────────── */
+.cm-wrap {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.cm-wrap .CodeMirror {
+  flex: 1;
+  height: 100%;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+.CodeMirror-scroll {
+  height: 100%;
+}
+
+/* ── Preview pane ────────────────────────────────────────────────────────── */
+#preview-pane {
+  background: var(--panel-bg);
+  overflow: auto;
+  padding: 24px 32px;
+  flex: 1;
+  font-family: "IM Fell English", serif;
+}
+
+#preview-placeholder {
+  color: #aaa;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+#preview-error {
+  display: none;
+  background: #fff0f0;
+  border: 2px solid #cc4444;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: #cc2222;
+  white-space: pre-wrap;
+}
+
+/* ── CETEIcean / TEI rendering ───────────────────────────────────────────── */
+#preview-pane tei-tei,
+#preview-pane [data-origname="TEI"] {
+  display: block;
+}
+
+#preview-pane tei-titlestmt,
+#preview-pane [data-origname="titleStmt"] {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+#preview-pane tei-title[data-origlevel="main"],
+#preview-pane [data-origname="title"][data-origlevel="main"] {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  font-style: italic;
+  color: var(--rust);
+}
+
+#preview-pane tei-author,
+#preview-pane [data-origname="author"],
+#preview-pane tei-editor,
+#preview-pane [data-origname="editor"] {
+  display: block;
+  font-size: 1rem;
+  margin: 0.2em 0;
+  color: var(--olive);
+}
+
+#preview-pane tei-body,
+#preview-pane [data-origname="body"] {
+  display: block;
+}
+
+#preview-pane tei-div,
+#preview-pane [data-origname="div"] {
+  display: block;
+  margin-bottom: 1.6em;
+}
+
+#preview-pane tei-head,
+#preview-pane [data-origname="head"] {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 3px;
+  color: var(--ink);
+}
+
+#preview-pane tei-p,
+#preview-pane [data-origname="p"] {
+  display: block;
+  margin-bottom: 0.9em;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+#preview-pane tei-lb,
+#preview-pane [data-origname="lb"] {
+  display: block;
+}
+
+#preview-pane tei-emph,
+#preview-pane [data-origname="emph"] {
+  font-style: italic;
+}
+
+#preview-pane tei-persname,
+#preview-pane [data-origname="persName"] {
+  color: var(--rust);
+  border-bottom: 1px dotted var(--rust);
+  cursor: help;
+}
+
+#preview-pane tei-placename,
+#preview-pane [data-origname="placeName"] {
+  color: var(--olive);
+  border-bottom: 1px dotted var(--olive);
+  cursor: help;
+}
+
+#preview-pane tei-date,
+#preview-pane [data-origname="date"] {
+  color: #555;
+  font-style: italic;
+}
+
+#preview-pane tei-note,
+#preview-pane [data-origname="note"] {
+  display: inline;
+  font-size: 0.8em;
+  color: var(--gold);
+  cursor: pointer;
+  vertical-align: super;
+}
+#preview-pane tei-note::before {
+  content: "[note: ";
+}
+#preview-pane tei-note::after {
+  content: "]";
+}
+
+#preview-pane tei-lg,
+#preview-pane [data-origname="lg"] {
+  display: block;
+  margin: 0.8em 2em;
+}
+
+#preview-pane tei-l,
+#preview-pane [data-origname="l"] {
+  display: block;
+}
+
+#preview-pane tei-teiheader,
+#preview-pane [data-origname="teiHeader"] {
+  display: none;
+}
+
+#preview-pane tei-fw,
+#preview-pane [data-origname="fw"] {
+  display: none;
+}
+
+/* ── Status bar ──────────────────────────────────────────────────────────── */
+#statusbar {
+  height: var(--status-h);
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 20px;
+  font-size: 0.68rem;
+  color: #aaa;
+  font-family: "JetBrains Mono", monospace;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+#statusbar .status-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#statusbar .valid {
+  color: #6dbf6d;
+}
+#statusbar .invalid {
+  color: #ef6a6a;
+}
+#status-cursor {
+  margin-left: auto;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}

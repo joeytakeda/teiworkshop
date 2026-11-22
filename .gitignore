@@ -1,0 +1,14 @@
+# Dependencies and build output
+node_modules/
+/dist/
+*.map
+
+# Editor and OS files
+.idea/
+.DS_Store
+~$*
+
+# Not tracked for now
+/_2024-02-14/
+/2024-02-14/leafwriter/
+/2024-04-17/leafwriter/

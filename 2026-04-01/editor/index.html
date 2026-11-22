@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEI Workshop — Live Encoder</title>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <div id="header">
+    <h1>TEI Workshop <span>&amp;</span> Live Preview</h1>
+    <div class="toolbar">
+      <button class="btn" id="btn-format">⌥ Format</button>
+      <button class="btn" id="btn-reset">↺ Reset</button>
+      <button class="btn primary" id="btn-render">▶ Render</button>
+    </div>
+  </div>
+
+  <!-- ── Snippet bar ── -->
+  <div class="snippet-bar">
+    <label>Insert:</label>
+    <button class="snip" data-snippet="persName">&lt;persName&gt;</button>
+    <button class="snip" data-snippet="placeName">&lt;placeName&gt;</button>
+    <button class="snip" data-snippet="date">&lt;date&gt;</button>
+    <button class="snip" data-snippet="emph">&lt;emph&gt;</button>
+     <button class="snip" data-snippet="unclear">&lt;unclear&gt;</button>
+      <button class="snip" data-snippet="supplied">&lt;supplied&gt;</button>
+    <button class="snip" data-snippet="note">&lt;note&gt;</button>
+    <button class="snip" data-snippet="div">&lt;div&gt;</button>
+    <button class="snip" data-snippet="p">&lt;p&gt;</button>
+    <button class="snip" data-snippet="lb">&lt;lb/&gt;</button>
+  </div>
+
+  <!-- ── Workspace ── -->
+  <div id="workspace">
+
+    <!-- Left: Editor -->
+    <div class="pane" id="editor-pane">
+      <div class="pane-header">
+        <div class="dot"></div>
+        <span class="pane-title">XML / TEI Editor</span>
+        <small>Ctrl+Space for autocomplete · Auto-renders on pause</small>
+      </div>
+      <div class="cm-wrap">
+        <textarea id="tei-editor"></textarea>
+      </div>
+    </div>
+
+    <div id="divider"></div>
+
+    <!-- Right: Preview -->
+    <div class="pane" id="preview-right">
+      <div class="pane-header">
+        <div class="dot" style="background: var(--olive);"></div>
+        <span class="pane-title">CETEIcean Preview</span>
+        <small>Rendered via CETEIcean</small>
+      </div>
+      <div id="preview-pane">
+        <div id="preview-placeholder">
+          Edit the TEI document on the left — the preview will appear here automatically.
+        </div>
+        <div id="preview-error"></div>
+        <div id="preview-output"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Status bar ── -->
+  <div id="statusbar">
+    <div class="status-item">
+      <span id="status-validity" class="valid">✓ Valid XML</span>
+    </div>
+    <div class="status-item">
+      <span id="status-elements">Elements: —</span>
+    </div>
+    <div class="status-item">
+      <span id="status-words">Words: —</span>
+    </div>
+    <div class="status-item" id="status-cursor">Ln 1, Col 1</div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

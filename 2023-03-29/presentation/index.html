@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2021">
+<head>
+    <title>Introduction to XPath</title>
+    <meta charset="utf-8"/>
+    <link href="../../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../../lib/reveal-4.0.2/theme/black.css"/>
+    <link rel="stylesheet" href="../../css/presentation.css"/>
+    <link rel="stylesheet" href="../../lib/fonts/fira-code/fira_code.css"/>
+        <style>
+            
+            kbd{
+                font-family:monospace;
+                
+            }
+            
+            .reveal pre{
+            width:100%;
+            }
+            
+            .reveal ul{
+                display: block;
+            }
+            
+            .reveal code.xml{
+                max-height: 50vh;
+            
+            }
+            td > kbd{
+            display:block;
+            }
+        </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section id="intro-xpath" class="title-slide slide">
+            <h3 class="maintitle">Introduction to XPath</h3>
+
+            <hr/>
+            <p style="text-align:center; font-size:90%">Joey Takeda, SFU DHIL</p>
+            <p style="text-align:center; font-size:90%">March 29, 2023</p>
+            <p style="text-align:center; font-size:90%">Materials here: https://sfu.ca/~takeda/xpath</p>
+        </section>
+        
+        <section>
+            <h3>What is XPath</h3>
+            <p class="fragment">A syntax for navigating and querying the XML tree</p>
+            <p class="fragment">The core syntax for the "X-languages" (XQuery, XSLT) to transform and manipulate XML documents</p>
+            <p class="fragment">XPath can be used in JavaScript (much like CSS selectors)</p>
+            <p class="fragment">XQuery (to create server-side web applications); XSLT (to transform XML into HTML, PDF, et cetera)</p>
+            <p class="fragment">Used frequently in Python for Natural Language Processing and data analysis</p>
+        </section>
+        
+        <section>
+            <h3>Quick XML Refresher</h3>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <p>XML = eXtensible Markup Language</p>
+                    <p>XML is not a set language unto itself, but a grammar</p>
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <p>There is nothing inherent about the function of XML</p>
+                    <p>It is purely a structure--a way of organizing</p>
+                    <p>Anyone can conceive of an XML dialect (e.g. it is extensible)</p>
+                </div>
+            </div> 
+            
+        </section>
+        
+        <section>
+            <h3>XML</h3>
+            <p class="fragment">XML is hierarchical</p>
+            <p class="fragment">XML is a tree-like structure</p>
+            <p class="fragment">And is often described in genealogical terms</p>
+        </section>
+        
+        
+        <section>
+            <h3>XML Explained</h3>
+
+            <pre>
+<code class="xml" data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+        &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+
+            </pre>
+        </section>
+        
+        <section>
+            <h3>XML Explained</h3>
+            <p class="fragment">Each component of an XML tree is called a <i>node</i></p>
+            <p class="fragment">There are three main types of nodes:</p>
+            <ul>
+                <li class="fragment">Element nodes</li>
+                <li class="fragment">Text nodes</li>
+                <li class="fragment">Attribute nodes</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3>XML Explained: Element Nodes</h3>
+            
+            <p class="fragment">The two pointy brackets is called an element</p>
+            <p class="fragment">E.g. &lt;book&gt; would be called the book element</p>
+            <p class="fragment">All* elements have start and end tags</p>
+            <p class="fragment">E.g. &lt;book&gt; is the start tag and &lt;/book&gt; is the end tag</p>
+        </section>
+        
+        <section>
+            <h3>XML Explained: Text Nodes</h3>
+            <p class="fragment">Any text contained by an element</p>
+            <p class="fragment">The &lt;magazine&gt; element has a single text node, "The New Yorker"</p>
+        </section>
+        
+        <section>
+            <h3>XML Explained: Text Nodes</h3>
+            <p>How many text nodes?</p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+                <code class="xml" data-noescape="true">
+&lt;books&gt;
+      &lt;book&gt;Fifteen Dogs&lt;/book&gt;
+      &lt;book&gt;I Am A Cat&lt;/book&gt;
+&lt;/books&gt;                    
+                </code>
+            </pre>
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+                <code class="xml" data-noescape="true">
+&lt;books&gt;
+<mark>     </mark>&lt;book&gt;<mark>Fifteen Dogs</mark>&lt;/book&gt;
+<mark>     </mark>&lt;book&gt;<mark>I Am A Cat</mark>&lt;/book&gt;
+&lt;/books&gt;                    
+                </code>
+            </pre>
+                </div>
+            </div> 
+            
+        </section>
+        
+        <section>
+            <h3>XML Explained</h3>
+            <p class="fragment">Wait...what about &lt;knickknack/&gt; ?</p>
+            <p class="fragment">A special shortcut, called a "self-closing element" or "empty" element</p>
+            <p class="fragment">&lt;knickknack/&gt; === &lt;knickknack&gt;&lt;/knickknack&gt;</p>
+        </section>
+        
+        <section>
+            <h3>XML Explained</h3>
+            <p class="fragment">Elements can also have attributes and each attribute must have a value</p>
+            <p class="fragment">E.g. &lt;book author= "André Alexis"&gt; has an author attribute with the value of "André Alexis"</p>
+            <p class="fragment">(Think of attributes as you would in everyday life; people don't have "height" or "age" without a value)</p>
+        </section>
+        
+        <section>
+            <h3>XML Terminology</h3>
+            <p class="fragment">Elements nest and use genealogical terms</p>
+            <p class="fragment">Root: The main wrapper element (&lt;shelf&gt;)</p>
+            <p class="fragment">Child: Element directly within another element:
+                <br/>&lt;book&gt; is a child of &lt;books&gt;</p>
+            <p class="fragment">Parent: The containing element:
+                <br/>&lt;magazines&gt; is the parent element of &lt;magazine&gt;
+            </p>
+        </section>
+        
+        
+        <section>
+            <h3>XML Terminology</h3>
+            <p class="fragment">Ancestor: Parents and the parent's parents</p>
+            <ul class="fragment">
+                <li>&lt;shelf&gt; is the ancestor of &lt;magazine&gt;</li>
+                <li>&lt;books&gt; is an ancestor of &lt;book&gt;</li>
+            </ul>
+            <p class="fragment">Descendant: Children and children's children</p>
+            <ul class="fragment">
+               <li>&lt;magazine&gt; is a descendant of &lt;shelf&gt;</li>
+               <li>&lt;books&gt; is a descendant of &lt;shelf&gt;</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3>XML Terminology</h3>
+            <p class="fragment">Preceding sibling and following sibling: Children that share a parent
+            </p>
+            <ul class="fragment">
+                <li>&lt;magazines&gt; is the following sibling of &lt;books&gt;</li>
+                <li>&lt;books&gt; is the preceding sibling of &lt;magazines&gt; and a
+                following sibling of &lt;knickknack&gt;</li>
+                <li>The &lt;knickknack&gt; has two following siblings and no preceding siblings</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>What is XPath</h3>
+            <p>An XPath expression specifies the <i>location</i> of a <i>node</i> in the XML tree</p>
+        </section>
+        <section>
+            <h3>Example: Finding the magazine</h3>
+            <p>To navigate to the magazine element: <kbd>/shelf/magazines/magazine</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       <mark>&lt;magazine&gt;The New Yorker&lt;/magazine&gt;</mark>
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>    
+            <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+        <mark>&lt;magazine&gt;The New Yorker&lt;/magazine&gt;</mark>
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+        </section>
+        <section>
+            <h3>XPath Explained</h3>
+            <p class="fragment">The leading slash represents the <i>document root</i></p>
+            <p class="fragment">Each / represents a <i>step</i> in the tree</p>
+            <p class="fragment">The / is also known as the <i>child axis</i></p>
+
+        </section>
+        <section>
+            <h3>XPath Explained</h3>
+            <p class="fragment">Think of "/" as meaning "direct child of"</p>
+            <p class="fragment">So /shelf/magazines/magazine = "Magazine is a direct child of magazines, which is a direct child of shelf"</p>
+        </section>
+        <section>
+            <h3>XPath Explained</h3>
+            <p class="fragment">An XPath statement will return <i>all nodes</i> that match a path</p>
+            <p class="fragment">Text nodes are special and are called text()</p>
+        </section>
+        <section>
+            <h3>Example: Finding books</h3>
+            <p><kbd>/shelf/books/book</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+       <mark>&lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;</mark>
+       <mark>&lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>    
+           
+        </section>
+        
+        <section>
+            <h3>Beyond elements</h3>
+            <p class="fragment">Attributes can be referred to using the "@" with their name</p>
+        </section>
+        
+        <section>
+            <h3>Example: Retrieving attributes</h3>
+            <p><kbd>/shelf/books/book/@author</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book <mark>author="André Alexis"</mark>&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book <mark>author="Natsume Sōseki"</mark>&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>  
+        </section>
+        <section>
+            <h3>Beyond elements</h3>
+            <p class="fragment">Text nodes can be referred to using text()</p>
+            <p class="fragment">Any element can be referred to using * (as a wildcard selector)</p>
+            <p class="fragment">Text and element nodes can be referred to using node()</p>
+        </section>
+        
+        <section>
+            <h3>Element: All child elements</h3>
+            <p><kbd>shelf/*/*</kbd> = All grandchildren of shelf</p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        <mark>&lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;</mark>
+        <mark>&lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       <mark>&lt;magazine&gt;The New Yorker&lt;/magazine&gt;</mark>
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>    
+            
+          
+        </section>
+        
+
+        <section>
+            <h3>Example: All child nodes</h3>
+            <p><kbd>/shelf/books/node()</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+<mark>        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>    
+        </section>
+        
+        <section>
+            <h3>Example: Finding book titles</h3>
+            <p><kbd>/shelf/books/book/text()</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+   &lt;knickknack/&gt;
+   &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;<mark>Fifteen Dogs</mark>&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;<mark>I Am A Cat</mark>&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre> 
+                </div>
+            </div>  
+        </section>
+
+        <section>
+            <h3>Question</h3>
+            <p>What will <kbd>/shelf/books/text()</kbd> return?</p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+<mark>        </mark>&lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+<mark>        </mark>&lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+            </div> 
+        </section>
+        
+        <section>
+            <h3>Try it!</h3>
+            <p>Go to the workshop page: https://sfu.ca/~takeda/xpath</p>
+            <p>Click the "Download Hamlet" button (and remember where you save it)</p>
+            <p>Open oXygen and go to File > Open and open the Hamlet file</p>
+        </section>
+        <section>
+            <h3>In oXygen</h3>
+            <p>Go to Window > Show View > XPath/XQuery Builder</p>
+        </section>
+        <section>
+            <h3>Hamlet</h3>
+            <p>&lt;div&gt; = a division (act or scene)</p>
+            <p>&lt;sp&gt; = speech</p>
+            <p>&lt;speaker&gt; = speech prefix (i.e. the name printed in the play)</p>
+            <p>&lt;l&gt; = a verse line</p>
+            <p>&lt;p&gt; = a paragraph</p>
+            <p>&lt;stage&gt; = a stage direction</p>
+        </section>
+        
+        <section>
+            <h3>Exercises</h3>
+            <p class="fragment">Retrieve all acts (direct children of body)</p>
+            <p class="fragment"><kbd>/body/div</kbd> (5)</p>
+            <p class="fragment">Retrieve all scenes (direct children of acts)</p>
+            <p class="fragment"><kbd>/body/div/div</kbd> (20)</p>
+        </section>
+
+        <section>
+            <h3>Okay, but...</h3>
+            <p class="fragment">Retrieve all stage directions (descendant of body)</p>
+            <p class="fragment"><kbd>/body/div/div/stage</kbd></p>
+            <p class="fragment">But also <kbd>/body/div/div/sp/stage</kbd></p>
+            <p class="fragment">But also <kbd>/body/div/div/sp/l/stage</kbd></p>
+            <p class="fragment">But also <kbd>/body/div/div/sp/speaker/stage</kbd></p>
+            <p class="fragment">But also <kbd>/body/div/div/sp/p/stage</kbd></p>
+            <p class="fragment">+++++++</p>
+        </section>
+        
+        <section>
+            <h3>Axes!</h3>
+            <p class="fragment">Descendants = "//"</p>
+            <p class="fragment"><kbd>//stage</kbd> = every stage that is a descendant of the root element</p>
+        </section>
+        
+        <section>
+            <h3>Try it!</h3>
+            <p class="fragment">Retrieve all stage directions</p>
+            <p class="fragment"><kbd>//stage</kbd> (284)</p>
+        </section>
+        
+        <section>
+            <h3>Try it!</h3>
+            <p class="fragment">How many speeches (&lt;sp&gt;) are in Hamlet?</p>
+            <p class="fragment"><kbd>//sp</kbd> (1138)</p>
+        </section>
+        
+        <section>
+            <h3>Try it!</h3>
+            <p class="fragment">Retrieve all stage directions contained in a speech</p>
+            <p class="fragment"><kbd>//sp/stage</kbd> (134)</p>
+        </section>
+        
+        <section>
+            <h3>Axes</h3>
+            <table class="r-fit-text">
+                <thead>
+                    <tr>
+                        <th>Axis</th>
+                        <th>Short</th>
+                        <th>Full</th>
+                        <th>Example</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Child</td>
+                        <td>/</td>
+                        <td>child::</td>
+                        <td>
+                            <kbd>/body/div</kbd>
+                            <kbd>/body/child::div</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Descendant or self</td>
+                        <td>//</td>
+                        <td>descendant-or-self::</td>
+                        <td>
+                            <kbd>//sp</kbd>
+                            <kbd>/*/descendant-or-self::sp</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Descendant</td>
+                        <td/>
+                        <td>descendant::</td>
+                        <td>
+                            <kbd>/body//sp</kbd>
+                            <kbd>/body/descendant::sp</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Parent</td>
+                        <td>..</td>
+                        <td>parent::</td>
+                        <td>
+                            <kbd>/body/div/div/sp/parent::div</kbd>
+                            <kbd>//div/..</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Ancestor</td>
+                        <td/>
+                        <td>ancestor::</td>
+                        <td>
+                            <kbd>//speaker/ancestor::div</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Ancestor or self</td>
+                        <td/>
+                        <td>ancestor-or-self::</td>
+                        <td>
+                            <kbd>//div/ancestor-or-self::div</kbd>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Self</td>
+                        <td/>
+                        <td>self::</td>
+                        <td>
+                            <kbd>//stage/parent::*/self::stage</kbd>
+                        </td>
+                        <td>This is mostly useful in conjunction with other axes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h4>Axes</h4>
+            <table class="r-fit-text">
+                <thead>
+                    <tr>
+                        <th>Axis</th>
+                        <th>Short</th>
+                        <th>Full</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Preceding-sibling</td>
+                        <td/>
+                        <td>preceding-sibling::</td>
+                        <td>
+                            <kbd>//stage/preceding-sibling::l</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Following-sibling</td>
+                        <td/>
+                        <td>following-sibling::</td>
+                        <td>
+                            <kbd>//div/stage/following-sibling::sp</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Preceding</td>
+                        <td/>
+                        <td>preceding::</td>
+                        <td>
+                            <kbd>//stage/preceding::lb</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Following</td>
+                        <td/>
+                        <td>following::</td>
+                        <td><kbd>//sp/following::stage</kbd></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">Retrieve the parent speech (&lt;sp&gt;) from all stage directions</p>
+            <p class="fragment"><kbd>//stage/parent::sp</kbd> (99)</p>
+        </section>
+        
+        
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">Retrieve all of the @who values for speech</p>
+            <p class="fragment"><kbd>//sp/@who</kbd> (1137)</p>
+        </section>
+        
+        
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">How many verse lines (&lt;l&gt;) follow a stage direction in a speech?</p>
+            <p class="fragment"><kbd>//sp/stage/following-sibling::l</kbd> (403)</p>
+        </section>
+        
+        <section>
+            <h4>Coffee Break!</h4>
+        </section>
+        
+        <section>
+            <h4>Predicates</h4>
+            <p class="fragment">We've just learned how XPath helps us navigate the tree</p>
+            <p class="fragment">XPath predicates help us filter these results by searching for parts of the tree so long as they satisfy a particular set of conditions.</p>
+        </section>
+        
+        <section>
+            <h4>What do they look like</h4>
+            <p class="fragment">Square brackets that follows the step they apply to</p>
+            <p class="fragment">Think of the square brackets as the phrase “that is...” or “that has...”</p>
+            <p class="fragment"><kbd>//shelf[books]</kbd> = all shelf elements that has a child books element</p>
+            <p class="fragment"><kbd>//div[descendant::stage]</kbd> = all divs that have a descendant stage element</p>
+        </section>
+        
+        <section>
+            <h4>More examples</h4>
+            <p class="fragment">Predicates can be nested and can be chained</p>
+            <p class="fragment"><kbd>//sp[stage[stage]]</kbd> = all speeches that have a stage that have a child stage</p>
+            <p class="fragment"><kbd>//sp[stage][p]</kbd> = all speeches that have a stage AND has a paragraph</p>
+        </section>
+        
+        <section>
+            <h4>More examples</h4>
+            <p class="fragment">More formally, predicates resolve to a boolean value (true or false)</p>
+            <p class="fragment">This means you can perform operations in the predicate</p>
+            <p class="fragment"><kbd>//div[@type='act']</kbd> = all divs that have a type attribute with the value "act"</p>
+            <p class="fragment"><kbd>//div[@type='scene'][stage]</kbd> = all scenes that have a stage as a child</p>
+        </section>
+        
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">Write the XPath for getting Act 3, Scene 1</p>
+            <p class="fragment"><kbd>//div[@type='act'][@n='3']/div[@type='scene'][@n='1']</kbd></p>
+        </section>
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">How many stages contain another stage?</p>
+            <p class="fragment"><kbd>//stage[descendant::stage]</kbd> (16)</p>
+        </section>
+        <section>
+            <h4>Position in sequence</h4>
+            <p class="fragment">All nodes have an implicit <i>position</i> that can be used in a predicate</p>
+            <p class="fragment">//books/book[2] = the second book in the sequence</p>
+            <p class="fragment">You can also retrieve this using the position() function (we'll talk more about functions later)</p>
+            <p class="fragment">//sp[position() = 3] = the speech that is third in a sequence</p>
+        </section>
+        <section>
+            <h4>Positions example</h4>
+            <p><kbd>//book[2]</kbd></p>
+            <pre>
+                <code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        <mark>&lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+                </code>
+            </pre>
+            
+        </section>
+        <section>
+            <h4>What about this?</h4>
+            <p><kbd>//book[2]</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="Kate Beaton"&gt;Ducks&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="Joy Kogawa"&gt;Obasan&lt;/book&gt;
+        &lt;book author="Emily St. John Mandel"&gt;Station Eleven&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="Kate Beaton"&gt;Ducks&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        <mark>&lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="Joy Kogawa"&gt;Obasan&lt;/book&gt;
+        <mark>&lt;book author="Emily St. John Mandel"&gt;Station Eleven&lt;/book&gt;</mark>
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+            </div> 
+        </section>
+        
+        <section>
+            <h4>Positions continued</h4>
+            <p class="fragment">What do you get when you try //sp[3]?</p>
+            <p class="fragment">Why would there be more than one?</p>
+            <p class="fragment">This specifies that this is <i>third</i> in a <i>given sequence</i>, not in the
+                entire set of results</p>
+        </section>
+        
+        <section>
+            <h4>What about this?</h4>
+            <p><kbd>(//book)[2]</kbd></p>
+            <div class="r-stack">
+                <div class="fragment fade-in fade-out" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="Kate Beaton"&gt;Ducks&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="Joy Kogawa"&gt;Obasan&lt;/book&gt;
+        &lt;book author="Emily St. John Mandel"&gt;Station Eleven&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+                <div class="fragment current-visible" data-fragment-index="0">
+                    <pre>
+<code class="xml"  data-noescape="true">
+ &lt;shelf&gt;
+    &lt;knickknack/&gt;
+    &lt;books&gt;
+        &lt;book author="Kate Beaton"&gt;Ducks&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        <mark>&lt;book author="André Alexis"&gt;Fifteen Dogs&lt;/book&gt;</mark>
+        &lt;book author="Natsume Sōseki"&gt;I Am A Cat&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;books&gt;
+        &lt;book author="Joy Kogawa"&gt;Obasan&lt;/book&gt;
+        &lt;book author="Emily St. John Mandel"&gt;Station Eleven&lt;/book&gt;
+    &lt;/books&gt;
+    &lt;magazines&gt;
+       &lt;magazine&gt;The New Yorker&lt;/magazine&gt;
+    &lt;magazines&gt;
+ &lt;/shelf&gt;
+            </code>
+            </pre>
+                </div>
+            </div> 
+        </section>
+        
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">Challenge: Finish the XPath to determine how many stages are in Act 3, Scene 1</p>
+            <p class="fragment"><kbd>//stage[</kbd></p>
+            <p class="fragment"><kbd>//stage[ancestor::div[@type='act'][@n='3']/div[@type='scene'][@n='1']]</kbd> (10)</p>
+            <p class="fragment">
+                <kbd>//stage[ancestor::div[@type='scene'][@n='1'][../self::div[@n='3']]]</kbd>
+            </p>
+        </section>
+
+        <section>
+            <h4>Try it!</h4>
+            <p class="fragment">Challenge: How many prose speeches are in act 2, scene 1?</p>
+            <p class="fragment"><kbd>//div[@type='act'][@n='2']/div[@type='scene'][@n='1']/descendant::sp[p]</kbd></p>
+            <p class="fragment"><kbd>//div[2]/div[1]//sp[p]</kbd></p>
+            <p class="fragment"><kbd>//sp[p][ancestor::div[@type='scene'][@n='1']][ancestor::div[@type='act'][@n='2']]</kbd></p>
+        </section>
+        
+        <section>
+            <h4>If time: Functions</h4>
+            <p class="fragment">Functions perform operations on sets of results</p>
+            <p class="fragment">position() is a function that returns the position of a node</p>
+            <p class="fragment">not() is a function that negates a boolean</p>
+            <p class="fragment"><kbd>//sp[not(stage)]</kbd> = all speeches that DO NOT have a child stage</p>
+        </section>
+        
+        <section>
+            <h4>Try it!</h4>
+            <p>Are there any speeches that do not have a @who value?</p>
+            <p class="fragment">
+                <kbd>//sp[not(@who)]</kbd> (1)
+            </p>
+        </section>
+        
+        <section>
+            <h4>Brainstorm</h4>
+            <p class="fragment">Any queries you're interested in trying out?</p>
+        </section>
+        
+        <section>
+            <h4>Resources</h4>
+            <p>W3C Guidelines for XPath: https://www.w3.org/TR/xpath-functions-31/</p>
+            <p>Saxonica (XSLT Processor) XPath Reference: https://www.saxonica.com/documentation12/index.html#!expressions</p>
+            <p>DHSI "Code the X-Files" course: https://dhsi.org/on-campus-courses/</p>
+        </section>
+        
+        <section>
+            <h4>Thanks!</h4>
+        </section>
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../../lib/reveal-4.0.2/reveal.esm.js";
+    import Highlight from "../../lib/reveal-4.0.2/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../../js/presentation.js";
+    initDeck(Reveal, { plugins: [Highlight] });
+</script>
+    
+</body>
+</html>

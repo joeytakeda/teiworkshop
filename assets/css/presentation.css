@@ -1,0 +1,9 @@
+/* Stylesheet for decks built with Vite: reveal.js from npm, plus the shared
+   workshop stylesheet (css/presentation.css) and fonts from lib/. New decks set
+   data-style="2024" on <html>. */
+@import "reveal.js/dist/reveal.css";
+@import "reveal.js/dist/theme/black.css";
+@import "reveal.js/plugin/highlight/monokai.css";
+@import "../../lib/fonts/open-sans/open-sans.css";
+@import "../../lib/fonts/fira-code/fira_code.css";
+@import "../../css/presentation.css";

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="screenplay.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wea="https://winnifredeatonarchive.org/ns">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+     <profileDesc>
+        <handNotes>
+           <handNote xml:id="WE-pencil-thick" medium="pencil" scribeRef="pers:WE1">Winnifred writing in pencil</handNote>
+           <handNote xml:id="WE-pencil-thin" medium="pencil" scribeRef="pers:WE1">Winnifred writing in a thinner pencil</handNote>
+           <handNote xml:id="Unknown-pencil-blue" medium="pencil"></handNote>
+           <handNote xml:id="Unknown-pencil" medium="pencil">Unknown pencil</handNote>
+           <handNote xml:id="Unknown-pencil-red" medium="red pencil">Unknown red pencil</handNote>
+        </handNotes>
+     </profileDesc>
+  </teiHeader>
+  <text rendition="filmpage:white">
+     <front>
+        <pb rendition="filmpage:green"/>
+        <note type="annotation" hand="#WE-pencil1" place="top right">OKed by <unclear cert="low">ES</unclear></note>
+        <docTitle>
+           <titlePart type="main">ROPES</titlePart>
+        </docTitle>
+        <byline>By
+           <lb/><persName>Wilbur Daniel Steele</persName>
+        </byline>
+        <byline>
+           <subst hand="#WE-pencil-thick">
+              <add>Screen Story +</add>
+              <del>Treatment &amp;</del>
+           </subst>
+           Dialogue
+           <lb/>By
+           <lb/><persName>Winnifred Reeve</persName>
+        </byline>
+        <pb rendition="filmpage:yellow"/>
+        <ab>ROPES</ab>
+        <castList>
+           <head>CHARACTERS</head>
+           <castItem xml:id="JennyBlake">
+              <role>Jenny Blake</role> (<actor>Mary Nolan</actor>)
+              <note>
+                 <p>A girl of about 20. Flippant and pleasure loving, dance and boy mad, pretty and sexy. Lightheaded and vain. The kind of girl men go crazy about. Beneath her flighty ways, Jenny has a warm loveable nature.</p>
+                 <p>Jenny is a product of the east side</p>
+              </note>
+           </castItem>
+           <castItem xml:id="PaulWhalen">
+              <role>Paul Whalen</role>
+           </castItem>
+           <castItem>
+              <role>Jim Paine</role> (<actor>Eddie Phillips</actor>?)
+           </castItem>
+           <castItem>
+              <note>People on the public beach. Jen's young friends — boys and girls &amp;c.</note>
+           </castItem>
+        </castList>
+        <pb rendition="filmpage:yellow"/>
+        <div>
+           <!--How do we represent this setList in a way that is
+           parallel to a castList? -->
+           <list>
+              
+              <item>
+                 <label>
+                    <placeName>PUBLIC BEACH</placeName> ---Coney, Brighton...--- where we decide
+                 </label>
+                 <note>
+                    <p>
+                       At the beach
+                       <list>
+                          <item>Life guard look-out station</item>
+                          <item>Siren pole. on beach</item>
+                          <item>Hot dog and hamburger shack.</item>
+                       </list>
+                    </p>
+                 </note>
+              </item>
+              <item>
+                 <label>PUBLIC DANCE HALL ON PIER</label>
+              </item>
+              <item>
+                 <label>BEACH STREET</label>
+                 <note>
+                    <p>All we need is the outside of teh window of Justice</p>
+                 </note>
+              </item>
+              <item>
+                 <label>Exterior:</label>
+                 <list>
+                    <item>
+                       <label>LIGHTHOUSE</label>
+                       <note>
+                          <list>
+                             <item>LIVING ROOM</item>
+                             <item>TOWER WITH THE BIG LIGHT</item>
+                          </list>
+                       </note>
+                    </item>
+                    <item>
+                       <label>Small bea<supplied>c</supplied>h harbor for boats.</label>
+                    </item>
+                    <item>
+                       <label>The open sea.</label>
+                    </item>
+                 </list>
+              </item>
+           </list>
+        </div>
+        
+        <!--Do we need a setList: 
+         <setList>
+            <setItem>
+               <placeName>....</placeName>
+               <setDesc>
+                  <p>At the beach:
+                     <list>
+                        <item>Life guard look-out station</item>
+                     </list>
+               </setDesc>
+            </setItem>
+         </setList>
+        
+        -->
+     </front>
+     <body>
+        <pb n="1"/>
+        <byline>
+           Treatment and dialogue by:
+           <name ref="pers:WE1">Winnifred Reeve</name>
+        </byline>
+        <noteGrp type="annotation" hand="#WE-pencil-thick" place="top right">
+           <note>From P.1 to 38 this all new original material by Reeve</note>
+           <note>Also last sequences practically original except for block incident</note>
+        </noteGrp>
+        <head>Ropes</head>
+        <opener>
+           <byline>By
+              <lb/><name>Wilbur Daniel Steele</name>
+           </byline>
+        </opener>
+        <fw type="page-sequence" place="left margin"
+           style="transform: rotate(90deg)" hand="#Unknown-pencil">
+           <span from="pg:1" to="pg:10A">1–10A</span>
+        </fw>
+        <div type="sequence">
+           <head>Sequence 1.</head>
+           <camera type="transition">FADE IN</camera>
+           <wea:slugline>Life-Guard Look-out Station</wea:slugline>
+           <p>This is a small structure (on scaffolding)...</p>
+           <p>Two young Life guards are in the Station. They wear dark bathing suits, with the caption: U.S. LIFE GUARD in white letters across the breasts.</p>
+           <!--...-->
+           <pb n="2"/>
+           <fw type="pageNum">2.</fw>
+           <p>She is holding...</p>
+           <p><wea:slugline>Look-out station.</wea:slugline> Paul is smiling as he looks through glasses. The other boy, also with glasses, is looking through them at the water.</p>
+           <sp>
+              <speaker>Life Guard</speaker>
+              <p>The water's pretty rough.</p>
+           </sp>
+           <sp>
+              <speaker>Paul</speaker>
+              <p>Look at that girl.</p>
+           </sp>
+           <sp>
+              <speaker>Life Guard</speaker>
+              <p>And there's a powerful undertow off there.</p>
+           </sp>
+           <sp>
+              <speaker>Paul</speaker>
+              <p>Say, Bill — look at her — isn't she pretty?</p>
+           </sp>
+          <p>He nudges Bill and the latter reluctantly turns from the water and turns his glasses to the beach.</p>
+           <p>
+              <wea:slugline>PUBLIC BEACH</wea:slugline> — a type ....
+           </p>
+           <!--...-->
+           <pb n="3"/>
+           <fw type="pageNum">3.</fw>
+           <!--...-->
+           <!--TODO: Figure out if what our practice has been so far, and if we want to always replicate UPPERCASE or should we normalize and tag that it is uppercase?-->
+           <p>We notice particularly <name rendition="rnd:uppercase">Jim Paine</name> a dark browed.... At this time they are calling to her, or whistling.</p>
+           <p><q>Heh Jen, throw it to me!</q></p>
+           <p><q>This way, kid!</q></p>
+           <!--...-->
+           <pb n="3a"/>
+           <fw type="pageNum">3.<add hand="#WE-pencil-thick">a</add></fw>
+           <!--...-->
+           <p>It is all rough and tumble beach play, but not so in the case of Jim Paine. S<del hand="#WE-pencil-thick">c</del>ore at his girl<add hand="#WE-pencil-thick">,</add> [...] Having infl<subst hand="#WE-pencil-thick"><del>u</del><add>i</add></subst> dire punishment...</p>
+           
+           <!--...-->
+           <pb n="4"/>
+           <fw type="pageNum">4.</fw>
+           <!--...-->
+           <sp>
+              <speaker>Jim</speaker>
+              <stage>(a bit crestafallen)</stage>
+              <p>We been going together for two months now.</p>
+           </sp>
+           <!--...-->
+           <pb n="5"/>
+           <fw>5</fw>
+           <!--..-->
+           <pb n="6"/>
+           <fw>6</fw>
+           <wea:slugline>On the beach.</wea:slugline>
+           <!--...-->
+           <note type="authorial">
+              <label>NOTE:</label>
+              <p>Anyone who has been on a Public beach will be familiar with the above circumstances...</p>
+           </note>
+        </div>
+     </body>
+  </text>
+</TEI>

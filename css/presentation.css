@@ -1,0 +1,227 @@
+/* Shared stylesheet for workshop decks.
+   Rules without a scope apply to every deck. Rules scoped with
+   :where([data-style="…"]) apply only to decks whose <html> element carries
+   that data-style, so older decks keep their original look:
+     2021      2021-01-19, 2021-10-28, 2021-11-18, 2022-02-10, 2023-03-17, 2023-03-29
+     2022-10   2022-10-26
+     2023-11   2023-11-08
+     2023-11-b 2023-11-08_2
+     2024      2024-02-14, 2024-04-17, 2026-04-01 and new decks
+   :where() adds no specificity, and rules are ordered so each deck's cascade
+   matches its original stylesheet. */
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../lib/fonts/oswald/Oswald-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+:root {
+  --main-font: Oswald, Helvetica, sans-serif;
+  --heading-font: Oswald, Helvetica, sans-serif;
+}
+
+.reveal {
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+
+code,
+.codelike {
+  font-family: "Fira Code VF", monospace;
+}
+
+.highlight-line {
+  color: #efefef;
+}
+
+.highlight-line .hljs-section {
+  color: #a6e22e;
+}
+
+:where([data-style="2024"]) [data-background-iframe],
+:where([data-style="2024"]) [data-background-image]:has(> div) {
+  z-index: 9000;
+}
+
+:where([data-style="2021"],[data-style="2022-10"],[data-style="2023-11"],[data-style="2023-11-b"]) [data-background-iframe] {
+  z-index: 9000;
+}
+
+:where([data-style="2023-11"],[data-style="2023-11-b"],[data-style="2024"]) [data-background-iframe] > div,
+:where([data-style="2023-11"],[data-style="2023-11-b"],[data-style="2024"]) [data-background-image] > div {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+:where([data-style="2024"]) [data-background-iframe][data-background-color] h2 {
+  color: var(--r-heading-color) !important;
+}
+
+:where([data-style="2023-11"],[data-style="2023-11-b"]) [data-background-iframe] > div.hidden,
+:where([data-style="2023-11"],[data-style="2023-11-b"]) [data-background-image] > div.hidden {
+  display: none;
+}
+
+:where([data-style="2022-10"]) [data-background-iframe] > div,
+:where([data-style="2022-10"]) .overlay-item{
+    position: absolute;
+    width: 40%;
+    right: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    text-align: left;
+
+}
+
+:where([data-style="2021"]) [data-background-iframe] > div{
+    position: absolute;
+    width: 40%;
+    right: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    text-align: left;
+
+}
+
+:where([data-style="2021"],[data-style="2022-10"],[data-style="2024"]) [data-background-iframe] > div.hidden {
+  display: none;
+}
+
+.closer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.closer:hover {
+  opacity: 1;
+}
+
+.reveal img.svg {
+  margin: 0;
+}
+
+cite {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+:where([data-style="2024"]) kbd {
+  font-size: 0.8em;
+}
+
+:where([data-style="2023-11"]) kbd {
+  font-size: 90%;
+}
+
+.reveal-viewport.blur .slide-background-content {
+  filter: blur(14px) !important;
+}
+
+p {
+  text-align: left;
+}
+
+.current-fragment .italic {
+  display: inline-block;
+  animation: italic 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.underline {
+  display: inline-block;
+}
+
+.underline:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 95%;
+  width: 0px;
+  height: 3px;
+  background: transparent;
+  transition: width 1s ease-in-out;
+}
+
+.visible .underline:after {
+  width: 100%;
+  background: white;
+}
+
+.current-fragment .bold {
+  animation: bold 1.5s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in-out;
+  display: inline-block;
+}
+
+.current-fragment .yell {
+  display: inline-block;
+  animation: yell 1.25s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes italic {
+  0% {
+    transform: skewX(0);
+  }
+
+  25% {
+    transform: skewX(-20deg);
+  }
+
+  100% {
+    transform: skewX(0);
+  }
+}
+
+@keyframes yell {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bold {
+  0% {
+    font-weight: 500;
+  }
+
+  75% {
+    font-weight: 700;
+  }
+  100% {
+    font-weight: 550;
+  }
+}
+
+:where([data-style="2023-11"],[data-style="2023-11-b"]) .two-col {
+  display: flex;
+  justify-content: space-around;
+}

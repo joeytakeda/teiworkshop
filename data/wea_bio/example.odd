@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="oddex1" start="listPerson person">
+        <moduleRef key="core" include="note p"/>
+        <moduleRef key="tei"/>
+        <moduleRef key="namesdates" include="person persName forename surname listPerson"/>
+        <constraintSpec ident="note" scheme="schematron">
+          <constraint>
+            <sch:assert test="tei:note[tei:p]">ERROR: All notes must include a p.</sch:assert>
+            
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="note2" scheme="schematron">
+          <constraint>
+            <sch:pattern>
+              <sch:rule context="tei:p">
+                <sch:assert test="not(matches(string-join(.,''),'^\s|\s$'))">ERROR: Paragraphs must not contain spaces at the beginning or the end.</sch:assert>
+                <sch:assert test="matches(string-join(.,''),'\.\s*$')">ERROR: Paragraphs must end with a period.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+            <sch:assert test="tei:note[tei:p]">ERROR: All notes must include a p.</sch:assert>
+            
+          </constraint>
+        </constraintSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

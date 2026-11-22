@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-style="2023-11-b">
+<head>
+    <title>Creating Digital Editions Using TEI</title>
+    <meta charset="utf-8"/>
+    <link href="../lib/fonts/open-sans/open-sans.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../lib/reveal-4.0.2/reveal.css"/>
+        <link rel="stylesheet" id="theme" href="../lib/reveal-4.0.2/theme/black.css"/>
+    <link rel="stylesheet" href="../css/presentation.css"/>
+    <link rel="stylesheet" href="../lib/fonts/fira-code/fira_code.css"/>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        
+        <section>
+            <img src="../images/TEI_Logo.svg"/>
+            
+        </section>
+        <section data-background-iframe="../spectator/index.html"></section>
+        <section data-background-iframe="https://joeytakeda.github.io/lim-site/site/index.html">
+        </section>
+
+        <section data-background-iframe="https://sfu-dhil.github.io/lim-schema/encoding_structure.html" data-background-color="white">
+        </section>
+
+
+
+    </div>
+</div>
+
+<script type="module">
+    import Reveal from "../lib/reveal-4.0.2/reveal.esm.js";
+    import Highlight from "../lib/reveal-4.0.2/plugin/highlight/highlight.esm.js";
+    import { initDeck } from "../js/presentation.js";
+    initDeck(Reveal, {
+    plugins: [Highlight],
+    infoBoxes: ":is(section[data-background-iframe], section[data-background-image]) > div",
+    options: { hash: true, maxScale: 1.5, preloadIframes: true },
+  });
+</script>
+    
+</body>
+</html>
