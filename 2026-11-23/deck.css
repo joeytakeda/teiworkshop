@@ -371,12 +371,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40pt;
-  align-items: start;
-}
-
-.reveal .two-col > div {
-  border-top: 1px solid var(--rule);
-  padding-top: 14pt;
+  align-items: center;
 }
 
 kbd,
