@@ -25,7 +25,7 @@
                             <img src="../images/lyrical-ballads-1798-p115.jpg" alt=""/>
                             <span class="box" data-label="head" style="--out:77px; left:22%; top:23.8%; width:54%; height:10.6%"></span>
                             <span class="box lg" data-label="lg" style="--out:50px; left:6.5%; top:49.5%; width:78%; height:16.3%"></span>
-                            <span class="box lg" data-label="lg" st             yle="--out:50px; left:6.5%; top:67.7%; width:78%; height:16%"></span>
+                            <span class="box lg" data-label="lg" style="--out:50px; left:6.5%; top:67.7%; width:78%; height:16%"></span>
                         </div>
                     </div>
                 </section>
@@ -127,23 +127,7 @@
                     <aside class="notes">1:50–2:10</aside>
                 </section>
 
-                <!-- <section data-draft>
-                    <h3>Not just putting it online</h3>
-                    <ul class="fragmented">
-                        <li>
-                            <strong>Digitizing for access:</strong> a scan or a web page</li>
-                        <li>
-                            <strong>Encoding as representation:</strong> a model that says what each part is</li>
-                    </ul>
-                    <figure>
-                    <blockquote class="fragment small">digital editions force us to confront the very same set of issues with far more rigor and clarity</blockquote>
-                    <figcaption>
-                        <p>Julia Flanders, "The Productive Unease of 21st-century Digital Scholarship," <i>Digital Humanities Quarterly</i> 3.3 (2009), para. 22.</cite>
-                    </figcaption>
-                    </figure>
-
-                    <aside class="notes">PLACEHOLDER: a scan reproduces the object; an encoding records a reading of it. "Productive unease" is Flanders's phrase (para. 12).</aside>
-                </section> -->
+              
 
                 <section>
                     <h3>What is markup?</h3>
@@ -172,7 +156,6 @@
                             </div>
                         </div>
                     </div>
-                    <aside class="notes">Replaces the O'Hara images with the instructor's Lyrical Ballads project. The boxes are positioned by eye: check them in the browser and adjust the percentages if needed. Ask: how do you know this is a poem? Where does a stanza end?</aside>
                 </section>
 
                 <section>
@@ -197,32 +180,45 @@
                      <p class="fragment fade-in">Variant <span class="hands" role="img" aria-label="hands"><img src="../images/hands.svg" data-import="true"></img></span></p>
                 </section>
 
-<!-- 
-                <section data-draft>
-                    <h3>Try it on paper (5 minutes)</h3>
-                    <p>On your poem, bracket and label every part you can see.</p>
-                    <p class="fragment">Make up your own labels.</p>
-                    <aside class="notes">PLACEHOLDER: first hands-on moment before 2:45. Compare two or three students' labels (different names, different levels of detail) to set up semantics v. display now and the need for a shared vocabulary in Part 4.</aside>
-                </section> -->
-
                 <section>
+                    <h3>But what are you trying to (re-)create?</h3>
+                    <ul class="fragmented">
+                        <li>Should additions be moved inline? Are additions (from later revision campaigns) part of the fair copy?</li>
+                        <li>How to demonstrate supplied text, inferences, guesses?</li>
+                        <li>For critical editions, which variants and readings?</li>
+                        <li>What about editorial commentary? And how to distinguish this from authorial commentary?</li>
+                    </ul>
+                </section>
+
+                 <section>
                     <h3>Semantics versus Display</h3>
                     <p class="fragment">Semantic or Descriptive markup = encoding <i>what</i> the thing is</p>
                     <p class="fragment">Display or Presentational markup = encoding <i>how</i> you want that thing to look</p>
-                    <aside class="notes">An underlined word in your manuscript: "underlined", "emphasized", or "a title"?</aside>
+                    <p class="fragment">An underlined word in your manuscript: "underlined", "emphasized", or "a title"?</aside>
                 </section>
 
-                <!-- <section data-draft>
-                    <h3>Encoding preserves interpretation</h3>
-                    <ul class="fragmented">
-                        <li>A printed edition keeps its decisions in the apparatus, or makes them silently</li>
-                        <li>An encoded text records each decision where it was made</li>
-                        <li>The decisions stay in the file, open to a reader who disagrees</li>
-                    </ul>
-                    <aside class="notes">PLACEHOLDER: point back to the board; the "lost" column is mostly interpretation the printed version had to drop or hide.</aside>
-                </section> -->
+                
 
                 <section>
+                    <h3>Text Encoding</h3>
+                    <ul class="fragmented">
+                        <li>Emerging in the late 1980s in response to increased digitization</li>
+                        <li>Plain text = unstructured, ambigious, local</li>
+                        <li>Many different models that sought to understand <i>what</i> a text is</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>"What is text, really?" (De Rose et al., 1990)</h3>
+                    <ul class="fragmented">
+                        <li>Text = "Ordered Hierarchy of Content Objects" [OHCO] (DeRose et al., 1990)</li>
+                        <li>By this they mean that text can be usefully represented as a <i>tree</i> or a <i>hierarchy</i></li>
+                        <li>"The functionality we want and need requires that the intellectually salient features of text be reflected in the way that text is organized by our systems" (23)</li>
+                    </ul>
+                    <p class="citation">Steven J. DeRose, David G. Durand, Elli Mylonas, and Allen H. Renear, "What Is Text, Really?" <i>Journal of Computing in Higher Education</i> 1, no. 2 (1990): 3–26.</p>
+                </section>
+
+                 <section>
                     <h3>The Process of Marking Up Texts</h3>
                     <figure>
                         <div class="r-stack">
@@ -237,23 +233,6 @@
                             </figcaption>
                         
                     </figure>
-                </section>
-
-                <section data-draft>
-                    <h3>A model is an argument</h3>
-                    <ul class="fragmented">
-                        <li>To encode a text is to model it: what are its parts, and which matter?</li>
-                        <li>Every model leaves things out</li>
-                        <li>The TEI is a shared model, one you adapt and argue with</li>
-                    </ul>
-                    <cite class="fragment">See Julia Flanders and Fotis Jannidis, "Data Modeling in a Digital Humanities Context: An Introduction," in <i>The Shape of Data in Digital Humanities</i>, ed. Flanders and Jannidis (Routledge, 2019).</cite>
-                    <aside class="notes">PLACEHOLDER: paraphrase, not a quotation. Optional companion line from Flanders, "Productive Unease," para. 23: "it is the act of stating rules that requires the discipline of methodological self-scrutiny."</aside>
-                </section>
-
-                <section>
-                    <h3>Encoding Texts as Literary Criticism</h3>
-                    <p class="fragment">Marking up text is an assertion of your knowledge and your interpretation of the text</p>
-                    <p class="fragment">What does the text (form and content) express?</p>
                 </section>
 
                
@@ -290,18 +269,6 @@
                     </ul>
                 </section>
 
-                <!-- Cut first if Part 4 runs long (as in 2026-04-01, where it was commented out).
-    <section>
-        <h3>The TEI: A Brief History</h3>
-        <p class="fragment">Began in 1987 with the Poughkeepsie Principles</p>
-        <p class="fragment">Proposal 1 (P1) released 1990</p>
-        <p class="fragment">HTML (v1) appears</p>
-        <p class="fragment">P3 (1994): Picking up steam</p>
-        <p class="fragment">HTML 4.01 (1999)</p>
-        <p class="fragment">P4 (2002): P3, but make it XML</p>
-        <p class="fragment">P5 (2007): The current version</p>
-    </section> -->
-
                 <section>
                     <h3>The TEI</h3>
                     <p>Offers a rich vocabulary and method to encode:</p>
@@ -316,7 +283,7 @@
                     </div>
                 </section>
 
-                <section>
+                <!-- <section>
                     <h3>Some Examples</h3>
                     <aside class="notes">The four sites the instructor asked students to review.</aside>
                 </section>
@@ -347,23 +314,37 @@
                             <a href="https://dvpp.uvic.ca/">https://dvpp.uvic.ca/</a>
                         </p>
                     </div>
-                </section>
+                </section> -->
 
-                <section data-background-iframe="https://scholarlyediting.org/issues/41/kinship-and-longing/antoine-is-willing-to-burn-it-all-down_fr/">
+                <!-- <section data-background-iframe="https://scholarlyediting.org/issues/41/kinship-and-longing/antoine-is-willing-to-burn-it-all-down_fr/">
                     <h2>Kinship & Longing: Keywords for Black Louisiana</h2>
                     <p>
                         <a href="https://scholarlyediting.org/issues/41/kinship-and-longing/">Edited by Olivia Barnard, Emma Bilski, Leila Blackbird, Jessica Marie Johnson, Ellie Palazzolo for <i>Scholarly Editing</i></a>
                     </p>
-                    <aside class="notes">PLACEHOLDER: the Whitman Archive blocks embedding (X-Frame-Options: SAMEORIGIN), so this can't be a background iframe. Add a screenshot as data-background-image, or open the link live.</aside>
-                </section>
+                </section> -->
 
-                 <section>
-                    <h3>TEI and the "Hierarchy"</h3>
+               <section>
+                    <h2>Activity</h2>
+                    <p>Explore the following text encoding projects</p>
                     <ul>
-                        <li>Text = "Ordered Hierarchy of Content Objects" [OHCO] (DeRose et al., 1990)</li>
+                        <li>The Pulter Project: <a href="https://pulterproject.northwestern.edu/">https://pulterproject.northwestern.edu/</a> </li>
+                        <li>Scholarly Editing, Kinship and Longing:  <a href="https://scholarlyediting.org/issues/41/kinship-and-longing/">https://scholarlyediting.org/issues/41/kinship-and-longing/</a></li>
+                        <li>Correspondence of Elizabeth Montague: <a href="https://emco.swansea.ac.uk/">https://emco.swansea.ac.uk/</a></li>
+                        <li>Digital Victorian Periodical Poetry: <a href="https://dvpp.uvic.ca">https://dvpp.uvic.ca</a></li>
+                        <li>Van Gogh Letters: <a href="https://vangoghletters.org/">https://vangoghletters.org/</a></li>
                     </ul>
-                    <cite>Steven J. DeRose, David G. Durand, Elli Mylonas, and Allen H. Renear, "What Is Text, Really?" <i>Journal of Computing in Higher Education</i> 1, no. 2 (1990): 3–26.</cite>
-                </section>
+               </section>
+
+               <section>
+                <h2>Questions to consider...</h2>
+                <ul>
+                    <li>What editorial choices did they make?</li>
+                     <li>What seems to be the primary interest of this edition?</li>
+                    <li>Are there multiple versions? Variants?</li>
+                    <li>How does the text resemble facsimile? Does the facsimile matter? What kind of transcription/edition are they creating?</li>
+
+                </ul>
+               </section>
                 
                    <section>
                     <div style="display:grid; grid-template-columns: 1fr auto; gap: 72pt; align-items: center; padding-right: 110px;">
@@ -470,7 +451,7 @@ What man has made of man.
 
                 <section>
                     <h3>XML</h3>
-                    <pre><code class="language-xml" data-trim data-line-numbers="|4|4|1|1,13|1-13|5-10|6-9" data-fragment-index="1"><script type="text/template">
+                    <pre><code class="language-xml" data-trim data-line-numbers="|2|2|3|1,15|1-15|3-8|4-7" data-fragment-index="1"><script type="text/template">
 <div>
   <head>Lines written in early spring</head>
   <lg type="stanza">
@@ -486,14 +467,13 @@ What man has made of man.
     <l>What man has made of man.</l>
   </lg>
 </div>
-</book>
         </script></code></pre>
                     <div class="r-stack fragment" data-fragment-index="0">
                         <p class="fragment fade-out" data-fragment-index="1">The two pointy brackets is called an element</p>
                         <p class="fragment fade-out current-visible" data-fragment-index="1">E.g. <kbd>&lt;head&gt;</kbd> = the head element</p>
                         <p class="fragment fade-out current-visible" data-fragment-index="2">All elements have start and end tags<br/>
                             <kbd>&lt;head&gt;</kbd> is the start tag and <kbd>&lt;/head&gt;</kbd> is the end tag</p>
-                        <p class="fragment fade-out current-visible" data-fragment-index="3">Elements can also have attributes (<kbd>@type</kbd>)<br/>Attributes must have a value: <kbd>&lt;lg <mark>type="1798"</mark>&gt;</kbd>
+                        <p class="fragment fade-out current-visible" data-fragment-index="3">Elements can also have attributes (<kbd>@type</kbd>)<br/>Attributes must have a value: <kbd>&lt;lg <mark>type="stanza"</mark>&gt;</kbd>
                         </p>
                         <p class="fragment fade-out current-visible" data-fragment-index="4">All XML structures have a "root" (or container) element</p>
                         <p class="fragment fade-out current-visible" data-fragment-index="5">Elements nest and use genealogical terms</p>
@@ -517,7 +497,7 @@ What man has made of man.
                     </p>
                 </section>
 
-                <section data-draft>
+                <!-- <section data-draft>
                     <h3>Well-formed and valid</h3>
                     <ul class="fragmented">
                         <li>
@@ -527,25 +507,6 @@ What man has made of man.
                         <li>oXygen checks both</li>
                     </ul>
                     <aside class="notes">PLACEHOLDER. 19th-century hands are full of ampersands: the first error most students hit is a bare &amp; in their transcription.</aside>
-                </section>
-
-            
-
-                
-
-                <!-- <section>
-                    <h3>But this can get tricky...</h3>
-                    <aside class="notes">Recall the paper exercise: which of your brackets nested, and which overlapped? A stanza running onto the next page is the classic case: TEI picks one hierarchy and marks the other with milestones like &lt;pb/&gt; and &lt;lb/&gt;.</aside>
-                </section>
-
-                <section>
-                    <div class="r-stack">
-                        <img class="fragment" src="../images/letter-closer-diagram.png"/>
-                        <img class="fragment" src="../images/letter-closer-diagram_p1.png"/>
-                        <img class="fragment" src="../images/letter-closer-diagram_p2.png"/>
-                        <img class="fragment" src="../images/letter-closer-diagram_p3.png"/>
-                        <img class="fragment" src="../images/letter-closer-diagram_p4.png"/>
-                    </div>
                 </section> -->
 
             
@@ -568,10 +529,10 @@ What man has made of man.
   </lg>
 </div>
         </script></code></pre>
-                    <aside class="notes">Interpretation step (replaces placeName/persName in O'Hara). Is nature a person here? Should "griev'd" be regularized? Each tag is a reading. PLACEHOLDER: swap in your preferred examples.</aside>
+               
                 </section>
 
-                <section data-draft>
+                <section>
                     <h3>And in manuscript</h3>
                     <pre><code class="language-xml" data-trim data-line-numbers="1-3|4-7|8-11|12-13"><script type="text/template">
 <l>And cease to mourn the Ills,
@@ -640,10 +601,9 @@ What man has made of man.
                     <p class="part-no">Part 5</p>
                     <h2>Questions? (And break)</h2>
                     <p class="small">Next: download <a href="../data/2026-11-23/poem-template.xml" download>poem-template.xml</a> and open it in oXygen</p>
-                    <aside class="notes">Anyone without their poem: pick a fallback now (see notes on "You've already made this text twice").</aside>
                 </section>
 
-                <section data-draft="data-draft">
+                <section>
                     <h3>Getting set up in oXygen</h3>
                     <ol class="fragmented">
                         <li>Download <a href="../data/2026-11-23/poem-template.xml" download>poem-template.xml</a>
@@ -683,7 +643,7 @@ What man has made of man.
                     <aside class="notes">PLACEHOLDER. Your note: linger on metadata if there's time; cut this part to this slide if not. For a book history class this is close to a catalogue record or codicological description.</aside>
                 </section>
 
-                <section data-draft="data-draft">
+                <section>
                     <div class="code-explained">
                         <pre class="compact"><code class="language-xml" data-trim data-line-numbers="|2-7|8-14|15-25|26-29" data-fragment-index="0"><script type="text/template">
 <msDesc>
@@ -737,13 +697,11 @@ What man has made of man.
                     <aside class="notes">Combines the parts table with the step-through. Values are placeholders, not facts about the SCRB manuscript. @hand in the body points back to these handNotes.</aside>
                 </section>
 
-                <section data-draft="data-draft">
+                <section>
                     <h3>Discussion</h3>
                     <ul class="fragmented">
-                        <li>You're all encoding poems from the same manuscript. Should every file repeat this?</li>
                         <li>What would you record that the TEI doesn't seem to ask for?</li>
                     </ul>
-                    <aside class="notes">First question leads to project-level decisions (shared header, teiCorpus); second to customization in Part 8.</aside>
                 </section>
 
                 <!-- ============================================================
@@ -931,10 +889,9 @@ What man has made of man.
                         <h2>Show and tell</h2>
                         <p>What did you encode? What did you leave out? What did you get back?</p>
                     </div>
-                    <aside class="notes">Paste two or three volunteers' files into the editor to render them with CETEIcean.</aside>
                 </section>
 
-                <section data-draft="data-draft">
+                <!-- <section data-draft="data-draft">
                     <h3>Compare with the professionals</h3>
                     <ul class="fragmented">
                         <li>
@@ -946,7 +903,7 @@ What man has made of man.
                     </ul>
                     <p class="fragment">What did they decide differently?</p>
                     <aside class="notes">PLACEHOLDER. Worth pointing out: the Lyrical Ballads file records display (rend="centre uppercase font-size(3mm)") and puts the poem's lg inside a p; Lyon in Mourning expands abbreviations with choice throughout. Different projects, different arguments.</aside>
-                </section>
+                </section> -->
 
                 <section>
                     <h3>What to encode?</h3>
@@ -980,7 +937,7 @@ What man has made of man.
                     <aside class="notes">Ties back to the msDesc discussion: a class edition of this manuscript would start by agreeing on a customization.</aside>
                 </section>
 
-                <section data-draft="data-draft">
+                <!-- <section data-draft="data-draft">
                     <h3>Your file will outlast the software</h3>
                     <ul class="fragmented">
                         <li>Plain text in an open, documented standard</li>
@@ -988,7 +945,7 @@ What man has made of man.
                         <li>Send it to your instructor: 30 poems encoded the same way are the start of a class edition</li>
                     </ul>
                     <aside class="notes">PLACEHOLDER. Closes the third claim of the argument. Confirm with the instructor where files should go.</aside>
-                </section>
+                </section> -->
 
                 <section>
                     <h3>Okay, I'm convinced...where do I start?</h3>
