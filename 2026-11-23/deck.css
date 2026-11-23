@@ -24,15 +24,15 @@
 
 :root {
   /* Palette */
-  --desk: #161a21;        /* blue-black ink, the ground */
+  --desk: #161a21; /* blue-black ink, the ground */
   --desk-raised: #1f242d; /* code blocks, cards */
-  --paper: #e9ebe7;       /* main text */
-  --paper-soft: #a3a9b3;  /* secondary text */
-  --rule: #343b47;        /* hairlines */
-  --pencil: #8cc8e0;      /* non-photo blue */
+  --paper: #e9ebe7; /* main text */
+  --paper-soft: #a3a9b3; /* secondary text */
+  --rule: #343b47; /* hairlines */
+  --pencil: #8cc8e0; /* non-photo blue */
   --pencil-deep: #5aa4c4; /* boxes and rules where the pale blue is too loud */
-  --iron-gall: #d9a87a;   /* attribute values, like brown manuscript ink */
-  --correction: #e5675a;  /* deletions only */
+  --iron-gall: #d9a87a; /* attribute values, like brown manuscript ink */
+  --correction: #e5675a; /* deletions only */
 
   /* Type */
   --display: "EB Garamond", Garamond, Georgia, serif;
@@ -93,9 +93,15 @@
   text-wrap: balance;
 }
 
-.reveal h1 { font-size: 64pt; }
-.reveal h2 { font-size: 44pt; }
-.reveal h3 { font-size: 36pt; }
+.reveal h1 {
+  font-size: 64pt;
+}
+.reveal h2 {
+  font-size: 44pt;
+}
+.reveal h3 {
+  font-size: 36pt;
+}
 
 .reveal p,
 .reveal li {
@@ -119,14 +125,9 @@
   padding-left: 0.2em;
 }
 
-.reveal ul li::marker {
-  color: var(--pencil);
-}
-
 .reveal ol li::marker {
   font-family: var(--display);
   font-size: 1.1em;
-  color: var(--pencil);
 }
 
 .reveal strong,
@@ -196,7 +197,9 @@
 
 /* Fragments: a plain fade, no movement */
 .reveal .slides section .fragment {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 /* --------------------------------------------------------------------------
@@ -273,6 +276,7 @@
    -------------------------------------------------------------------------- */
 
 .reveal section.divider .part-no {
+  display: none;
   font-family: var(--display);
   font-style: italic;
   font-size: 26pt;
@@ -295,13 +299,15 @@
    Quotations and citations
    -------------------------------------------------------------------------- */
 
-.reveal blockquote {
+.reveal figure:has(blockquote) {
   width: auto;
   max-width: 28em;
   margin: 0 0 12pt;
-  padding: 0 0 0 24pt;
+  padding: 12pt 12pt 12pt 12pt;
   border-left: 2px solid var(--pencil-deep);
-  background: none;
+  background: var(--desk-raised);
+  border-left: 2px solid var(--rule);
+  color: var(--paper);
   box-shadow: none;
   font-family: var(--display);
   font-style: italic;
@@ -309,6 +315,12 @@
   line-height: 1.25;
   color: var(--paper);
   text-align: left;
+}
+
+.reveal cite {
+  font-size: inherit;
+  margin: unset;
+  display: inline;
 }
 
 .reveal blockquote.small,
@@ -320,16 +332,24 @@
   margin: 0;
 }
 
-.reveal cite {
+.reveal figure figcaption,
+.reveal .citation {
   display: block;
-  max-width: 50em;
   margin-top: 18pt;
   font-family: var(--text);
   font-style: normal;
-  font-size: 12pt;
+  font-size: 10pt;
   line-height: 1.45;
   color: var(--paper-soft);
-  text-align: left;
+  width: 100%;
+  p {
+    max-width: unset;
+    width: 100%;
+    text-align: right;
+    &:before {
+      content: "— ";
+    }
+  }
 }
 
 .reveal cite i {
@@ -340,8 +360,12 @@
    Utilities used by the slides
    -------------------------------------------------------------------------- */
 
-.reveal .small { font-size: 17pt; }
-.reveal .muted { color: var(--paper-soft); }
+.reveal .small {
+  font-size: 17pt;
+}
+.reveal .muted {
+  color: var(--paper-soft);
+}
 
 .reveal .two-col {
   display: grid;
@@ -424,16 +448,35 @@ kbd,
 
 /* highlight.js in the deck's palette: tag names in blue pencil,
    attribute values in iron-gall brown. */
-.reveal .hljs { background: var(--desk-raised); color: var(--paper); }
-.reveal .hljs-tag { color: var(--paper-soft); }
-.reveal .hljs-name { color: var(--pencil); font-weight: 500; }
-.reveal .hljs-attr { color: var(--paper); }
-.reveal .hljs-string { color: var(--iron-gall); }
-.reveal .hljs-comment { color: var(--paper-soft); font-style: italic; }
+.reveal .hljs {
+  background: var(--desk-raised);
+  color: var(--paper);
+}
+.reveal .hljs-tag {
+  color: var(--paper-soft);
+}
+.reveal .hljs-name {
+  color: var(--pencil);
+  font-weight: 500;
+}
+.reveal .hljs-attr {
+  color: var(--paper);
+}
+.reveal .hljs-string {
+  color: var(--iron-gall);
+}
+.reveal .hljs-comment {
+  color: var(--paper-soft);
+  font-style: italic;
+}
 .reveal .hljs-meta,
 .reveal .hljs-meta .hljs-string,
-.reveal .hljs-keyword { color: var(--paper-soft); }
-.reveal .hljs-symbol { color: var(--iron-gall); }
+.reveal .hljs-keyword {
+  color: var(--paper-soft);
+}
+.reveal .hljs-symbol {
+  color: var(--iron-gall);
+}
 
 .reveal .hljs-ln-numbers {
   color: var(--paper-soft);
@@ -575,13 +618,15 @@ kbd,
   height: 2.5px;
   width: 0;
   background: var(--correction);
-  transition: width 0.7s ease-in-out 0.3s;
 }
 
 .visible .strike::after {
   width: 104%;
+  transition: width 0.7s ease-in-out 0.3s;
 }
 
+/* The addition drops in above the line once its bullet has faded in.
+   The delay applies on the way in only, so stepping back hides it at once. */
 .interlinear {
   display: inline-block;
   font-family: var(--display);
@@ -590,11 +635,88 @@ kbd,
   font-size: 0.85em;
   vertical-align: 0.8em;
   opacity: 0;
-  transition: opacity 0.5s ease 0.9s;
+  transform: translateY(-0.3em);
 }
 
 .visible .interlinear {
   opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.4s ease 0.3s,
+    transform 0.4s ease-out 0.3s;
+}
+
+/* Smudged: the words blur and smear sideways, then settle half-legible. */
+.illegible-blur {
+  display: inline-block;
+  user-select: none;
+}
+
+.visible .illegible-blur {
+  animation: smudge 1.6s ease-in-out 0.4s forwards;
+}
+
+@keyframes smudge {
+  0% {
+    filter: blur(0);
+    letter-spacing: 0;
+    opacity: 1;
+  }
+  50% {
+    filter: blur(5px);
+    letter-spacing: 0.08em;
+    transform: translateX(4px);
+    opacity: 0.6;
+  }
+  100% {
+    filter: blur(2.5px);
+    letter-spacing: 0.03em;
+    transform: translateX(1px);
+    opacity: 0.75;
+  }
+}
+
+/* A second hand: "hands" is written out stroke by stroke. The SVG is the
+   Pinyon Script outline, revealed through a mask of pen strokes that follow
+   the letters in writing order (each stroke's --at and --len are fractions
+   of the whole). The unmasked copy settles in at the end to fill any gaps. */
+.hands {
+  --write: 2.2s;
+  display: inline-block;
+  vertical-align: -0.09em;
+  margin-left: 0.1em;
+}
+
+.hands svg {
+  display: block;
+  height: 1.3em;
+  width: auto;
+  overflow: visible;
+}
+
+.hands {
+  color: var(--iron-gall);
+}
+
+/* Stroke width, caps and colour are set on the <mask> in hands.svg. */
+.hands mask path {
+  stroke-dasharray: 1 2;
+  stroke-dashoffset: 1.05;
+}
+
+.hands .settle {
+  opacity: 0;
+}
+
+.visible .hands mask path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset calc(var(--len) * var(--write)) ease-in-out
+    calc(0.35s + var(--at) * var(--write));
+}
+
+.visible .hands .settle {
+  opacity: 1;
+  transition: opacity 0.3s ease calc(0.35s + var(--write));
 }
 
 /* --------------------------------------------------------------------------
@@ -654,9 +776,15 @@ kbd,
 
 @media (prefers-reduced-motion: reduce) {
   .reveal .slides section .fragment,
-  .strike::after,
-  .interlinear {
+  .visible .strike::after,
+  .visible .interlinear,
+  .visible .hands mask path,
+  .visible .hands .settle {
     transition: none !important;
+  }
+  .visible .illegible-blur {
+    animation: none !important;
+    filter: blur(2.5px);
   }
   .current-fragment .italic,
   .current-fragment .bold,

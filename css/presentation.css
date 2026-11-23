@@ -12,7 +12,8 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("../lib/fonts/oswald/Oswald-VariableFont_wght.ttf") format("truetype-variations");
+  src: url("../lib/fonts/oswald/Oswald-VariableFont_wght.ttf")
+    format("truetype-variations");
   font-weight: 1 999;
 }
 
@@ -44,16 +45,28 @@ code,
   z-index: 9000;
 }
 
-:where([data-style="2021"],[data-style="2022-10"],[data-style="2023-11"],[data-style="2023-11-b"]) [data-background-iframe] {
+:where(
+    [data-style="2021"],
+    [data-style="2022-10"],
+    [data-style="2023-11"],
+    [data-style="2023-11-b"]
+  )
+  [data-background-iframe] {
   z-index: 9000;
 }
 
-:where([data-style="2023-11"],[data-style="2023-11-b"],[data-style="2024"]) [data-background-iframe] > div,
-:where([data-style="2023-11"],[data-style="2023-11-b"],[data-style="2024"]) [data-background-image] > div {
+:where([data-style="2023-11"], [data-style="2023-11-b"], [data-style="2024"])
+  [data-background-iframe]
+  > div,
+:where([data-style="2023-11"], [data-style="2023-11-b"], [data-style="2024"])
+  [data-background-image]
+  > div {
   position: absolute;
   width: 40%;
   right: 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 5px 25px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5),
+    0 5px 25px rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   padding: 20px;
@@ -65,39 +78,47 @@ code,
   color: var(--r-heading-color) !important;
 }
 
-:where([data-style="2023-11"],[data-style="2023-11-b"]) [data-background-iframe] > div.hidden,
-:where([data-style="2023-11"],[data-style="2023-11-b"]) [data-background-image] > div.hidden {
+:where([data-style="2023-11"], [data-style="2023-11-b"])
+  [data-background-iframe]
+  > div.hidden,
+:where([data-style="2023-11"], [data-style="2023-11-b"])
+  [data-background-image]
+  > div.hidden {
   display: none;
 }
 
 :where([data-style="2022-10"]) [data-background-iframe] > div,
-:where([data-style="2022-10"]) .overlay-item{
-    position: absolute;
-    width: 40%;
-    right: 0;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2);
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 20px;
-    font-size: 20px;
-    text-align: left;
-
+:where([data-style="2022-10"]) .overlay-item {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5),
+    0 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
 }
 
-:where([data-style="2021"]) [data-background-iframe] > div{
-    position: absolute;
-    width: 40%;
-    right: 0;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2);
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 20px;
-    font-size: 20px;
-    text-align: left;
-
+:where([data-style="2021"]) [data-background-iframe] > div {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5),
+    0 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
 }
 
-:where([data-style="2021"],[data-style="2022-10"],[data-style="2024"]) [data-background-iframe] > div.hidden {
+:where([data-style="2021"], [data-style="2022-10"], [data-style="2024"])
+  [data-background-iframe]
+  > div.hidden {
   display: none;
 }
 
@@ -221,7 +242,7 @@ p {
   }
 }
 
-:where([data-style="2023-11"],[data-style="2023-11-b"]) .two-col {
+:where([data-style="2023-11"], [data-style="2023-11-b"]) .two-col {
   display: flex;
   justify-content: space-around;
 }
